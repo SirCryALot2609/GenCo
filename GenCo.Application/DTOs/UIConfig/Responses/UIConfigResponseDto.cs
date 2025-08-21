@@ -9,7 +9,7 @@ namespace GenCo.Application.DTOs.UIConfig.Responses
 {
     public class UIConfigResponseDto : BaseResponseDto
     {
-        public int ProjectId { get; set; }
+        public Guid ProjectId { get; set; }
         public string Name { get; set; } = default!;
         public string? ConfigJson { get; set; }
     }

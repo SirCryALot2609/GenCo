@@ -9,7 +9,7 @@ namespace GenCo.Application.DTOs.UIConfig.Requests
 {
     public class UpdateUIConfigRequestDto : BaseRequestDto
     {
-        public int Id { get; set; }
+        public Guid Id { get; set; }
         public string? Name { get; set; }
         public string? ConfigJson { get; set; }
     }

@@ -16,12 +16,12 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Features\UIConfigs\Commands\UpdateUIConfig\" />
-    <Folder Include="Features\UIConfigs\Queries\" />
     <Folder Include="Features\WorkflowStep\Commands\" />
     <Folder Include="Features\WorkflowStep\Queries\" />
-    <Folder Include="Features\Workflows\Commands\" />
-    <Folder Include="Features\Workflows\Queries\" />
+    <Folder Include="Features\Workflows\Commands\CreateWorkflow\" />
+    <Folder Include="Features\Workflows\Commands\DeleteWorkflow\" />
+    <Folder Include="Features\Workflows\Commands\UpdateWorkflow\" />
+    <Folder Include="Features\Workflows\Queries\GetWorkflowById\" />
   </ItemGroup>
 
 </Project>

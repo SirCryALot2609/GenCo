@@ -10,8 +10,8 @@ namespace GenCo.Application.DTOs.Relation.Requests
     public class UpdateRelationRequestDto : BaseRequestDto
     {
         public Guid Id { get; set; }
-        public int? FromEntityId { get; set; }
-        public int? ToEntityId { get; set; }
+        public Guid? FromEntityId { get; set; }
+        public Guid? ToEntityId { get; set; }
         public string? RelationType { get; set; }
     }
 }

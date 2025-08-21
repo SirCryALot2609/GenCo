@@ -11,6 +11,11 @@ namespace GenCo.Application.Persistence.Contracts
     public interface IProjectRepository : IGenericRepository<Project>
     {
         Task<Project?> GetProjectWithMetadataAsync(Guid projectId);
+        Task<Project?> GetProjectWithEntitiesAsync(Guid projectId);
+        Task<Project?> GetProjectWithRelationsAsync(Guid projectId);
+        Task<Project?> GetProjectWithWorkflowsAsync(Guid projectId);
+        Task<Project?> GetProjectWithAllDetailsAsync(Guid projectId);
+
         Task<IReadOnlyCollection<Project>> SearchProjectsByNameAsync(string keyword);
     }
 }

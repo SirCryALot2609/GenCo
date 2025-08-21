@@ -29,13 +29,13 @@ namespace GenCo.Application.Features.Entities.Commands.UpdateEntity
                 };
             }
             _mapper.Map(request.Request, entity);
-            await _repository.UpdateAsync(entity);
+            var updated = await _repository.UpdateAsync(entity);
             return new BaseUpdateResponseDto
             {
                 Success = true,
                 Message = "Entity updated successfully.",
-                UpdatedAt = entity.UpdateAt,
-                UpdatedBy = entity.UpdateBy,
+                UpdatedAt = updated.UpdateAt,
+                UpdatedBy = updated.UpdateBy,
             };
         }
     }

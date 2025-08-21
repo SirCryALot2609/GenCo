@@ -9,7 +9,7 @@ namespace GenCo.Application.DTOs.Workflow.Requests
 {
     public class CreateWorkflowRequestDto : BaseRequestDto
     {
-        public int ProjectId { get; set; }
+        public Guid ProjectId { get; set; }
         public string Name { get; set; } = default!;
         public string? Definition { get; set; } // JSON hoặc XML
     }

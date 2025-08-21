@@ -10,7 +10,7 @@ namespace GenCo.Application.DTOs.Entity.Responses
 {
     public class EntityResponseDto : BaseResponseDto
     {
-        public int ProjectId { get; set; }
+        public Guid ProjectId { get; set; }
         public string Name { get; set; } = default!;
         public string? Description { get; set; }
 

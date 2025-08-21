@@ -30,13 +30,13 @@ namespace GenCo.Application.Features.Projects.Commands.UpdateProject
                 };
             }
             _mapper.Map(request.Request, project);
-            await _repository.UpdateAsync(project);
+            var updated = await _repository.UpdateAsync(project);
             return new BaseUpdateResponseDto
             {
                 Success = true,
                 Message = "Project updated successfully.",
-                UpdatedAt = project.UpdateAt,
-                UpdatedBy = project.UpdateBy,
+                UpdatedAt = updated.UpdateAt,
+                UpdatedBy = updated.UpdateBy,
             };
         }
     }

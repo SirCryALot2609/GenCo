@@ -12,5 +12,6 @@ namespace GenCo.Application.Persistence.Contracts
     {
         Task<IReadOnlyCollection<Workflow>> GetWorkflowsByProjectIdAsync(Guid projectId);
         Task<Workflow?> GetWorkflowWithStepsAsync(Guid workflowId);
+        Task DeleteByProjectIdAsync(Guid projectId);
     }
 }

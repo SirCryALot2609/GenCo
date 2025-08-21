@@ -9,9 +9,9 @@ namespace GenCo.Application.DTOs.Relation.Requests
 {
     public class CreateRelationRequestDto : BaseRequestDto
     {
-        public int ProjectId { get; set; }
-        public int FromEntityId { get; set; }
-        public int ToEntityId { get; set; }
+        public Guid ProjectId { get; set; }
+        public Guid FromEntityId { get; set; }
+        public Guid ToEntityId { get; set; }
         public string RelationType { get; set; } = default!; // OneToMany, ManyToMany...
     }
 }

@@ -9,9 +9,9 @@ namespace GenCo.Application.DTOs.Relation.Responses
 {
     public class RelationResponseDto : BaseResponseDto
     {
-        public int ProjectId { get; set; }
-        public int FromEntityId { get; set; }
-        public int ToEntityId { get; set; }
+        public Guid ProjectId { get; set; }
+        public Guid FromEntityId { get; set; }
+        public Guid ToEntityId { get; set; }
         public string RelationType { get; set; } = default!;
     }
 }

@@ -31,13 +31,13 @@ namespace GenCo.Application.Features.Fields.Commands.UpdateField
                 };
             }
             _mapper.Map(request.Request, field);
-            await _repository.UpdateAsync(field);
+            var updated = await _repository.UpdateAsync(field);
             return new BaseUpdateResponseDto
             {
                 Success = true,
                 Message = "Entity updated successfully.",
-                UpdatedAt = field.UpdateAt,
-                UpdatedBy = field.UpdateBy,
+                UpdatedAt = updated.UpdateAt,
+                UpdatedBy = updated.UpdateBy,
             };
         }
     }

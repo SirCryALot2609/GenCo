@@ -9,7 +9,7 @@ namespace GenCo.Application.DTOs.Field.Responses
 {
     public class FieldResponseDto : BaseResponseDto
     {
-        public int EntityId { get; set; }
+        public Guid EntityId { get; set; }
         public string Name { get; set; } = default!;
         public string DataType { get; set; } = default!;
         public bool IsNullable { get; set; }

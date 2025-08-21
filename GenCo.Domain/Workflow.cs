@@ -12,6 +12,6 @@ namespace GenCo.Domain
         public Guid ProjectId { get; set; }
         public Project Project { get; set; } = default!;
         public string Name { get; set; } = default!;
-        public ICollection<WorkflowStep> Steps { get; set; } = new List<WorkflowStep>();
+        public ICollection<WorkflowStep> Steps { get; set; } = [];
     }
 }

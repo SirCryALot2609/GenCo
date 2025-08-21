@@ -31,13 +31,13 @@ namespace GenCo.Application.Features.Relations.Commands.UpdateRelation
                 };
             }
             _mapper.Map(request.Request, realtion);
-            await _repository.UpdateAsync(realtion);
+            var updated = await _repository.UpdateAsync(realtion);
             return new BaseUpdateResponseDto
             {
                 Success = true,
                 Message = "Relation updated successfully.",
-                UpdatedAt = realtion.UpdateAt,
-                UpdatedBy = realtion.UpdateBy,
+                UpdatedAt = updated.UpdateAt,
+                UpdatedBy = updated.UpdateBy,
             };
         }
     }

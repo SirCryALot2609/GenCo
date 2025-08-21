@@ -30,13 +30,13 @@ namespace GenCo.Application.Features.ServiceConfigs.Commands.UpdateServiceConfig
                 };
             }
             _mapper.Map(request.Request, serviceConfig);
-            await _repository.UpdateAsync(serviceConfig);
+            var updated = await _repository.UpdateAsync(serviceConfig);
             return new BaseUpdateResponseDto
             {
                 Success = true,
                 Message = "Relation updated successfully.",
-                UpdatedAt = serviceConfig.UpdateAt,
-                UpdatedBy = serviceConfig.UpdateBy,
+                UpdatedAt = updated.UpdateAt,
+                UpdatedBy = updated.UpdateBy,
             };
         }
     }

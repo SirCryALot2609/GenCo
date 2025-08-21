@@ -12,5 +12,7 @@ namespace GenCo.Application.Persistence.Contracts
     {
         Task<IReadOnlyCollection<Entity>> GetEntitiesByProjectIdAsync(Guid projectId);
         Task<Entity?> GetEntityWithFieldsAsync(Guid entityId);
+        Task DeleteByProjectIdAsync(Guid projectId);
+        Task<IReadOnlyCollection<Entity>> SearchByNameAsync(Guid projectId, string keyword);
     }
 }

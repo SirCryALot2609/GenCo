@@ -11,5 +11,6 @@ namespace GenCo.Application.Persistence.Contracts
     public interface IFieldRepository : IGenericRepository<Field>
     {
         Task<IReadOnlyCollection<Field>> GetFieldsByEntityIdAsync(Guid entityId);
+        Task DeleteByEntityIdAsync(Guid entityId);
     }
 }
