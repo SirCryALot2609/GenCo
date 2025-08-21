@@ -16,8 +16,9 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Features\ServiceConfigs\Commands\" />
-    <Folder Include="Features\ServiceConfigs\Queries\" />
+    <Folder Include="Features\ServiceConfigs\Commands\UpdateServiceConfig\" />
+    <Folder Include="Features\ServiceConfigs\Queries\GetServiceConfigById\" />
+    <Folder Include="Features\ServiceConfigs\Queries\GetServiceConfigsByProjectId\" />
     <Folder Include="Features\UIConfigs\Commands\" />
     <Folder Include="Features\UIConfigs\Queries\" />
     <Folder Include="Features\Workflows\Commands\" />

@@ -13,6 +13,6 @@ namespace GenCo.Domain
         public Project Project { get; set; } = default!;
         public string Name { get; set; } = default!;
         public string? Label { get; set; }
-        public ICollection<Field> Fields { get; set; } = new List<Field>();
+        public ICollection<Field> Fields { get; set; } = [];
     }
 }

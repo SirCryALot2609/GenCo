@@ -9,6 +9,6 @@ namespace GenCo.Application.DTOs.ServiceConfig.Requests
 {
     public class DeleteServiceConfigRequestDto : BaseRequestDto
     {
-        public int Id { get; set; }
+        public Guid Id { get; set; }
     }
 }

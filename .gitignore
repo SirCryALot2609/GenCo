@@ -1,0 +1,18 @@
+# Visual Studio
+.vs/
+*.vscode/
+*.user
+*.suo
+
+# Build
+bin/
+obj/
+Debug/
+Release/
+
+# Other
+*.log
+*.cache
+*.dll
+*.pdb
+*.tmp
