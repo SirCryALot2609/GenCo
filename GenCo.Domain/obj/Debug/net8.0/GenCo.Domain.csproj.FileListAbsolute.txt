@@ -1,0 +1,11 @@
+C:\Users\SirCryALot\source\repos\GenCo\GenCo.Domain\bin\Debug\net8.0\GenCo.Domain.deps.json
+C:\Users\SirCryALot\source\repos\GenCo\GenCo.Domain\bin\Debug\net8.0\GenCo.Domain.dll
+C:\Users\SirCryALot\source\repos\GenCo\GenCo.Domain\bin\Debug\net8.0\GenCo.Domain.pdb
+C:\Users\SirCryALot\source\repos\GenCo\GenCo.Domain\obj\Debug\net8.0\GenCo.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\SirCryALot\source\repos\GenCo\GenCo.Domain\obj\Debug\net8.0\GenCo.Domain.AssemblyInfoInputs.cache
+C:\Users\SirCryALot\source\repos\GenCo\GenCo.Domain\obj\Debug\net8.0\GenCo.Domain.AssemblyInfo.cs
+C:\Users\SirCryALot\source\repos\GenCo\GenCo.Domain\obj\Debug\net8.0\GenCo.Domain.csproj.CoreCompileInputs.cache
+C:\Users\SirCryALot\source\repos\GenCo\GenCo.Domain\obj\Debug\net8.0\GenCo.Domain.dll
+C:\Users\SirCryALot\source\repos\GenCo\GenCo.Domain\obj\Debug\net8.0\refint\GenCo.Domain.dll
+C:\Users\SirCryALot\source\repos\GenCo\GenCo.Domain\obj\Debug\net8.0\GenCo.Domain.pdb
+C:\Users\SirCryALot\source\repos\GenCo\GenCo.Domain\obj\Debug\net8.0\ref\GenCo.Domain.dll

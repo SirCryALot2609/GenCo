@@ -1,0 +1,15 @@
+C:\Users\SirCryALot\source\repos\GenCo\GenCo.Application\bin\Debug\net8.0\GenCo.Application.deps.json
+C:\Users\SirCryALot\source\repos\GenCo\GenCo.Application\bin\Debug\net8.0\GenCo.Application.dll
+C:\Users\SirCryALot\source\repos\GenCo\GenCo.Application\bin\Debug\net8.0\GenCo.Application.pdb
+C:\Users\SirCryALot\source\repos\GenCo\GenCo.Application\bin\Debug\net8.0\GenCo.Domain.dll
+C:\Users\SirCryALot\source\repos\GenCo\GenCo.Application\bin\Debug\net8.0\GenCo.Domain.pdb
+C:\Users\SirCryALot\source\repos\GenCo\GenCo.Application\obj\Debug\net8.0\GenCo.Application.csproj.AssemblyReference.cache
+C:\Users\SirCryALot\source\repos\GenCo\GenCo.Application\obj\Debug\net8.0\GenCo.Application.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\SirCryALot\source\repos\GenCo\GenCo.Application\obj\Debug\net8.0\GenCo.Application.AssemblyInfoInputs.cache
+C:\Users\SirCryALot\source\repos\GenCo\GenCo.Application\obj\Debug\net8.0\GenCo.Application.AssemblyInfo.cs
+C:\Users\SirCryALot\source\repos\GenCo\GenCo.Application\obj\Debug\net8.0\GenCo.Application.csproj.CoreCompileInputs.cache
+C:\Users\SirCryALot\source\repos\GenCo\GenCo.Application\obj\Debug\net8.0\GenCo.Ap.81D3642F.Up2Date
+C:\Users\SirCryALot\source\repos\GenCo\GenCo.Application\obj\Debug\net8.0\GenCo.Application.dll
+C:\Users\SirCryALot\source\repos\GenCo\GenCo.Application\obj\Debug\net8.0\refint\GenCo.Application.dll
+C:\Users\SirCryALot\source\repos\GenCo\GenCo.Application\obj\Debug\net8.0\GenCo.Application.pdb
+C:\Users\SirCryALot\source\repos\GenCo\GenCo.Application\obj\Debug\net8.0\ref\GenCo.Application.dll
