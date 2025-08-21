@@ -1,6 +1,7 @@
 ﻿using AutoMapper;
 using GenCo.Application.DTOs.Common;
 using GenCo.Application.Persistence.Contracts;
+using GenCo.Domain;
 using MediatR;
 using System;
 using System.Collections.Generic;
@@ -11,33 +12,34 @@ using System.Threading.Tasks;
 namespace GenCo.Application.Features.Relations.Commands.DeleteRelation
 {
     public class DeleteRelationCommandHandler(IRelationRepository repository, IMapper mapper)
-        : IRequestHandler<DeleteRelationCommand, BaseUpdateResponseDto>
+        : IRequestHandler<DeleteRelationCommand, BaseDeleteResponseDto>
     {
         private readonly IRelationRepository _repository = repository;
         private readonly IMapper _mapper = mapper;
 
-        public async Task<BaseUpdateResponseDto> Handle(DeleteRelationCommand request, CancellationToken cancellationToken)
+        public async Task<BaseDeleteResponseDto> Handle(DeleteRelationCommand request, CancellationToken cancellationToken)
         {
             var realation = await _repository.GetByIdAsync(request.Request.Id);
             if (realation == null)
             {
-                return new BaseUpdateResponseDto
+                return new BaseDeleteResponseDto
                 {
                     Success = false,
                     Message = "Relation not found.",
-                    UpdatedAt = DateTime.UtcNow,
-                    UpdatedBy = "system"
+                    DeleteAt = DateTime.UtcNow,
+                    DeleteBy = "system"
                 };
             }
-            var deleted = await _repository.DeleteAsync(realation);
-            return new BaseUpdateResponseDto
+            await _repository.DeleteAsync(realation);
+            var deleted = await _repository.GetByIdAsync(realation.Id);
+            return new BaseDeleteResponseDto
             {
-                Success = deleted,
-                Message = deleted
+                Success = deleted.IsDelete,
+                Message = deleted.IsDelete
                     ? "Project deleted successfully."
                     : "Failed to delete project.",
-                UpdatedAt = realation.CreatedAt,
-                UpdatedBy = realation.UpdateBy,
+                DeleteAt = deleted.DeleteAt,
+                DeleteBy = deleted.DeleteBy,
             };
         }
     }

@@ -9,7 +9,7 @@ namespace GenCo.Application.DTOs.Workflow.Requests
 {
     public class UpdateWorkflowRequestDto : BaseRequestDto
     {
-        public int Id { get; set; }
+        public Guid Id { get; set; }
         public string? Name { get; set; }
         public string? Definition { get; set; }
     }

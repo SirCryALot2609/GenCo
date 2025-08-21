@@ -12,33 +12,34 @@ using System.Threading.Tasks;
 namespace GenCo.Application.Features.Entities.Commands.DeleteEntity
 {
     public class DeleteEntityCommandHandler(IEntityRepository repository, IMapper mapper)
-                : IRequestHandler<DeleteEntityCommand, BaseUpdateResponseDto>
+                : IRequestHandler<DeleteEntityCommand, BaseDeleteResponseDto>
     {
         private readonly IEntityRepository _repository = repository;
         private readonly IMapper _mapper = mapper;
 
-        public async Task<BaseUpdateResponseDto> Handle(DeleteEntityCommand request, CancellationToken cancellationToken)
+        public async Task<BaseDeleteResponseDto> Handle(DeleteEntityCommand request, CancellationToken cancellationToken)
         {
             var entity = await _repository.GetByIdAsync(request.Request.Id);
             if (entity == null)
             {
-                return new BaseUpdateResponseDto
+                return new BaseDeleteResponseDto
                 {
                     Success = false,
                     Message = "Entity not found.",
-                    UpdatedAt = DateTime.UtcNow,
-                    UpdatedBy = "system"
+                    DeleteAt = DateTime.UtcNow,
+                    DeleteBy = "system"
                 };
             }
-            var deleted = await _repository.DeleteAsync(entity);
-            return new BaseUpdateResponseDto
+            await _repository.DeleteAsync(entity);
+            var deleted = await _repository.GetByIdAsync(entity.Id);
+            return new BaseDeleteResponseDto
             {
-                Success = deleted,
-                Message = deleted
+                Success = deleted.IsDelete,
+                Message = deleted.IsDelete
                     ? "Entity deleted successfully."
                     : "Failed to delete entity.",
-                UpdatedAt = entity.UpdateAt,
-                UpdatedBy = entity.UpdateBy,
+                DeleteAt = deleted.DeleteAt,
+                DeleteBy = deleted.DeleteBy,
             };
         }
     }

@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace GenCo.Application.Features.Relations.Commands.DeleteRelation
 {
-    public class DeleteRelationCommand :IRequest<BaseUpdateResponseDto>
+    public class DeleteRelationCommand :IRequest<BaseDeleteResponseDto>
     {
         public DeleteRelationRequestDto Request { get; set; } = default!;
     }

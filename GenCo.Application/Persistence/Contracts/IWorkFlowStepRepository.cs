@@ -8,7 +8,8 @@ using System.Threading.Tasks;
 
 namespace GenCo.Application.Persistence.Contracts
 {
-    internal interface IWorkFlowStepRepository : IGenericRepository<WorkflowStep>
+    public interface IWorkFlowStepRepository : IGenericRepository<WorkflowStep>
     {
+        Task<IReadOnlyCollection<WorkflowStep>> GetByWorkflowIdAsync(Guid workflowId);
     }
 }

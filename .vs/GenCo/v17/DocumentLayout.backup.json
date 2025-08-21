@@ -3,16 +3,16 @@
   "WorkspaceRootPath": "C:\\Users\\SirCryALot\\source\\repos\\GenCo\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{95FBC8D5-50C0-469A-A54D-59C26FC250D6}|GenCo.Application\\GenCo.Application.csproj|c:\\users\\sircryalot\\source\\repos\\genco\\genco.application\\features\\serviceconfigs\\commands\\deleteserviceconfig\\deleteserviceconfigcommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{95FBC8D5-50C0-469A-A54D-59C26FC250D6}|GenCo.Application\\GenCo.Application.csproj|solutionrelative:genco.application\\features\\serviceconfigs\\commands\\deleteserviceconfig\\deleteserviceconfigcommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{95FBC8D5-50C0-469A-A54D-59C26FC250D6}|GenCo.Application\\GenCo.Application.csproj|c:\\users\\sircryalot\\source\\repos\\genco\\genco.application\\dtos\\workflowstep\\responses\\workflowstepresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{95FBC8D5-50C0-469A-A54D-59C26FC250D6}|GenCo.Application\\GenCo.Application.csproj|solutionrelative:genco.application\\dtos\\workflowstep\\responses\\workflowstepresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9DAFC978-AF9F-478B-884D-A0D707485210}|GenCo.Domain\\GenCo.Domain.csproj|c:\\users\\sircryalot\\source\\repos\\genco\\genco.domain\\entity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9DAFC978-AF9F-478B-884D-A0D707485210}|GenCo.Domain\\GenCo.Domain.csproj|solutionrelative:genco.domain\\entity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{95FBC8D5-50C0-469A-A54D-59C26FC250D6}|GenCo.Application\\GenCo.Application.csproj|c:\\users\\sircryalot\\source\\repos\\genco\\genco.application\\dtos\\workflowstep\\responses\\getworkflowstepsbyworkflowidresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{95FBC8D5-50C0-469A-A54D-59C26FC250D6}|GenCo.Application\\GenCo.Application.csproj|solutionrelative:genco.application\\dtos\\workflowstep\\responses\\getworkflowstepsbyworkflowidresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{95FBC8D5-50C0-469A-A54D-59C26FC250D6}|GenCo.Application\\GenCo.Application.csproj|c:\\users\\sircryalot\\source\\repos\\genco\\genco.application\\features\\relations\\commands\\deleterelation\\deleterelationcommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{95FBC8D5-50C0-469A-A54D-59C26FC250D6}|GenCo.Application\\GenCo.Application.csproj|solutionrelative:genco.application\\features\\relations\\commands\\deleterelation\\deleterelationcommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{95FBC8D5-50C0-469A-A54D-59C26FC250D6}|GenCo.Application\\GenCo.Application.csproj|c:\\users\\sircryalot\\source\\repos\\genco\\genco.application\\dtos\\entity\\responses\\entitiesbyprojectidresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{95FBC8D5-50C0-469A-A54D-59C26FC250D6}|GenCo.Application\\GenCo.Application.csproj|solutionrelative:genco.application\\dtos\\entity\\responses\\entitiesbyprojectidresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,45 +22,45 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Entity.cs",
-              "DocumentMoniker": "C:\\Users\\SirCryALot\\source\\repos\\GenCo\\GenCo.Domain\\Entity.cs",
-              "RelativeDocumentMoniker": "GenCo.Domain\\Entity.cs",
-              "ToolTip": "C:\\Users\\SirCryALot\\source\\repos\\GenCo\\GenCo.Domain\\Entity.cs",
-              "RelativeToolTip": "GenCo.Domain\\Entity.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAA8AAAAAAAAAA==",
+              "DocumentIndex": 0,
+              "Title": "WorkflowStepResponseDto.cs",
+              "DocumentMoniker": "C:\\Users\\SirCryALot\\source\\repos\\GenCo\\GenCo.Application\\DTOs\\WorkflowStep\\Responses\\WorkflowStepResponseDto.cs",
+              "RelativeDocumentMoniker": "GenCo.Application\\DTOs\\WorkflowStep\\Responses\\WorkflowStepResponseDto.cs",
+              "ToolTip": "C:\\Users\\SirCryALot\\source\\repos\\GenCo\\GenCo.Application\\DTOs\\WorkflowStep\\Responses\\WorkflowStepResponseDto.cs",
+              "RelativeToolTip": "GenCo.Application\\DTOs\\WorkflowStep\\Responses\\WorkflowStepResponseDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAkAAAARAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-21T01:18:46.037Z",
+              "WhenOpened": "2025-08-21T02:13:12.115Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "DeleteRelationCommandHandler.cs",
-              "DocumentMoniker": "C:\\Users\\SirCryALot\\source\\repos\\GenCo\\GenCo.Application\\Features\\Relations\\Commands\\DeleteRelation\\DeleteRelationCommandHandler.cs",
-              "RelativeDocumentMoniker": "GenCo.Application\\Features\\Relations\\Commands\\DeleteRelation\\DeleteRelationCommandHandler.cs",
-              "ToolTip": "C:\\Users\\SirCryALot\\source\\repos\\GenCo\\GenCo.Application\\Features\\Relations\\Commands\\DeleteRelation\\DeleteRelationCommandHandler.cs",
-              "RelativeToolTip": "GenCo.Application\\Features\\Relations\\Commands\\DeleteRelation\\DeleteRelationCommandHandler.cs",
-              "ViewState": "AgIAAAwAAAAAAAAAAAAAACcAAAAvAAAAAAAAAA==",
+              "Title": "EntitiesByProjectIdResponseDto.cs",
+              "DocumentMoniker": "C:\\Users\\SirCryALot\\source\\repos\\GenCo\\GenCo.Application\\DTOs\\Entity\\Responses\\EntitiesByProjectIdResponseDto.cs",
+              "RelativeDocumentMoniker": "GenCo.Application\\DTOs\\Entity\\Responses\\EntitiesByProjectIdResponseDto.cs",
+              "ToolTip": "C:\\Users\\SirCryALot\\source\\repos\\GenCo\\GenCo.Application\\DTOs\\Entity\\Responses\\EntitiesByProjectIdResponseDto.cs",
+              "RelativeToolTip": "GenCo.Application\\DTOs\\Entity\\Responses\\EntitiesByProjectIdResponseDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAABEAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-21T01:16:34.162Z",
+              "WhenOpened": "2025-08-21T02:13:04.752Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "DeleteServiceConfigCommandHandler.cs",
-              "DocumentMoniker": "C:\\Users\\SirCryALot\\source\\repos\\GenCo\\GenCo.Application\\Features\\ServiceConfigs\\Commands\\DeleteServiceConfig\\DeleteServiceConfigCommandHandler.cs",
-              "RelativeDocumentMoniker": "GenCo.Application\\Features\\ServiceConfigs\\Commands\\DeleteServiceConfig\\DeleteServiceConfigCommandHandler.cs",
-              "ToolTip": "C:\\Users\\SirCryALot\\source\\repos\\GenCo\\GenCo.Application\\Features\\ServiceConfigs\\Commands\\DeleteServiceConfig\\DeleteServiceConfigCommandHandler.cs",
-              "RelativeToolTip": "GenCo.Application\\Features\\ServiceConfigs\\Commands\\DeleteServiceConfig\\DeleteServiceConfigCommandHandler.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAATAAAAAAAAAA==",
+              "DocumentIndex": 1,
+              "Title": "GetWorkflowStepsByWorkflowIdResponseDto.cs",
+              "DocumentMoniker": "C:\\Users\\SirCryALot\\source\\repos\\GenCo\\GenCo.Application\\DTOs\\WorkflowStep\\Responses\\GetWorkflowStepsByWorkflowIdResponseDto.cs",
+              "RelativeDocumentMoniker": "GenCo.Application\\DTOs\\WorkflowStep\\Responses\\GetWorkflowStepsByWorkflowIdResponseDto.cs",
+              "ToolTip": "C:\\Users\\SirCryALot\\source\\repos\\GenCo\\GenCo.Application\\DTOs\\WorkflowStep\\Responses\\GetWorkflowStepsByWorkflowIdResponseDto.cs",
+              "RelativeToolTip": "GenCo.Application\\DTOs\\WorkflowStep\\Responses\\GetWorkflowStepsByWorkflowIdResponseDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAA6AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-21T01:15:09.188Z",
+              "WhenOpened": "2025-08-21T02:12:56.535Z",
               "EditorCaption": ""
             }
           ]

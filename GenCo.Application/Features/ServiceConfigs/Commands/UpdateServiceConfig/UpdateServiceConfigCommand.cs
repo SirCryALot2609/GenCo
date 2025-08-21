@@ -7,10 +7,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace GenCo.Application.Features.ServiceConfigs.Commands.DeleteServiceConfig
+namespace GenCo.Application.Features.ServiceConfigs.Commands.UpdateServiceConfig
 {
-    public class DeleteServiceConfigCommand : IRequest<BaseDeleteResponseDto>
+    public class UpdateServiceConfigCommand : IRequest<BaseUpdateResponseDto>
     {
-        public DeleteServiceConfigRequestDto Request { get; set; } = default!;
+        public UpdateServiceConfigRequestDto Request { get; set; } = default!;
     }
 }

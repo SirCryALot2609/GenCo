@@ -13,6 +13,8 @@ namespace GenCo.Domain.Common
         public string? CreatedBy { get; set; }
         public DateTime? UpdateAt { get; set; }
         public string? UpdateBy { get; set; }
+        public DateTime? DeleteAt { get; set; }
+        public string? DeleteBy { get; set; }
         public bool IsDelete { get; set; } = false;
     }
 }

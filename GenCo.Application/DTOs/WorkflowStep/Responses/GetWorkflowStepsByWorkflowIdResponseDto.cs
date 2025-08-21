@@ -4,13 +4,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace GenCo.Application.DTOs.ServiceConfig.Responses
+namespace GenCo.Application.DTOs.WorkflowStep.Responses
 {
-    public class ServiceConfigsByProjectIdResponseDto
+    public class GetWorkflowStepsByWorkflowIdResponseDto
     {
         public bool Success { get; set; }
         public string Message { get; set; } = string.Empty;
         public DateTime RetrievedAt { get; set; } = DateTime.UtcNow;
-        public List<ServiceConfigResponseDto> ServiceConfig { get; set; } = [];
+        public IReadOnlyCollection<WorkflowStepResponseDto> Steps { get; set; } = [];
     }
 }

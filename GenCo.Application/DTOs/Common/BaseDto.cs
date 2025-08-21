@@ -41,4 +41,9 @@ namespace GenCo.Application.DTOs.Common
         public DateTime? UpdatedAt { get; set; }
         public string? UpdatedBy { get; set; }
     }
+    public class BaseDeleteResponseDto : BaseActionResponseDto
+    {
+        public DateTime? DeleteAt { get; set; }
+        public string? DeleteBy { get; set; }
+    }
 }

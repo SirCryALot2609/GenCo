@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace GenCo.Application.Features.Projects.Commands.DeleteProject
 {
-    public class DeleteProjectCommand : IRequest<BaseUpdateResponseDto>
+    public class DeleteProjectCommand : IRequest<BaseDeleteResponseDto>
     {
         public DeleteProjectRequestDto Request { get; set; } = default!;
     }

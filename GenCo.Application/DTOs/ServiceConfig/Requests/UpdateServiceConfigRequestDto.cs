@@ -9,7 +9,7 @@ namespace GenCo.Application.DTOs.ServiceConfig.Requests
 {
     public class UpdateServiceConfigRequestDto : BaseRequestDto
     {
-        public int Id { get; set; }
+        public Guid Id { get; set; }
         public string? Name { get; set; }
         public string? ConfigJson { get; set; }
     }

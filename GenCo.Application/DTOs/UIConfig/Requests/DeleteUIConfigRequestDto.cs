@@ -9,6 +9,6 @@ namespace GenCo.Application.DTOs.UIConfig.Requests
 {
     public class DeleteUIConfigRequestDto : BaseRequestDto
     {
-        public int Id { get; set; }
+        public Guid Id { get; set; }
     }
 }

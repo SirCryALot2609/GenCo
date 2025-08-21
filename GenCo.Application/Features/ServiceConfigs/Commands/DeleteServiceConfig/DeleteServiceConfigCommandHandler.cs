@@ -12,33 +12,34 @@ using System.Threading.Tasks;
 namespace GenCo.Application.Features.ServiceConfigs.Commands.DeleteServiceConfig
 {
     public class DeleteServiceConfigCommandHandler(IServiceConfigRepository repository, IMapper mapper)
-        : IRequestHandler<DeleteServiceConfigCommand, BaseUpdateResponseDto>
+        : IRequestHandler<DeleteServiceConfigCommand, BaseDeleteResponseDto>
     {
         private readonly IServiceConfigRepository _repository = repository;
         private readonly IMapper _mapper = mapper;
 
-        public async Task<BaseUpdateResponseDto> Handle(DeleteServiceConfigCommand request, CancellationToken cancellationToken)
+        public async Task<BaseDeleteResponseDto> Handle(DeleteServiceConfigCommand request, CancellationToken cancellationToken)
         {
             var serviceConfig = await _repository.GetByIdAsync(request.Request.Id);
             if (serviceConfig == null)
             {
-                return new BaseUpdateResponseDto
+                return new BaseDeleteResponseDto
                 {
                     Success = false,
                     Message = "Service config not found.",
-                    UpdatedAt = DateTime.UtcNow,
-                    UpdatedBy = "system",
+                    DeleteAt = DateTime.UtcNow,
+                    DeleteBy = "system",
                 };
             }
-            var deleted = await _repository.DeleteAsync(serviceConfig);
-            return new BaseUpdateResponseDto
+            await _repository.DeleteAsync(serviceConfig);
+            var deleted = await _repository.GetByIdAsync(serviceConfig.Id);
+            return new BaseDeleteResponseDto
             {
-                Success = deleted,
-                Message = deleted
+                Success = deleted.IsDelete,
+                Message = deleted.IsDelete
                     ? "Service config deleted successfully."
                     : "Failed to delete service config.",
-                UpdatedAt = serviceConfig.CreatedAt,
-                UpdatedBy = serviceConfig.UpdateBy,
+                DeleteAt = deleted.DeleteAt,
+                DeleteBy = deleted.DeleteBy,
             };
         }
     }

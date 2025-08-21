@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace GenCo.Application.Features.Fields.Commands.DeleteField
 {
-    public class DeleteFieldCommand : IRequest<BaseUpdateResponseDto>
+    public class DeleteFieldCommand : IRequest<BaseDeleteResponseDto>
     {
         public DeleteFieldRequestDto Request { get; set; } = default!;
     }

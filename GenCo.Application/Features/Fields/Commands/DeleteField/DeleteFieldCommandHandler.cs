@@ -12,33 +12,34 @@ using System.Threading.Tasks;
 namespace GenCo.Application.Features.Fields.Commands.DeleteField
 {
     public class DeleteFieldCommandHandler(IFieldRepository repository, IMapper mapper)
-        : IRequestHandler<DeleteFieldCommand, BaseUpdateResponseDto>
+        : IRequestHandler<DeleteFieldCommand, BaseDeleteResponseDto>
     {
         private readonly IFieldRepository _repository = repository;
         private readonly IMapper _mapper = mapper;
 
-        public async Task<BaseUpdateResponseDto> Handle(DeleteFieldCommand request, CancellationToken cancellationToken)
+        public async Task<BaseDeleteResponseDto> Handle(DeleteFieldCommand request, CancellationToken cancellationToken)
         {
             var field = await _repository.GetByIdAsync(request.Request.Id);
             if (field == null)
             {
-                return new BaseUpdateResponseDto
+                return new BaseDeleteResponseDto
                 {
                     Success = false,
                     Message = "Field not found.",
-                    UpdatedAt = DateTime.UtcNow,
-                    UpdatedBy = "system"
+                    DeleteAt = DateTime.UtcNow,
+                    DeleteBy = "system"
                 };
             }
-            var deleted = await _repository.DeleteAsync(field);
-            return new BaseUpdateResponseDto
+            await _repository.DeleteAsync(field);
+            var deleted = await _repository.GetByIdAsync(field.Id);
+            return new BaseDeleteResponseDto
             {
-                Success = deleted,
-                Message = deleted
+                Success = deleted.IsDelete,
+                Message = deleted.IsDelete
                     ? "Field deleted successfully."
                     : "Failed to delete field.",
-                UpdatedAt = field.UpdateAt,
-                UpdatedBy = field.UpdateBy,
+                DeleteAt = deleted.DeleteAt,
+                DeleteBy = deleted.DeleteBy,
             };
         }
     }

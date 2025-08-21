@@ -3,20 +3,36 @@
   "WorkspaceRootPath": "C:\\Users\\SirCryALot\\source\\repos\\GenCo\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{8EC462FD-D22E-90A8-E5CE-7E832BA40C5D}|Solution Items{8EC462FD-D22E-90A8-E5CE-7E832BA40C5D}|C:\\Users\\SirCryALot\\source\\repos\\GenCo\\.gitignore||{3B902123-F8A7-4915-9F01-361F908088D0}",
-      "RelativeMoniker": "D:0:0:{8EC462FD-D22E-90A8-E5CE-7E832BA40C5D}|Solution Items{8EC462FD-D22E-90A8-E5CE-7E832BA40C5D}|solutionrelative:.gitignore||{3B902123-F8A7-4915-9F01-361F908088D0}"
+      "AbsoluteMoniker": "D:0:0:{95FBC8D5-50C0-469A-A54D-59C26FC250D6}|GenCo.Application\\GenCo.Application.csproj|c:\\users\\sircryalot\\source\\repos\\genco\\genco.application\\features\\uiconfigs\\commands\\deleteuiconfig\\deleteuiconfigcommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{95FBC8D5-50C0-469A-A54D-59C26FC250D6}|GenCo.Application\\GenCo.Application.csproj|solutionrelative:genco.application\\features\\uiconfigs\\commands\\deleteuiconfig\\deleteuiconfigcommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{95FBC8D5-50C0-469A-A54D-59C26FC250D6}|GenCo.Application\\GenCo.Application.csproj|c:\\users\\sircryalot\\source\\repos\\genco\\genco.application\\features\\serviceconfigs\\commands\\deleteserviceconfig\\deleteserviceconfigcommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{95FBC8D5-50C0-469A-A54D-59C26FC250D6}|GenCo.Application\\GenCo.Application.csproj|solutionrelative:genco.application\\features\\serviceconfigs\\commands\\deleteserviceconfig\\deleteserviceconfigcommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{95FBC8D5-50C0-469A-A54D-59C26FC250D6}|GenCo.Application\\GenCo.Application.csproj|c:\\users\\sircryalot\\source\\repos\\genco\\genco.application\\features\\uiconfigs\\commands\\deleteuiconfig\\deleteuiconfigcommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{95FBC8D5-50C0-469A-A54D-59C26FC250D6}|GenCo.Application\\GenCo.Application.csproj|solutionrelative:genco.application\\features\\uiconfigs\\commands\\deleteuiconfig\\deleteuiconfigcommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9DAFC978-AF9F-478B-884D-A0D707485210}|GenCo.Domain\\GenCo.Domain.csproj|c:\\users\\sircryalot\\source\\repos\\genco\\genco.domain\\entity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9DAFC978-AF9F-478B-884D-A0D707485210}|GenCo.Domain\\GenCo.Domain.csproj|solutionrelative:genco.domain\\entity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{95FBC8D5-50C0-469A-A54D-59C26FC250D6}|GenCo.Application\\GenCo.Application.csproj|c:\\users\\sircryalot\\source\\repos\\genco\\genco.application\\features\\uiconfigs\\commands\\createuiconfig\\createuiconfigcommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{95FBC8D5-50C0-469A-A54D-59C26FC250D6}|GenCo.Application\\GenCo.Application.csproj|solutionrelative:genco.application\\features\\uiconfigs\\commands\\createuiconfig\\createuiconfigcommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{95FBC8D5-50C0-469A-A54D-59C26FC250D6}|GenCo.Application\\GenCo.Application.csproj|c:\\users\\sircryalot\\source\\repos\\genco\\genco.application\\features\\relations\\commands\\deleterelation\\deleterelationcommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{95FBC8D5-50C0-469A-A54D-59C26FC250D6}|GenCo.Application\\GenCo.Application.csproj|solutionrelative:genco.application\\features\\relations\\commands\\deleterelation\\deleterelationcommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{95FBC8D5-50C0-469A-A54D-59C26FC250D6}|GenCo.Application\\GenCo.Application.csproj|c:\\users\\sircryalot\\source\\repos\\genco\\genco.application\\features\\serviceconfigs\\commands\\createserviceconfig\\createserviceconfigcommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{95FBC8D5-50C0-469A-A54D-59C26FC250D6}|GenCo.Application\\GenCo.Application.csproj|solutionrelative:genco.application\\features\\serviceconfigs\\commands\\createserviceconfig\\createserviceconfigcommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{95FBC8D5-50C0-469A-A54D-59C26FC250D6}|GenCo.Application\\GenCo.Application.csproj|c:\\users\\sircryalot\\source\\repos\\genco\\genco.application\\features\\uiconfigs\\commands\\createuiconfig\\createuiconfigcommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{95FBC8D5-50C0-469A-A54D-59C26FC250D6}|GenCo.Application\\GenCo.Application.csproj|solutionrelative:genco.application\\features\\uiconfigs\\commands\\createuiconfig\\createuiconfigcommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{95FBC8D5-50C0-469A-A54D-59C26FC250D6}|GenCo.Application\\GenCo.Application.csproj|c:\\users\\sircryalot\\source\\repos\\genco\\genco.application\\dtos\\workflowstep\\responses\\workflowstepresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{95FBC8D5-50C0-469A-A54D-59C26FC250D6}|GenCo.Application\\GenCo.Application.csproj|solutionrelative:genco.application\\dtos\\workflowstep\\responses\\workflowstepresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{95FBC8D5-50C0-469A-A54D-59C26FC250D6}|GenCo.Application\\GenCo.Application.csproj|c:\\users\\sircryalot\\source\\repos\\genco\\genco.application\\dtos\\workflowstep\\responses\\getworkflowstepsbyworkflowidresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{95FBC8D5-50C0-469A-A54D-59C26FC250D6}|GenCo.Application\\GenCo.Application.csproj|solutionrelative:genco.application\\dtos\\workflowstep\\responses\\getworkflowstepsbyworkflowidresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{95FBC8D5-50C0-469A-A54D-59C26FC250D6}|GenCo.Application\\GenCo.Application.csproj|c:\\users\\sircryalot\\source\\repos\\genco\\genco.application\\dtos\\entity\\responses\\entitiesbyprojectidresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{95FBC8D5-50C0-469A-A54D-59C26FC250D6}|GenCo.Application\\GenCo.Application.csproj|solutionrelative:genco.application\\dtos\\entity\\responses\\entitiesbyprojectidresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,59 +42,109 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": ".gitignore",
-              "DocumentMoniker": "C:\\Users\\SirCryALot\\source\\repos\\GenCo\\.gitignore",
-              "RelativeDocumentMoniker": ".gitignore",
-              "ToolTip": "C:\\Users\\SirCryALot\\source\\repos\\GenCo\\.gitignore",
-              "RelativeToolTip": ".gitignore",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2025-08-21T01:32:21.632Z",
+              "DocumentIndex": 1,
+              "Title": "DeleteUIConfigCommandHandler.cs",
+              "DocumentMoniker": "C:\\Users\\SirCryALot\\source\\repos\\GenCo\\GenCo.Application\\Features\\UIConfigs\\Commands\\DeleteUIConfig\\DeleteUIConfigCommandHandler.cs",
+              "RelativeDocumentMoniker": "GenCo.Application\\Features\\UIConfigs\\Commands\\DeleteUIConfig\\DeleteUIConfigCommandHandler.cs",
+              "ToolTip": "C:\\Users\\SirCryALot\\source\\repos\\GenCo\\GenCo.Application\\Features\\UIConfigs\\Commands\\DeleteUIConfig\\DeleteUIConfigCommandHandler.cs",
+              "RelativeToolTip": "GenCo.Application\\Features\\UIConfigs\\Commands\\DeleteUIConfig\\DeleteUIConfigCommandHandler.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-21T07:23:49.223Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Entity.cs",
-              "DocumentMoniker": "C:\\Users\\SirCryALot\\source\\repos\\GenCo\\GenCo.Domain\\Entity.cs",
-              "RelativeDocumentMoniker": "GenCo.Domain\\Entity.cs",
-              "ToolTip": "C:\\Users\\SirCryALot\\source\\repos\\GenCo\\GenCo.Domain\\Entity.cs",
-              "RelativeToolTip": "GenCo.Domain\\Entity.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAA8AAAAAAAAAA==",
+              "DocumentIndex": 0,
+              "Title": "DeleteUIConfigCommand.cs",
+              "DocumentMoniker": "C:\\Users\\SirCryALot\\source\\repos\\GenCo\\GenCo.Application\\Features\\UIConfigs\\Commands\\DeleteUIConfig\\DeleteUIConfigCommand.cs",
+              "RelativeDocumentMoniker": "GenCo.Application\\Features\\UIConfigs\\Commands\\DeleteUIConfig\\DeleteUIConfigCommand.cs",
+              "ToolTip": "C:\\Users\\SirCryALot\\source\\repos\\GenCo\\GenCo.Application\\Features\\UIConfigs\\Commands\\DeleteUIConfig\\DeleteUIConfigCommand.cs",
+              "RelativeToolTip": "GenCo.Application\\Features\\UIConfigs\\Commands\\DeleteUIConfig\\DeleteUIConfigCommand.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-21T01:18:46.037Z",
+              "WhenOpened": "2025-08-21T07:23:41.57Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "DeleteRelationCommandHandler.cs",
-              "DocumentMoniker": "C:\\Users\\SirCryALot\\source\\repos\\GenCo\\GenCo.Application\\Features\\Relations\\Commands\\DeleteRelation\\DeleteRelationCommandHandler.cs",
-              "RelativeDocumentMoniker": "GenCo.Application\\Features\\Relations\\Commands\\DeleteRelation\\DeleteRelationCommandHandler.cs",
-              "ToolTip": "C:\\Users\\SirCryALot\\source\\repos\\GenCo\\GenCo.Application\\Features\\Relations\\Commands\\DeleteRelation\\DeleteRelationCommandHandler.cs",
-              "RelativeToolTip": "GenCo.Application\\Features\\Relations\\Commands\\DeleteRelation\\DeleteRelationCommandHandler.cs",
-              "ViewState": "AgIAAAwAAAAAAAAAAAAAACcAAAAvAAAAAAAAAA==",
+              "Title": "CreateServiceConfigCommandHandler.cs",
+              "DocumentMoniker": "C:\\Users\\SirCryALot\\source\\repos\\GenCo\\GenCo.Application\\Features\\ServiceConfigs\\Commands\\CreateServiceConfig\\CreateServiceConfigCommandHandler.cs",
+              "RelativeDocumentMoniker": "GenCo.Application\\Features\\ServiceConfigs\\Commands\\CreateServiceConfig\\CreateServiceConfigCommandHandler.cs",
+              "ToolTip": "C:\\Users\\SirCryALot\\source\\repos\\GenCo\\GenCo.Application\\Features\\ServiceConfigs\\Commands\\CreateServiceConfig\\CreateServiceConfigCommandHandler.cs",
+              "RelativeToolTip": "GenCo.Application\\Features\\ServiceConfigs\\Commands\\CreateServiceConfig\\CreateServiceConfigCommandHandler.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-21T01:16:34.162Z",
+              "WhenOpened": "2025-08-21T07:21:51.198Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "DeleteServiceConfigCommandHandler.cs",
-              "DocumentMoniker": "C:\\Users\\SirCryALot\\source\\repos\\GenCo\\GenCo.Application\\Features\\ServiceConfigs\\Commands\\DeleteServiceConfig\\DeleteServiceConfigCommandHandler.cs",
-              "RelativeDocumentMoniker": "GenCo.Application\\Features\\ServiceConfigs\\Commands\\DeleteServiceConfig\\DeleteServiceConfigCommandHandler.cs",
-              "ToolTip": "C:\\Users\\SirCryALot\\source\\repos\\GenCo\\GenCo.Application\\Features\\ServiceConfigs\\Commands\\DeleteServiceConfig\\DeleteServiceConfigCommandHandler.cs",
-              "RelativeToolTip": "GenCo.Application\\Features\\ServiceConfigs\\Commands\\DeleteServiceConfig\\DeleteServiceConfigCommandHandler.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAdAAAAAAAAAA==",
+              "DocumentIndex": 2,
+              "Title": "CreateUIConfigCommandHandler.cs",
+              "DocumentMoniker": "C:\\Users\\SirCryALot\\source\\repos\\GenCo\\GenCo.Application\\Features\\UIConfigs\\Commands\\CreateUIConfig\\CreateUIConfigCommandHandler.cs",
+              "RelativeDocumentMoniker": "GenCo.Application\\Features\\UIConfigs\\Commands\\CreateUIConfig\\CreateUIConfigCommandHandler.cs",
+              "ToolTip": "C:\\Users\\SirCryALot\\source\\repos\\GenCo\\GenCo.Application\\Features\\UIConfigs\\Commands\\CreateUIConfig\\CreateUIConfigCommandHandler.cs",
+              "RelativeToolTip": "GenCo.Application\\Features\\UIConfigs\\Commands\\CreateUIConfig\\CreateUIConfigCommandHandler.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACEAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-21T01:15:09.188Z",
+              "WhenOpened": "2025-08-21T07:17:24.439Z",
               "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "CreateUIConfigCommand.cs",
+              "DocumentMoniker": "C:\\Users\\SirCryALot\\source\\repos\\GenCo\\GenCo.Application\\Features\\UIConfigs\\Commands\\CreateUIConfig\\CreateUIConfigCommand.cs",
+              "RelativeDocumentMoniker": "GenCo.Application\\Features\\UIConfigs\\Commands\\CreateUIConfig\\CreateUIConfigCommand.cs",
+              "ToolTip": "C:\\Users\\SirCryALot\\source\\repos\\GenCo\\GenCo.Application\\Features\\UIConfigs\\Commands\\CreateUIConfig\\CreateUIConfigCommand.cs",
+              "RelativeToolTip": "GenCo.Application\\Features\\UIConfigs\\Commands\\CreateUIConfig\\CreateUIConfigCommand.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAABJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-21T07:17:17.826Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "WorkflowStepResponseDto.cs",
+              "DocumentMoniker": "C:\\Users\\SirCryALot\\source\\repos\\GenCo\\GenCo.Application\\DTOs\\WorkflowStep\\Responses\\WorkflowStepResponseDto.cs",
+              "RelativeDocumentMoniker": "GenCo.Application\\DTOs\\WorkflowStep\\Responses\\WorkflowStepResponseDto.cs",
+              "ToolTip": "C:\\Users\\SirCryALot\\source\\repos\\GenCo\\GenCo.Application\\DTOs\\WorkflowStep\\Responses\\WorkflowStepResponseDto.cs",
+              "RelativeToolTip": "GenCo.Application\\DTOs\\WorkflowStep\\Responses\\WorkflowStepResponseDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwBEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-21T02:13:12.115Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "EntitiesByProjectIdResponseDto.cs",
+              "DocumentMoniker": "C:\\Users\\SirCryALot\\source\\repos\\GenCo\\GenCo.Application\\DTOs\\Entity\\Responses\\EntitiesByProjectIdResponseDto.cs",
+              "RelativeDocumentMoniker": "GenCo.Application\\DTOs\\Entity\\Responses\\EntitiesByProjectIdResponseDto.cs",
+              "ToolTip": "C:\\Users\\SirCryALot\\source\\repos\\GenCo\\GenCo.Application\\DTOs\\Entity\\Responses\\EntitiesByProjectIdResponseDto.cs",
+              "RelativeToolTip": "GenCo.Application\\DTOs\\Entity\\Responses\\EntitiesByProjectIdResponseDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAABEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-21T02:13:04.752Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "GetWorkflowStepsByWorkflowIdResponseDto.cs",
+              "DocumentMoniker": "C:\\Users\\SirCryALot\\source\\repos\\GenCo\\GenCo.Application\\DTOs\\WorkflowStep\\Responses\\GetWorkflowStepsByWorkflowIdResponseDto.cs",
+              "RelativeDocumentMoniker": "GenCo.Application\\DTOs\\WorkflowStep\\Responses\\GetWorkflowStepsByWorkflowIdResponseDto.cs",
+              "ToolTip": "C:\\Users\\SirCryALot\\source\\repos\\GenCo\\GenCo.Application\\DTOs\\WorkflowStep\\Responses\\GetWorkflowStepsByWorkflowIdResponseDto.cs",
+              "RelativeToolTip": "GenCo.Application\\DTOs\\WorkflowStep\\Responses\\GetWorkflowStepsByWorkflowIdResponseDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAA6AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-21T02:12:56.535Z"
             }
           ]
         }

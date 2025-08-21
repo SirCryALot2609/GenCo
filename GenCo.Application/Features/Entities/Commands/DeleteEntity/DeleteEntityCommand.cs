@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace GenCo.Application.Features.Entities.Commands.DeleteEntity
 {
-    public class DeleteEntityCommand : IRequest<BaseUpdateResponseDto>
+    public class DeleteEntityCommand : IRequest<BaseDeleteResponseDto>
     {
         public DeleteEntityRequestDto Request { get; set; } = default!;
     }

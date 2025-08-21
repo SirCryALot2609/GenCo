@@ -12,33 +12,34 @@ using System.Threading.Tasks;
 namespace GenCo.Application.Features.Projects.Commands.DeleteProject
 {
     public class DeleteProjectCommandHandler(IProjectRepository repository, IMapper mapper)
-                : IRequestHandler<DeleteProjectCommand, BaseUpdateResponseDto>
+                : IRequestHandler<DeleteProjectCommand, BaseDeleteResponseDto>
     {
         private readonly IProjectRepository _repository = repository;
         private readonly IMapper _mapper = mapper;
 
-        public async Task<BaseUpdateResponseDto> Handle(DeleteProjectCommand request, CancellationToken cancellationToken)
+        public async Task<BaseDeleteResponseDto> Handle(DeleteProjectCommand request, CancellationToken cancellationToken)
         {
             var project = await _repository.GetByIdAsync(request.Request.Id);
             if (project == null)
             {
-                return new BaseUpdateResponseDto
+                return new BaseDeleteResponseDto
                 {
                     Success = false,
                     Message = "Project not found.",
-                    UpdatedAt = DateTime.UtcNow,
-                    UpdatedBy = "system"
+                    DeleteAt = DateTime.UtcNow,
+                    DeleteBy = "system"
                 };
             }
-            var deleted = await _repository.DeleteAsync(project);
-            return new BaseUpdateResponseDto
+            await _repository.DeleteAsync(project);
+            var deleted = await _repository.GetByIdAsync(project.Id);
+            return new BaseDeleteResponseDto
             {
-                Success = deleted,
-                Message = deleted
+                Success = deleted.IsDelete,
+                Message = deleted.IsDelete
                     ? "Project deleted successfully."
                     : "Failed to delete project.",
-                UpdatedAt = project.CreatedAt,
-                UpdatedBy = project.UpdateBy,
+                DeleteAt = deleted.DeleteAt,
+                DeleteBy = deleted.DeleteBy,
             };
         }
     }
