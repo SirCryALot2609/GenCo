@@ -5,10 +5,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace GenCo.Application.DTOs.Entity.Responses
+namespace GenCo.Application.DTOs.Field.Responses
 {
-    public class EntitySummaryResponseDto : BaseResponseDto
+    public class DeleteFieldResponseDto : BaseResponseDto
     {
-        public string Name { get; set; } = default!;
+        public bool Deleted { get; set; }
     }
 }

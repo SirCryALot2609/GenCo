@@ -10,7 +10,5 @@ namespace GenCo.Application.Persistence.Contracts
 {
     public  interface IRelationRepository : IGenericRepository<Relation>
     {
-        Task<IReadOnlyCollection<Relation>> GetRelationsByProjectIdAsync(Guid projectId);
-        Task DeleteByProjectIdAsync(Guid projectId);
     }
 }

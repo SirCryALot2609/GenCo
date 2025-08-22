@@ -5,10 +5,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace GenCo.Application.DTOs.Project.Responses
+namespace GenCo.Application.DTOs.Entity.Responses
 {
-    public class ProjectSummaryResponseDto : BaseResponseDto
+    public class UpdateEntityResponseDto : BaseResponseDto
     {
+        public Guid ProjectId { get; set; }
         public string Name { get; set; } = default!;
     }
 }

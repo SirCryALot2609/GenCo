@@ -5,11 +5,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace GenCo.Application.DTOs.Field.Responses
+namespace GenCo.Application.DTOs.Project.Responses
 {
-    public class FieldSummaryResponseDto : BaseResponseDto
+    public class UpdateProjectResponseDto : BaseResponseDto
     {
         public string Name { get; set; } = default!;
-        public string DataType { get; set; } = default!;
+        public string? Description { get; set; }
     }
 }

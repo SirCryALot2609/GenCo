@@ -10,7 +10,5 @@ namespace GenCo.Application.Persistence.Contracts
 {
     public interface IWorkFlowStepRepository : IGenericRepository<WorkflowStep>
     {
-        Task<IReadOnlyCollection<WorkflowStep>> GetByWorkflowIdAsync(Guid workflowId);
-        Task DeleteByWorkflowIdAsync(Guid workflowId);
     }
 }

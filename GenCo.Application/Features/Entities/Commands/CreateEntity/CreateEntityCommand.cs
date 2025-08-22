@@ -10,8 +10,6 @@ using System.Threading.Tasks;
 
 namespace GenCo.Application.Features.Entities.Commands.CreateEntity
 {
-    public class CreateEntityCommand : IRequest<BaseCreateResponseDto>
-    {
-        public CreateEntityRequestDto Request { get; set; } = default!;
-    }
+    public record CreateEntityCommand(CreateEntityRequestDto Request)
+        : IRequest<CreateEntityResponseDto>;
 }

@@ -10,7 +10,5 @@ namespace GenCo.Application.Persistence.Contracts
 {
     public interface IFieldValidatorRepository : IGenericRepository<FieldValidator>
     {
-        Task<IReadOnlyCollection<FieldValidator>> GetByFieldIdAsync(Guid fieldId);
-        Task DeleteByFieldIdAsync(Guid fieldId);
     }
 }

@@ -1,5 +1,6 @@
 ﻿using GenCo.Application.DTOs.Common;
 using GenCo.Application.DTOs.Entity.Requests;
+using GenCo.Application.DTOs.Entity.Responses;
 using MediatR;
 using System;
 using System.Collections.Generic;
@@ -9,8 +10,6 @@ using System.Threading.Tasks;
 
 namespace GenCo.Application.Features.Entities.Commands.DeleteEntity
 {
-    public class DeleteEntityCommand : IRequest<BaseDeleteResponseDto>
-    {
-        public DeleteEntityRequestDto Request { get; set; } = default!;
-    }
+    public record DeleteEntityCommand(DeleteEntityRequestDto Request)
+        : IRequest<DeleteEntityResponseDto>;
 }

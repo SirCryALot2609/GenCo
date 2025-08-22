@@ -10,9 +10,12 @@ namespace GenCo.Application.DTOs.Field.Requests
     public class UpdateFieldRequestDto : BaseRequestDto
     {
         public Guid Id { get; set; }
+        public Guid? EntityId { get; set; }
         public string? Name { get; set; }
-        public string? DataType { get; set; }
-        public bool? IsNullable { get; set; }
+        public string? Type { get; set; }
+        public bool? IsRequired { get; set; }
         public bool? IsPrimaryKey { get; set; }
+        public string? DefaultValue { get; set; }
+        public List<Guid>? ValidatorIds { get; set; }
     }
 }

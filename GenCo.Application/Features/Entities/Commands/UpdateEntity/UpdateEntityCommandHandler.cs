@@ -1,5 +1,6 @@
 ﻿using AutoMapper;
 using GenCo.Application.DTOs.Common;
+using GenCo.Application.DTOs.Entity.Responses;
 using GenCo.Application.Persistence.Contracts;
 using MediatR;
 using System;
@@ -11,32 +12,17 @@ using System.Threading.Tasks;
 namespace GenCo.Application.Features.Entities.Commands.UpdateEntity
 {
     public class UpdateEntityCommandHandler(IProjectRepository repository, IMapper mapper)
-        : IRequestHandler<UpdateEntityCommand, BaseUpdateResponseDto>
+        : IRequestHandler<UpdateEntityCommand, UpdateEntityResponseDto>
     {
         private readonly IProjectRepository _repository = repository;
         private readonly IMapper _mapper = mapper;
-        public async Task<BaseUpdateResponseDto> Handle(UpdateEntityCommand request, CancellationToken cancellationToken)
+        public async Task<UpdateEntityResponseDto> Handle(UpdateEntityCommand request, CancellationToken cancellationToken)
         {
-            var entity = await _repository.GetByIdAsync(request.Request.Id);
-            if (entity == null)
-            {
-                return new BaseUpdateResponseDto
-                {
-                    Success = false,
-                    Message = "Entity not found.",
-                    UpdatedAt = DateTime.UtcNow,
-                    UpdatedBy = "system"
-                };
-            }
+            var entity = await _repository.GetByIdAsync(request.Request.Id, cancellationToken: cancellationToken)
+                ?? throw new KeyNotFoundException("Entity not found");
             _mapper.Map(request.Request, entity);
-            var updated = await _repository.UpdateAsync(entity);
-            return new BaseUpdateResponseDto
-            {
-                Success = true,
-                Message = "Entity updated successfully.",
-                UpdatedAt = updated.UpdateAt,
-                UpdatedBy = updated.UpdateBy,
-            };
+            await _repository.UpdateAsync(entity, cancellationToken);
+            return _mapper.Map<UpdateEntityResponseDto>(entity);
         }
     }
 }

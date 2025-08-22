@@ -16,12 +16,14 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Folder Include="Features\Relations\Queries\" />
     <Folder Include="Features\WorkflowStep\Commands\" />
     <Folder Include="Features\WorkflowStep\Queries\" />
     <Folder Include="Features\Workflows\Commands\CreateWorkflow\" />
     <Folder Include="Features\Workflows\Commands\DeleteWorkflow\" />
     <Folder Include="Features\Workflows\Commands\UpdateWorkflow\" />
     <Folder Include="Features\Workflows\Queries\GetWorkflowById\" />
+    <Folder Include="Specifications\Entities\" />
   </ItemGroup>
 
 </Project>

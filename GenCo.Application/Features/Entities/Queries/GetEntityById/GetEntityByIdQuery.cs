@@ -8,8 +8,6 @@ using System.Threading.Tasks;
 
 namespace GenCo.Application.Features.Entities.Queries.GetEntityById
 {
-    public class GetEntityByIdQuery(Guid Id) : IRequest<EntityResponseDto>
-    {
-        public Guid Id { get; set; } = Id;
-    }
+    public record GetEntityByIdQuery(Guid Id)
+        : IRequest<EntityDetailsResponseDto>;
 }

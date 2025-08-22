@@ -10,9 +10,5 @@ namespace GenCo.Application.Persistence.Contracts
 {
     public interface IEntityRepository : IGenericRepository<Entity>
     {
-        Task<IReadOnlyCollection<Entity>> GetEntitiesByProjectIdAsync(Guid projectId);
-        Task<Entity?> GetEntityWithFieldsAsync(Guid entityId);
-        Task DeleteByProjectIdAsync(Guid projectId);
-        Task<IReadOnlyCollection<Entity>> SearchByNameAsync(Guid projectId, string keyword);
     }
 }

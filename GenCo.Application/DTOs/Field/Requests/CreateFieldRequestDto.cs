@@ -11,8 +11,10 @@ namespace GenCo.Application.DTOs.Field.Requests
     {
         public Guid EntityId { get; set; }
         public string Name { get; set; } = default!;
-        public string DataType { get; set; } = default!;
-        public bool IsNullable { get; set; }
+        public string Type { get; set; } = default!;
+        public bool IsRequired { get; set; }
         public bool IsPrimaryKey { get; set; }
+        public string? DefaultValue { get; set; }
+        public List<Guid>? ValidatorIds { get; set; }
     }
 }

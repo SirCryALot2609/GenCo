@@ -10,7 +10,5 @@ namespace GenCo.Application.Persistence.Contracts
 {
     public interface IServiceConfigRepository : IGenericRepository<ServiceConfig>
     {
-        Task<IReadOnlyCollection<ServiceConfig>> GetServiceConfigsByProjectIdAsync(Guid projectId);
-        Task DeleteByProjectIdAsync(Guid projectId);
     }
 }

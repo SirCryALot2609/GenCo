@@ -10,7 +10,5 @@ namespace GenCo.Application.Persistence.Contracts
 {
     public interface IUIConfigRepository : IGenericRepository<UIConfig>
     {
-        Task<IReadOnlyCollection<UIConfig>> GetUIConfigsByProjectIdAsync(Guid projectId);
-        Task DeleteByProjectIdAsync(Guid projectId);
     }
 }
