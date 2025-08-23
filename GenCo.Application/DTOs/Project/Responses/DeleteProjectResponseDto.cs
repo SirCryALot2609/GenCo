@@ -9,6 +9,6 @@ namespace GenCo.Application.DTOs.Project.Responses
 {
     public class DeleteProjectResponseDto : BaseResponseDto
     {
-        public bool Deleted { get; set; }
+        public bool Success { get; set; }
     }
 }

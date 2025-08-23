@@ -11,10 +11,10 @@ namespace GenCo.Domain.Common
         public Guid Id { get; set; }
         public DateTime CreatedAt { get; set; }
         public string? CreatedBy { get; set; }
-        public DateTime? UpdateAt { get; set; }
-        public string? UpdateBy { get; set; }
-        public DateTime? DeleteAt { get; set; }
-        public string? DeleteBy { get; set; }
-        public bool IsDelete { get; set; } = false;
+        public DateTime? UpdatedAt { get; set; }
+        public string? UpdatedBy { get; set; }
+        public DateTime? DeletedAt { get; set; }
+        public string? DeletedBy { get; set; }
+        public bool IsDeleted { get; set; } = false;
     }
 }

@@ -7,9 +7,8 @@ using System.Threading.Tasks;
 
 namespace GenCo.Application.DTOs.Project.Responses
 {
-    public class UpdateProjectResponseDto : BaseResponseDto
+    public class UpdateProjectResponseDto :BaseResponseDto
     {
-        public string Name { get; set; } = default!;
-        public string? Description { get; set; }
+        public ProjectResponseDto Project { get; set; } = default!;
     }
 }

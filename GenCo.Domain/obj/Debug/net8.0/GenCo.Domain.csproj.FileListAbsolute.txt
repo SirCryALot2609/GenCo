@@ -9,3 +9,4 @@ C:\Users\SirCryALot\source\repos\GenCo\GenCo.Domain\obj\Debug\net8.0\GenCo.Domai
 C:\Users\SirCryALot\source\repos\GenCo\GenCo.Domain\obj\Debug\net8.0\refint\GenCo.Domain.dll
 C:\Users\SirCryALot\source\repos\GenCo\GenCo.Domain\obj\Debug\net8.0\GenCo.Domain.pdb
 C:\Users\SirCryALot\source\repos\GenCo\GenCo.Domain\obj\Debug\net8.0\ref\GenCo.Domain.dll
+C:\Users\SirCryALot\source\repos\GenCo\GenCo.Domain\obj\Debug\net8.0\GenCo.Domain.sourcelink.json

@@ -55,5 +55,7 @@ namespace GenCo.Application.DTOs.Common
 
     public abstract class BaseResponseDto : AuditableDto
     {
+        public bool Success { get; set; } = true;
+        public string Message { get; set; } = string.Empty;
     }
 }

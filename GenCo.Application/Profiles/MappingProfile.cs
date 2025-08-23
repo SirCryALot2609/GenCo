@@ -1,5 +1,4 @@
 ﻿using AutoMapper;
-using GenCo.Application.DTOs.Entity.Request;
 using GenCo.Application.DTOs.Entity.Requests;
 using GenCo.Application.DTOs.Entity.Responses;
 using GenCo.Application.DTOs.Field.Requests;
@@ -31,6 +30,7 @@ namespace GenCo.Application.Profiles
             CreateMap<CreateProjectRequestDto, Project>();
             CreateMap<UpdateProjectRequestDto, Project>();
             CreateMap<Project, ProjectResponseDto>().ReverseMap();
+            CreateMap<Project, ProjectDetailsResponseDto>().ReverseMap();
             CreateMap<Project, ProjectListResponseDto>().ReverseMap();
 
             // -------- Entity --------

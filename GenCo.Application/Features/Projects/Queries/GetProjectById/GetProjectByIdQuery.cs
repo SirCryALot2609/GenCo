@@ -8,8 +8,6 @@ using System.Threading.Tasks;
 
 namespace GenCo.Application.Features.Projects.Queries.GetProjectById
 {
-    public class GetProjectByIdQuery(Guid Id) : IRequest<ProjectResponseDto>
-    {
-        public Guid Id { get; set; } = Id;
-    }
+    public record GetProjectByIdQuery(Guid ProjectId, bool IncludeAllCollections = false)
+    : IRequest<ProjectDetailResponseDto>;
 }

@@ -3,52 +3,52 @@
   "WorkspaceRootPath": "C:\\Users\\SirCryALot\\source\\repos\\GenCo\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{95FBC8D5-50C0-469A-A54D-59C26FC250D6}|GenCo.Application\\GenCo.Application.csproj|c:\\users\\sircryalot\\source\\repos\\genco\\genco.application\\specifications\\projects\\projectbyidspec.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{95FBC8D5-50C0-469A-A54D-59C26FC250D6}|GenCo.Application\\GenCo.Application.csproj|solutionrelative:genco.application\\specifications\\projects\\projectbyidspec.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{95FBC8D5-50C0-469A-A54D-59C26FC250D6}|GenCo.Application\\GenCo.Application.csproj|c:\\users\\sircryalot\\source\\repos\\genco\\genco.application\\dtos\\common\\basedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{95FBC8D5-50C0-469A-A54D-59C26FC250D6}|GenCo.Application\\GenCo.Application.csproj|solutionrelative:genco.application\\dtos\\common\\basedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{95FBC8D5-50C0-469A-A54D-59C26FC250D6}|GenCo.Application\\GenCo.Application.csproj|c:\\users\\sircryalot\\source\\repos\\genco\\genco.application\\specifications\\projects\\projectbykeywordspec.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{95FBC8D5-50C0-469A-A54D-59C26FC250D6}|GenCo.Application\\GenCo.Application.csproj|solutionrelative:genco.application\\specifications\\projects\\projectbykeywordspec.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{95FBC8D5-50C0-469A-A54D-59C26FC250D6}|GenCo.Application\\GenCo.Application.csproj|c:\\users\\sircryalot\\source\\repos\\genco\\genco.application\\dtos\\entity\\requests\\updateentityrequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{95FBC8D5-50C0-469A-A54D-59C26FC250D6}|GenCo.Application\\GenCo.Application.csproj|solutionrelative:genco.application\\dtos\\entity\\requests\\updateentityrequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9DAFC978-AF9F-478B-884D-A0D707485210}|GenCo.Domain\\GenCo.Domain.csproj|c:\\users\\sircryalot\\source\\repos\\genco\\genco.domain\\field.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9DAFC978-AF9F-478B-884D-A0D707485210}|GenCo.Domain\\GenCo.Domain.csproj|solutionrelative:genco.domain\\field.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{95FBC8D5-50C0-469A-A54D-59C26FC250D6}|GenCo.Application\\GenCo.Application.csproj|c:\\users\\sircryalot\\source\\repos\\genco\\genco.application\\dtos\\entity\\requests\\searchentitiesrequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{95FBC8D5-50C0-469A-A54D-59C26FC250D6}|GenCo.Application\\GenCo.Application.csproj|solutionrelative:genco.application\\dtos\\entity\\requests\\searchentitiesrequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9DAFC978-AF9F-478B-884D-A0D707485210}|GenCo.Domain\\GenCo.Domain.csproj|c:\\users\\sircryalot\\source\\repos\\genco\\genco.domain\\entity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9DAFC978-AF9F-478B-884D-A0D707485210}|GenCo.Domain\\GenCo.Domain.csproj|solutionrelative:genco.domain\\entity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{95FBC8D5-50C0-469A-A54D-59C26FC250D6}|GenCo.Application\\GenCo.Application.csproj|c:\\users\\sircryalot\\source\\repos\\genco\\genco.application\\dtos\\entity\\requests\\getentitydetailsrequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{95FBC8D5-50C0-469A-A54D-59C26FC250D6}|GenCo.Application\\GenCo.Application.csproj|solutionrelative:genco.application\\dtos\\entity\\requests\\getentitydetailsrequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{95FBC8D5-50C0-469A-A54D-59C26FC250D6}|GenCo.Application\\GenCo.Application.csproj|c:\\users\\sircryalot\\source\\repos\\genco\\genco.application\\specifications\\common\\basespecification.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{95FBC8D5-50C0-469A-A54D-59C26FC250D6}|GenCo.Application\\GenCo.Application.csproj|solutionrelative:genco.application\\specifications\\common\\basespecification.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{95FBC8D5-50C0-469A-A54D-59C26FC250D6}|GenCo.Application\\GenCo.Application.csproj|c:\\users\\sircryalot\\source\\repos\\genco\\genco.application\\dtos\\entity\\requests\\createentityrequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{95FBC8D5-50C0-469A-A54D-59C26FC250D6}|GenCo.Application\\GenCo.Application.csproj|solutionrelative:genco.application\\dtos\\entity\\requests\\createentityrequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9DAFC978-AF9F-478B-884D-A0D707485210}|GenCo.Domain\\GenCo.Domain.csproj|c:\\users\\sircryalot\\source\\repos\\genco\\genco.domain\\project.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9DAFC978-AF9F-478B-884D-A0D707485210}|GenCo.Domain\\GenCo.Domain.csproj|solutionrelative:genco.domain\\project.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{95FBC8D5-50C0-469A-A54D-59C26FC250D6}|GenCo.Application\\GenCo.Application.csproj|c:\\users\\sircryalot\\source\\repos\\genco\\genco.application\\features\\entities\\commands\\createentity\\createentitycommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{95FBC8D5-50C0-469A-A54D-59C26FC250D6}|GenCo.Application\\GenCo.Application.csproj|solutionrelative:genco.application\\features\\entities\\commands\\createentity\\createentitycommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{95FBC8D5-50C0-469A-A54D-59C26FC250D6}|GenCo.Application\\GenCo.Application.csproj|c:\\users\\sircryalot\\source\\repos\\genco\\genco.application\\persistence\\contracts\\iworkflowsteprepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{95FBC8D5-50C0-469A-A54D-59C26FC250D6}|GenCo.Application\\GenCo.Application.csproj|solutionrelative:genco.application\\persistence\\contracts\\iworkflowsteprepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{95FBC8D5-50C0-469A-A54D-59C26FC250D6}|GenCo.Application\\GenCo.Application.csproj|c:\\users\\sircryalot\\source\\repos\\genco\\genco.application\\persistence\\contracts\\iworkflowrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{95FBC8D5-50C0-469A-A54D-59C26FC250D6}|GenCo.Application\\GenCo.Application.csproj|solutionrelative:genco.application\\persistence\\contracts\\iworkflowrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{95FBC8D5-50C0-469A-A54D-59C26FC250D6}|GenCo.Application\\GenCo.Application.csproj|c:\\users\\sircryalot\\source\\repos\\genco\\genco.application\\persistence\\contracts\\iuiconfigrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{95FBC8D5-50C0-469A-A54D-59C26FC250D6}|GenCo.Application\\GenCo.Application.csproj|solutionrelative:genco.application\\persistence\\contracts\\iuiconfigrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{95FBC8D5-50C0-469A-A54D-59C26FC250D6}|GenCo.Application\\GenCo.Application.csproj|c:\\users\\sircryalot\\source\\repos\\genco\\genco.application\\persistence\\contracts\\iserviceconfigrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{95FBC8D5-50C0-469A-A54D-59C26FC250D6}|GenCo.Application\\GenCo.Application.csproj|solutionrelative:genco.application\\persistence\\contracts\\iserviceconfigrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{95FBC8D5-50C0-469A-A54D-59C26FC250D6}|GenCo.Application\\GenCo.Application.csproj|c:\\users\\sircryalot\\source\\repos\\genco\\genco.application\\persistence\\contracts\\iprojectrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{95FBC8D5-50C0-469A-A54D-59C26FC250D6}|GenCo.Application\\GenCo.Application.csproj|solutionrelative:genco.application\\persistence\\contracts\\iprojectrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{95FBC8D5-50C0-469A-A54D-59C26FC250D6}|GenCo.Application\\GenCo.Application.csproj|c:\\users\\sircryalot\\source\\repos\\genco\\genco.application\\persistence\\contracts\\irelationrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{95FBC8D5-50C0-469A-A54D-59C26FC250D6}|GenCo.Application\\GenCo.Application.csproj|solutionrelative:genco.application\\persistence\\contracts\\irelationrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{95FBC8D5-50C0-469A-A54D-59C26FC250D6}|GenCo.Application\\GenCo.Application.csproj|c:\\users\\sircryalot\\source\\repos\\genco\\genco.application\\persistence\\contracts\\iprojectrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{95FBC8D5-50C0-469A-A54D-59C26FC250D6}|GenCo.Application\\GenCo.Application.csproj|solutionrelative:genco.application\\persistence\\contracts\\iprojectrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{95FBC8D5-50C0-469A-A54D-59C26FC250D6}|GenCo.Application\\GenCo.Application.csproj|c:\\users\\sircryalot\\source\\repos\\genco\\genco.application\\persistence\\contracts\\iserviceconfigrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{95FBC8D5-50C0-469A-A54D-59C26FC250D6}|GenCo.Application\\GenCo.Application.csproj|solutionrelative:genco.application\\persistence\\contracts\\iserviceconfigrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{95FBC8D5-50C0-469A-A54D-59C26FC250D6}|GenCo.Application\\GenCo.Application.csproj|c:\\users\\sircryalot\\source\\repos\\genco\\genco.application\\persistence\\contracts\\iuiconfigrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{95FBC8D5-50C0-469A-A54D-59C26FC250D6}|GenCo.Application\\GenCo.Application.csproj|solutionrelative:genco.application\\persistence\\contracts\\iuiconfigrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{95FBC8D5-50C0-469A-A54D-59C26FC250D6}|GenCo.Application\\GenCo.Application.csproj|c:\\users\\sircryalot\\source\\repos\\genco\\genco.application\\persistence\\contracts\\iworkflowrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{95FBC8D5-50C0-469A-A54D-59C26FC250D6}|GenCo.Application\\GenCo.Application.csproj|solutionrelative:genco.application\\persistence\\contracts\\iworkflowrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{95FBC8D5-50C0-469A-A54D-59C26FC250D6}|GenCo.Application\\GenCo.Application.csproj|c:\\users\\sircryalot\\source\\repos\\genco\\genco.application\\persistence\\contracts\\iworkflowsteprepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{95FBC8D5-50C0-469A-A54D-59C26FC250D6}|GenCo.Application\\GenCo.Application.csproj|solutionrelative:genco.application\\persistence\\contracts\\iworkflowsteprepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{95FBC8D5-50C0-469A-A54D-59C26FC250D6}|GenCo.Application\\GenCo.Application.csproj|c:\\users\\sircryalot\\source\\repos\\genco\\genco.application\\persistence\\contracts\\ifieldvalidatorrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -63,20 +63,112 @@
       "RelativeMoniker": "D:0:0:{95FBC8D5-50C0-469A-A54D-59C26FC250D6}|GenCo.Application\\GenCo.Application.csproj|solutionrelative:genco.application\\persistence\\contracts\\ientityrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{95FBC8D5-50C0-469A-A54D-59C26FC250D6}|GenCo.Application\\GenCo.Application.csproj|c:\\users\\sircryalot\\source\\repos\\genco\\genco.application\\persistence\\contracts\\common\\igenericrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{95FBC8D5-50C0-469A-A54D-59C26FC250D6}|GenCo.Application\\GenCo.Application.csproj|solutionrelative:genco.application\\persistence\\contracts\\common\\igenericrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{95FBC8D5-50C0-469A-A54D-59C26FC250D6}|GenCo.Application\\GenCo.Application.csproj|c:\\users\\sircryalot\\source\\repos\\genco\\genco.application\\dtos\\entity\\requests\\deleteentityrequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{95FBC8D5-50C0-469A-A54D-59C26FC250D6}|GenCo.Application\\GenCo.Application.csproj|solutionrelative:genco.application\\dtos\\entity\\requests\\deleteentityrequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{95FBC8D5-50C0-469A-A54D-59C26FC250D6}|GenCo.Application\\GenCo.Application.csproj|c:\\users\\sircryalot\\source\\repos\\genco\\genco.application\\specifications\\common\\ispecification.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{95FBC8D5-50C0-469A-A54D-59C26FC250D6}|GenCo.Application\\GenCo.Application.csproj|solutionrelative:genco.application\\specifications\\common\\ispecification.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{95FBC8D5-50C0-469A-A54D-59C26FC250D6}|GenCo.Application\\GenCo.Application.csproj|c:\\users\\sircryalot\\source\\repos\\genco\\genco.application\\features\\fields\\commands\\createfield\\createfieldcommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{95FBC8D5-50C0-469A-A54D-59C26FC250D6}|GenCo.Application\\GenCo.Application.csproj|solutionrelative:genco.application\\features\\fields\\commands\\createfield\\createfieldcommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{95FBC8D5-50C0-469A-A54D-59C26FC250D6}|GenCo.Application\\GenCo.Application.csproj|c:\\users\\sircryalot\\source\\repos\\genco\\genco.application\\features\\fields\\commands\\createfield\\createfieldcommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{95FBC8D5-50C0-469A-A54D-59C26FC250D6}|GenCo.Application\\GenCo.Application.csproj|solutionrelative:genco.application\\features\\fields\\commands\\createfield\\createfieldcommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{95FBC8D5-50C0-469A-A54D-59C26FC250D6}|GenCo.Application\\GenCo.Application.csproj|c:\\users\\sircryalot\\source\\repos\\genco\\genco.application\\profiles\\mappingprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{95FBC8D5-50C0-469A-A54D-59C26FC250D6}|GenCo.Application\\GenCo.Application.csproj|solutionrelative:genco.application\\profiles\\mappingprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{95FBC8D5-50C0-469A-A54D-59C26FC250D6}|GenCo.Application\\GenCo.Application.csproj|c:\\users\\sircryalot\\source\\repos\\genco\\genco.application\\features\\projects\\commands\\createproject\\createprojectcommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{95FBC8D5-50C0-469A-A54D-59C26FC250D6}|GenCo.Application\\GenCo.Application.csproj|solutionrelative:genco.application\\features\\projects\\commands\\createproject\\createprojectcommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{95FBC8D5-50C0-469A-A54D-59C26FC250D6}|GenCo.Application\\GenCo.Application.csproj|c:\\users\\sircryalot\\source\\repos\\genco\\genco.application\\features\\entities\\commands\\createentity\\createentitycommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{95FBC8D5-50C0-469A-A54D-59C26FC250D6}|GenCo.Application\\GenCo.Application.csproj|solutionrelative:genco.application\\features\\entities\\commands\\createentity\\createentitycommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{95FBC8D5-50C0-469A-A54D-59C26FC250D6}|GenCo.Application\\GenCo.Application.csproj|c:\\users\\sircryalot\\source\\repos\\genco\\genco.application\\dtos\\project\\requests\\createprojectrequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{95FBC8D5-50C0-469A-A54D-59C26FC250D6}|GenCo.Application\\GenCo.Application.csproj|solutionrelative:genco.application\\dtos\\project\\requests\\createprojectrequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9DAFC978-AF9F-478B-884D-A0D707485210}|GenCo.Domain\\GenCo.Domain.csproj|c:\\users\\sircryalot\\source\\repos\\genco\\genco.domain\\workflow.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9DAFC978-AF9F-478B-884D-A0D707485210}|GenCo.Domain\\GenCo.Domain.csproj|solutionrelative:genco.domain\\workflow.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{95FBC8D5-50C0-469A-A54D-59C26FC250D6}|GenCo.Application\\GenCo.Application.csproj|c:\\users\\sircryalot\\source\\repos\\genco\\genco.application\\dtos\\project\\responses\\projectdetailsresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{95FBC8D5-50C0-469A-A54D-59C26FC250D6}|GenCo.Application\\GenCo.Application.csproj|solutionrelative:genco.application\\dtos\\project\\responses\\projectdetailsresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{95FBC8D5-50C0-469A-A54D-59C26FC250D6}|GenCo.Application\\GenCo.Application.csproj|c:\\users\\sircryalot\\source\\repos\\genco\\genco.application\\specifications\\entities\\entitybynamespec.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{95FBC8D5-50C0-469A-A54D-59C26FC250D6}|GenCo.Application\\GenCo.Application.csproj|solutionrelative:genco.application\\specifications\\entities\\entitybynamespec.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{95FBC8D5-50C0-469A-A54D-59C26FC250D6}|GenCo.Application\\GenCo.Application.csproj|c:\\users\\sircryalot\\source\\repos\\genco\\genco.application\\specifications\\entities\\entitybyidspec.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{95FBC8D5-50C0-469A-A54D-59C26FC250D6}|GenCo.Application\\GenCo.Application.csproj|solutionrelative:genco.application\\specifications\\entities\\entitybyidspec.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{95FBC8D5-50C0-469A-A54D-59C26FC250D6}|GenCo.Application\\GenCo.Application.csproj|c:\\users\\sircryalot\\source\\repos\\genco\\genco.application\\specifications\\entities\\entitybypaginglevelspec.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{95FBC8D5-50C0-469A-A54D-59C26FC250D6}|GenCo.Application\\GenCo.Application.csproj|solutionrelative:genco.application\\specifications\\entities\\entitybypaginglevelspec.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9DAFC978-AF9F-478B-884D-A0D707485210}|GenCo.Domain\\GenCo.Domain.csproj|c:\\users\\sircryalot\\source\\repos\\genco\\genco.domain\\entity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9DAFC978-AF9F-478B-884D-A0D707485210}|GenCo.Domain\\GenCo.Domain.csproj|solutionrelative:genco.domain\\entity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9DAFC978-AF9F-478B-884D-A0D707485210}|GenCo.Domain\\GenCo.Domain.csproj|c:\\users\\sircryalot\\source\\repos\\genco\\genco.domain\\relation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9DAFC978-AF9F-478B-884D-A0D707485210}|GenCo.Domain\\GenCo.Domain.csproj|solutionrelative:genco.domain\\relation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9DAFC978-AF9F-478B-884D-A0D707485210}|GenCo.Domain\\GenCo.Domain.csproj|c:\\users\\sircryalot\\source\\repos\\genco\\genco.domain\\field.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9DAFC978-AF9F-478B-884D-A0D707485210}|GenCo.Domain\\GenCo.Domain.csproj|solutionrelative:genco.domain\\field.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{95FBC8D5-50C0-469A-A54D-59C26FC250D6}|GenCo.Application\\GenCo.Application.csproj|c:\\users\\sircryalot\\source\\repos\\genco\\genco.application\\specifications\\common\\basespecification.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{95FBC8D5-50C0-469A-A54D-59C26FC250D6}|GenCo.Application\\GenCo.Application.csproj|solutionrelative:genco.application\\specifications\\common\\basespecification.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{95FBC8D5-50C0-469A-A54D-59C26FC250D6}|GenCo.Application\\GenCo.Application.csproj|c:\\users\\sircryalot\\source\\repos\\genco\\genco.application\\dtos\\field\\responses\\fieldresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{95FBC8D5-50C0-469A-A54D-59C26FC250D6}|GenCo.Application\\GenCo.Application.csproj|solutionrelative:genco.application\\dtos\\field\\responses\\fieldresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{95FBC8D5-50C0-469A-A54D-59C26FC250D6}|GenCo.Application\\GenCo.Application.csproj|c:\\users\\sircryalot\\source\\repos\\genco\\genco.application\\features\\entities\\queries\\getentitybyid\\getentitybyidqueryhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{95FBC8D5-50C0-469A-A54D-59C26FC250D6}|GenCo.Application\\GenCo.Application.csproj|solutionrelative:genco.application\\features\\entities\\queries\\getentitybyid\\getentitybyidqueryhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{95FBC8D5-50C0-469A-A54D-59C26FC250D6}|GenCo.Application\\GenCo.Application.csproj|c:\\users\\sircryalot\\source\\repos\\genco\\genco.application\\features\\entities\\queries\\getentitybyid\\getentitybyidquery.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{95FBC8D5-50C0-469A-A54D-59C26FC250D6}|GenCo.Application\\GenCo.Application.csproj|solutionrelative:genco.application\\features\\entities\\queries\\getentitybyid\\getentitybyidquery.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{95FBC8D5-50C0-469A-A54D-59C26FC250D6}|GenCo.Application\\GenCo.Application.csproj|c:\\users\\sircryalot\\source\\repos\\genco\\genco.application\\dtos\\entity\\responses\\entitydetailsresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{95FBC8D5-50C0-469A-A54D-59C26FC250D6}|GenCo.Application\\GenCo.Application.csproj|solutionrelative:genco.application\\dtos\\entity\\responses\\entitydetailsresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{95FBC8D5-50C0-469A-A54D-59C26FC250D6}|GenCo.Application\\GenCo.Application.csproj|c:\\users\\sircryalot\\source\\repos\\genco\\genco.application\\dtos\\project\\responses\\projectresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{95FBC8D5-50C0-469A-A54D-59C26FC250D6}|GenCo.Application\\GenCo.Application.csproj|solutionrelative:genco.application\\dtos\\project\\responses\\projectresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{95FBC8D5-50C0-469A-A54D-59C26FC250D6}|GenCo.Application\\GenCo.Application.csproj|c:\\users\\sircryalot\\source\\repos\\genco\\genco.application\\dtos\\project\\responses\\projectlistresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{95FBC8D5-50C0-469A-A54D-59C26FC250D6}|GenCo.Application\\GenCo.Application.csproj|solutionrelative:genco.application\\dtos\\project\\responses\\projectlistresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{95FBC8D5-50C0-469A-A54D-59C26FC250D6}|GenCo.Application\\GenCo.Application.csproj|c:\\users\\sircryalot\\source\\repos\\genco\\genco.application\\dtos\\entity\\responses\\entityresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{95FBC8D5-50C0-469A-A54D-59C26FC250D6}|GenCo.Application\\GenCo.Application.csproj|solutionrelative:genco.application\\dtos\\entity\\responses\\entityresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{95FBC8D5-50C0-469A-A54D-59C26FC250D6}|GenCo.Application\\GenCo.Application.csproj|c:\\users\\sircryalot\\source\\repos\\genco\\genco.application\\specifications\\projects\\projectbyidspec.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{95FBC8D5-50C0-469A-A54D-59C26FC250D6}|GenCo.Application\\GenCo.Application.csproj|solutionrelative:genco.application\\specifications\\projects\\projectbyidspec.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{95FBC8D5-50C0-469A-A54D-59C26FC250D6}|GenCo.Application\\GenCo.Application.csproj|c:\\users\\sircryalot\\source\\repos\\genco\\genco.application\\specifications\\projects\\projectbykeywordspec.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{95FBC8D5-50C0-469A-A54D-59C26FC250D6}|GenCo.Application\\GenCo.Application.csproj|solutionrelative:genco.application\\specifications\\projects\\projectbykeywordspec.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9DAFC978-AF9F-478B-884D-A0D707485210}|GenCo.Domain\\GenCo.Domain.csproj|c:\\users\\sircryalot\\source\\repos\\genco\\genco.domain\\project.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9DAFC978-AF9F-478B-884D-A0D707485210}|GenCo.Domain\\GenCo.Domain.csproj|solutionrelative:genco.domain\\project.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{95FBC8D5-50C0-469A-A54D-59C26FC250D6}|GenCo.Application\\GenCo.Application.csproj|c:\\users\\sircryalot\\source\\repos\\genco\\genco.application\\persistence\\contracts\\common\\igenericrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{95FBC8D5-50C0-469A-A54D-59C26FC250D6}|GenCo.Application\\GenCo.Application.csproj|solutionrelative:genco.application\\persistence\\contracts\\common\\igenericrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{95FBC8D5-50C0-469A-A54D-59C26FC250D6}|GenCo.Application\\GenCo.Application.csproj|c:\\users\\sircryalot\\source\\repos\\genco\\genco.application\\specifications\\common\\ispecification.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{95FBC8D5-50C0-469A-A54D-59C26FC250D6}|GenCo.Application\\GenCo.Application.csproj|solutionrelative:genco.application\\specifications\\common\\ispecification.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -86,115 +178,102 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 6,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Field.cs",
-              "DocumentMoniker": "C:\\Users\\SirCryALot\\source\\repos\\GenCo\\GenCo.Domain\\Field.cs",
-              "RelativeDocumentMoniker": "GenCo.Domain\\Field.cs",
-              "ToolTip": "C:\\Users\\SirCryALot\\source\\repos\\GenCo\\GenCo.Domain\\Field.cs",
-              "RelativeToolTip": "GenCo.Domain\\Field.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-22T09:33:05.877Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Entity.cs",
-              "DocumentMoniker": "C:\\Users\\SirCryALot\\source\\repos\\GenCo\\GenCo.Domain\\Entity.cs",
-              "RelativeDocumentMoniker": "GenCo.Domain\\Entity.cs",
-              "ToolTip": "C:\\Users\\SirCryALot\\source\\repos\\GenCo\\GenCo.Domain\\Entity.cs",
-              "RelativeToolTip": "GenCo.Domain\\Entity.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-22T09:32:57.465Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "ProjectByKeywordSpec.cs",
-              "DocumentMoniker": "C:\\Users\\SirCryALot\\source\\repos\\GenCo\\GenCo.Application\\Specifications\\Projects\\ProjectByKeywordSpec.cs",
-              "RelativeDocumentMoniker": "GenCo.Application\\Specifications\\Projects\\ProjectByKeywordSpec.cs",
-              "ToolTip": "C:\\Users\\SirCryALot\\source\\repos\\GenCo\\GenCo.Application\\Specifications\\Projects\\ProjectByKeywordSpec.cs",
-              "RelativeToolTip": "GenCo.Application\\Specifications\\Projects\\ProjectByKeywordSpec.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAFAAAAAAAAAA==",
+              "Title": "UpdateEntityRequestDto.cs",
+              "DocumentMoniker": "C:\\Users\\SirCryALot\\source\\repos\\GenCo\\GenCo.Application\\DTOs\\Entity\\Requests\\UpdateEntityRequestDto.cs",
+              "RelativeDocumentMoniker": "GenCo.Application\\DTOs\\Entity\\Requests\\UpdateEntityRequestDto.cs",
+              "ToolTip": "C:\\Users\\SirCryALot\\source\\repos\\GenCo\\GenCo.Application\\DTOs\\Entity\\Requests\\UpdateEntityRequestDto.cs",
+              "RelativeToolTip": "GenCo.Application\\DTOs\\Entity\\Requests\\UpdateEntityRequestDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAA4AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-22T09:30:58.712Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "ProjectByIdSpec.cs",
-              "DocumentMoniker": "C:\\Users\\SirCryALot\\source\\repos\\GenCo\\GenCo.Application\\Specifications\\Projects\\ProjectByIdSpec.cs",
-              "RelativeDocumentMoniker": "GenCo.Application\\Specifications\\Projects\\ProjectByIdSpec.cs",
-              "ToolTip": "C:\\Users\\SirCryALot\\source\\repos\\GenCo\\GenCo.Application\\Specifications\\Projects\\ProjectByIdSpec.cs",
-              "RelativeToolTip": "GenCo.Application\\Specifications\\Projects\\ProjectByIdSpec.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAnAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-22T09:28:19.408Z",
+              "WhenOpened": "2025-08-23T02:49:02.13Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 6,
-              "Title": "IWorkFlowStepRepository.cs",
-              "DocumentMoniker": "C:\\Users\\SirCryALot\\source\\repos\\GenCo\\GenCo.Application\\Persistence\\Contracts\\IWorkFlowStepRepository.cs",
-              "RelativeDocumentMoniker": "GenCo.Application\\Persistence\\Contracts\\IWorkFlowStepRepository.cs",
-              "ToolTip": "C:\\Users\\SirCryALot\\source\\repos\\GenCo\\GenCo.Application\\Persistence\\Contracts\\IWorkFlowStepRepository.cs",
-              "RelativeToolTip": "GenCo.Application\\Persistence\\Contracts\\IWorkFlowStepRepository.cs",
+              "Title": "IProjectRepository.cs",
+              "DocumentMoniker": "C:\\Users\\SirCryALot\\source\\repos\\GenCo\\GenCo.Application\\Persistence\\Contracts\\IProjectRepository.cs",
+              "RelativeDocumentMoniker": "GenCo.Application\\Persistence\\Contracts\\IProjectRepository.cs",
+              "ToolTip": "C:\\Users\\SirCryALot\\source\\repos\\GenCo\\GenCo.Application\\Persistence\\Contracts\\IProjectRepository.cs",
+              "RelativeToolTip": "GenCo.Application\\Persistence\\Contracts\\IProjectRepository.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-22T09:25:29.601Z",
+              "WhenOpened": "2025-08-22T09:19:57.239Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "CreateEntityCommand.cs",
+              "DocumentMoniker": "C:\\Users\\SirCryALot\\source\\repos\\GenCo\\GenCo.Application\\Features\\Entities\\Commands\\CreateEntity\\CreateEntityCommand.cs",
+              "RelativeDocumentMoniker": "GenCo.Application\\Features\\Entities\\Commands\\CreateEntity\\CreateEntityCommand.cs",
+              "ToolTip": "C:\\Users\\SirCryALot\\source\\repos\\GenCo\\GenCo.Application\\Features\\Entities\\Commands\\CreateEntity\\CreateEntityCommand.cs",
+              "RelativeToolTip": "GenCo.Application\\Features\\Entities\\Commands\\CreateEntity\\CreateEntityCommand.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAA8AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-22T08:51:33.829Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "CreateEntityRequestDto.cs",
+              "DocumentMoniker": "C:\\Users\\SirCryALot\\source\\repos\\GenCo\\GenCo.Application\\DTOs\\Entity\\Requests\\CreateEntityRequestDto.cs",
+              "RelativeDocumentMoniker": "GenCo.Application\\DTOs\\Entity\\Requests\\CreateEntityRequestDto.cs",
+              "ToolTip": "C:\\Users\\SirCryALot\\source\\repos\\GenCo\\GenCo.Application\\DTOs\\Entity\\Requests\\CreateEntityRequestDto.cs",
+              "RelativeToolTip": "GenCo.Application\\DTOs\\Entity\\Requests\\CreateEntityRequestDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-22T09:48:06.369Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "GetEntityDetailsRequestDto.cs",
+              "DocumentMoniker": "C:\\Users\\SirCryALot\\source\\repos\\GenCo\\GenCo.Application\\DTOs\\Entity\\Requests\\GetEntityDetailsRequestDto.cs",
+              "RelativeDocumentMoniker": "GenCo.Application\\DTOs\\Entity\\Requests\\GetEntityDetailsRequestDto.cs",
+              "ToolTip": "C:\\Users\\SirCryALot\\source\\repos\\GenCo\\GenCo.Application\\DTOs\\Entity\\Requests\\GetEntityDetailsRequestDto.cs",
+              "RelativeToolTip": "GenCo.Application\\DTOs\\Entity\\Requests\\GetEntityDetailsRequestDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-22T10:29:03.536Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "SearchEntitiesRequestDto.cs",
+              "DocumentMoniker": "C:\\Users\\SirCryALot\\source\\repos\\GenCo\\GenCo.Application\\DTOs\\Entity\\Requests\\SearchEntitiesRequestDto.cs",
+              "RelativeDocumentMoniker": "GenCo.Application\\DTOs\\Entity\\Requests\\SearchEntitiesRequestDto.cs",
+              "ToolTip": "C:\\Users\\SirCryALot\\source\\repos\\GenCo\\GenCo.Application\\DTOs\\Entity\\Requests\\SearchEntitiesRequestDto.cs",
+              "RelativeToolTip": "GenCo.Application\\DTOs\\Entity\\Requests\\SearchEntitiesRequestDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-22T10:29:04.571Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "BaseDto.cs",
+              "DocumentMoniker": "C:\\Users\\SirCryALot\\source\\repos\\GenCo\\GenCo.Application\\DTOs\\Common\\BaseDto.cs",
+              "RelativeDocumentMoniker": "GenCo.Application\\DTOs\\Common\\BaseDto.cs",
+              "ToolTip": "C:\\Users\\SirCryALot\\source\\repos\\GenCo\\GenCo.Application\\DTOs\\Common\\BaseDto.cs",
+              "RelativeToolTip": "GenCo.Application\\DTOs\\Common\\BaseDto.cs",
+              "ViewState": "AgIAABYAAAAAAAAAAAAAADoAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-22T09:48:14.601Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 7,
-              "Title": "IWorkFlowRepository.cs",
-              "DocumentMoniker": "C:\\Users\\SirCryALot\\source\\repos\\GenCo\\GenCo.Application\\Persistence\\Contracts\\IWorkFlowRepository.cs",
-              "RelativeDocumentMoniker": "GenCo.Application\\Persistence\\Contracts\\IWorkFlowRepository.cs",
-              "ToolTip": "C:\\Users\\SirCryALot\\source\\repos\\GenCo\\GenCo.Application\\Persistence\\Contracts\\IWorkFlowRepository.cs",
-              "RelativeToolTip": "GenCo.Application\\Persistence\\Contracts\\IWorkFlowRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-22T09:25:24.884Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "IUIConfigRepository.cs",
-              "DocumentMoniker": "C:\\Users\\SirCryALot\\source\\repos\\GenCo\\GenCo.Application\\Persistence\\Contracts\\IUIConfigRepository.cs",
-              "RelativeDocumentMoniker": "GenCo.Application\\Persistence\\Contracts\\IUIConfigRepository.cs",
-              "ToolTip": "C:\\Users\\SirCryALot\\source\\repos\\GenCo\\GenCo.Application\\Persistence\\Contracts\\IUIConfigRepository.cs",
-              "RelativeToolTip": "GenCo.Application\\Persistence\\Contracts\\IUIConfigRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-22T09:25:23.136Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "IServiceConfigRepository.cs",
-              "DocumentMoniker": "C:\\Users\\SirCryALot\\source\\repos\\GenCo\\GenCo.Application\\Persistence\\Contracts\\IServiceConfigRepository.cs",
-              "RelativeDocumentMoniker": "GenCo.Application\\Persistence\\Contracts\\IServiceConfigRepository.cs",
-              "ToolTip": "C:\\Users\\SirCryALot\\source\\repos\\GenCo\\GenCo.Application\\Persistence\\Contracts\\IServiceConfigRepository.cs",
-              "RelativeToolTip": "GenCo.Application\\Persistence\\Contracts\\IServiceConfigRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-22T09:25:20.798Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
               "Title": "IRelationRepository.cs",
               "DocumentMoniker": "C:\\Users\\SirCryALot\\source\\repos\\GenCo\\GenCo.Application\\Persistence\\Contracts\\IRelationRepository.cs",
               "RelativeDocumentMoniker": "GenCo.Application\\Persistence\\Contracts\\IRelationRepository.cs",
@@ -207,15 +286,54 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "BaseSpecification.cs",
-              "DocumentMoniker": "C:\\Users\\SirCryALot\\source\\repos\\GenCo\\GenCo.Application\\Specifications\\Common\\BaseSpecification.cs",
-              "RelativeDocumentMoniker": "GenCo.Application\\Specifications\\Common\\BaseSpecification.cs",
-              "ToolTip": "C:\\Users\\SirCryALot\\source\\repos\\GenCo\\GenCo.Application\\Specifications\\Common\\BaseSpecification.cs",
-              "RelativeToolTip": "GenCo.Application\\Specifications\\Common\\BaseSpecification.cs",
-              "ViewState": "AgIAAB4AAAAAAAAAAAA3wAkAAAAaAAAAAAAAAA==",
+              "DocumentIndex": 8,
+              "Title": "IServiceConfigRepository.cs",
+              "DocumentMoniker": "C:\\Users\\SirCryALot\\source\\repos\\GenCo\\GenCo.Application\\Persistence\\Contracts\\IServiceConfigRepository.cs",
+              "RelativeDocumentMoniker": "GenCo.Application\\Persistence\\Contracts\\IServiceConfigRepository.cs",
+              "ToolTip": "C:\\Users\\SirCryALot\\source\\repos\\GenCo\\GenCo.Application\\Persistence\\Contracts\\IServiceConfigRepository.cs",
+              "RelativeToolTip": "GenCo.Application\\Persistence\\Contracts\\IServiceConfigRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-22T08:54:58.617Z",
+              "WhenOpened": "2025-08-22T09:25:20.798Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "IUIConfigRepository.cs",
+              "DocumentMoniker": "C:\\Users\\SirCryALot\\source\\repos\\GenCo\\GenCo.Application\\Persistence\\Contracts\\IUIConfigRepository.cs",
+              "RelativeDocumentMoniker": "GenCo.Application\\Persistence\\Contracts\\IUIConfigRepository.cs",
+              "ToolTip": "C:\\Users\\SirCryALot\\source\\repos\\GenCo\\GenCo.Application\\Persistence\\Contracts\\IUIConfigRepository.cs",
+              "RelativeToolTip": "GenCo.Application\\Persistence\\Contracts\\IUIConfigRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-22T09:25:23.136Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "IWorkFlowRepository.cs",
+              "DocumentMoniker": "C:\\Users\\SirCryALot\\source\\repos\\GenCo\\GenCo.Application\\Persistence\\Contracts\\IWorkFlowRepository.cs",
+              "RelativeDocumentMoniker": "GenCo.Application\\Persistence\\Contracts\\IWorkFlowRepository.cs",
+              "ToolTip": "C:\\Users\\SirCryALot\\source\\repos\\GenCo\\GenCo.Application\\Persistence\\Contracts\\IWorkFlowRepository.cs",
+              "RelativeToolTip": "GenCo.Application\\Persistence\\Contracts\\IWorkFlowRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-22T09:25:24.884Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "IWorkFlowStepRepository.cs",
+              "DocumentMoniker": "C:\\Users\\SirCryALot\\source\\repos\\GenCo\\GenCo.Application\\Persistence\\Contracts\\IWorkFlowStepRepository.cs",
+              "RelativeDocumentMoniker": "GenCo.Application\\Persistence\\Contracts\\IWorkFlowStepRepository.cs",
+              "ToolTip": "C:\\Users\\SirCryALot\\source\\repos\\GenCo\\GenCo.Application\\Persistence\\Contracts\\IWorkFlowStepRepository.cs",
+              "RelativeToolTip": "GenCo.Application\\Persistence\\Contracts\\IWorkFlowStepRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-22T09:25:29.601Z",
               "EditorCaption": ""
             },
             {
@@ -233,26 +351,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Project.cs",
-              "DocumentMoniker": "C:\\Users\\SirCryALot\\source\\repos\\GenCo\\GenCo.Domain\\Project.cs",
-              "RelativeDocumentMoniker": "GenCo.Domain\\Project.cs",
-              "ToolTip": "C:\\Users\\SirCryALot\\source\\repos\\GenCo\\GenCo.Domain\\Project.cs",
-              "RelativeToolTip": "GenCo.Domain\\Project.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-22T09:17:50.353Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 13,
               "Title": "IFieldRepository.cs",
               "DocumentMoniker": "C:\\Users\\SirCryALot\\source\\repos\\GenCo\\GenCo.Application\\Persistence\\Contracts\\IFieldRepository.cs",
               "RelativeDocumentMoniker": "GenCo.Application\\Persistence\\Contracts\\IFieldRepository.cs",
               "ToolTip": "C:\\Users\\SirCryALot\\source\\repos\\GenCo\\GenCo.Application\\Persistence\\Contracts\\IFieldRepository.cs",
               "RelativeToolTip": "GenCo.Application\\Persistence\\Contracts\\IFieldRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAFAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-08-22T09:25:09.498Z",
               "EditorCaption": ""
@@ -272,20 +377,307 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "IProjectRepository.cs",
-              "DocumentMoniker": "C:\\Users\\SirCryALot\\source\\repos\\GenCo\\GenCo.Application\\Persistence\\Contracts\\IProjectRepository.cs",
-              "RelativeDocumentMoniker": "GenCo.Application\\Persistence\\Contracts\\IProjectRepository.cs",
-              "ToolTip": "C:\\Users\\SirCryALot\\source\\repos\\GenCo\\GenCo.Application\\Persistence\\Contracts\\IProjectRepository.cs",
-              "RelativeToolTip": "GenCo.Application\\Persistence\\Contracts\\IProjectRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAFAAAAAAAAAA==",
+              "DocumentIndex": 18,
+              "Title": "MappingProfile.cs",
+              "DocumentMoniker": "C:\\Users\\SirCryALot\\source\\repos\\GenCo\\GenCo.Application\\Profiles\\MappingProfile.cs",
+              "RelativeDocumentMoniker": "GenCo.Application\\Profiles\\MappingProfile.cs",
+              "ToolTip": "C:\\Users\\SirCryALot\\source\\repos\\GenCo\\GenCo.Application\\Profiles\\MappingProfile.cs",
+              "RelativeToolTip": "GenCo.Application\\Profiles\\MappingProfile.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACAAAABJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-22T09:19:57.239Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-08-22T09:45:20.102Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "Workflow.cs",
+              "DocumentMoniker": "C:\\Users\\SirCryALot\\source\\repos\\GenCo\\GenCo.Domain\\Workflow.cs",
+              "RelativeDocumentMoniker": "GenCo.Domain\\Workflow.cs",
+              "ToolTip": "C:\\Users\\SirCryALot\\source\\repos\\GenCo\\GenCo.Domain\\Workflow.cs",
+              "RelativeToolTip": "GenCo.Domain\\Workflow.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-22T10:27:07.24Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "CreateProjectRequestDto.cs",
+              "DocumentMoniker": "C:\\Users\\SirCryALot\\source\\repos\\GenCo\\GenCo.Application\\DTOs\\Project\\Requests\\CreateProjectRequestDto.cs",
+              "RelativeDocumentMoniker": "GenCo.Application\\DTOs\\Project\\Requests\\CreateProjectRequestDto.cs",
+              "ToolTip": "C:\\Users\\SirCryALot\\source\\repos\\GenCo\\GenCo.Application\\DTOs\\Project\\Requests\\CreateProjectRequestDto.cs",
+              "RelativeToolTip": "GenCo.Application\\DTOs\\Project\\Requests\\CreateProjectRequestDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-22T10:27:50.935Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "CreateFieldCommand.cs",
+              "DocumentMoniker": "C:\\Users\\SirCryALot\\source\\repos\\GenCo\\GenCo.Application\\Features\\Fields\\Commands\\CreateField\\CreateFieldCommand.cs",
+              "RelativeDocumentMoniker": "GenCo.Application\\Features\\Fields\\Commands\\CreateField\\CreateFieldCommand.cs",
+              "ToolTip": "C:\\Users\\SirCryALot\\source\\repos\\GenCo\\GenCo.Application\\Features\\Fields\\Commands\\CreateField\\CreateFieldCommand.cs",
+              "RelativeToolTip": "GenCo.Application\\Features\\Fields\\Commands\\CreateField\\CreateFieldCommand.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAvAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-22T10:28:45.285Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 16,
+              "Title": "CreateFieldCommandHandler.cs",
+              "DocumentMoniker": "C:\\Users\\SirCryALot\\source\\repos\\GenCo\\GenCo.Application\\Features\\Fields\\Commands\\CreateField\\CreateFieldCommandHandler.cs",
+              "RelativeDocumentMoniker": "GenCo.Application\\Features\\Fields\\Commands\\CreateField\\CreateFieldCommandHandler.cs",
+              "ToolTip": "C:\\Users\\SirCryALot\\source\\repos\\GenCo\\GenCo.Application\\Features\\Fields\\Commands\\CreateField\\CreateFieldCommandHandler.cs",
+              "RelativeToolTip": "GenCo.Application\\Features\\Fields\\Commands\\CreateField\\CreateFieldCommandHandler.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACAAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-22T10:28:47.248Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "DeleteEntityRequestDto.cs",
+              "DocumentMoniker": "C:\\Users\\SirCryALot\\source\\repos\\GenCo\\GenCo.Application\\DTOs\\Entity\\Requests\\DeleteEntityRequestDto.cs",
+              "RelativeDocumentMoniker": "GenCo.Application\\DTOs\\Entity\\Requests\\DeleteEntityRequestDto.cs",
+              "ToolTip": "C:\\Users\\SirCryALot\\source\\repos\\GenCo\\GenCo.Application\\DTOs\\Entity\\Requests\\DeleteEntityRequestDto.cs",
+              "RelativeToolTip": "GenCo.Application\\DTOs\\Entity\\Requests\\DeleteEntityRequestDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAA4AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-22T09:48:08.478Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "ProjectDetailsResponseDto.cs",
+              "DocumentMoniker": "C:\\Users\\SirCryALot\\source\\repos\\GenCo\\GenCo.Application\\DTOs\\Project\\Responses\\ProjectDetailsResponseDto.cs",
+              "RelativeDocumentMoniker": "GenCo.Application\\DTOs\\Project\\Responses\\ProjectDetailsResponseDto.cs",
+              "ToolTip": "C:\\Users\\SirCryALot\\source\\repos\\GenCo\\GenCo.Application\\DTOs\\Project\\Responses\\ProjectDetailsResponseDto.cs",
+              "RelativeToolTip": "GenCo.Application\\DTOs\\Project\\Responses\\ProjectDetailsResponseDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAuAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-22T09:45:58.322Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "EntityByNameSpec.cs",
+              "DocumentMoniker": "C:\\Users\\SirCryALot\\source\\repos\\GenCo\\GenCo.Application\\Specifications\\Entities\\EntityByNameSpec.cs",
+              "RelativeDocumentMoniker": "GenCo.Application\\Specifications\\Entities\\EntityByNameSpec.cs",
+              "ToolTip": "C:\\Users\\SirCryALot\\source\\repos\\GenCo\\GenCo.Application\\Specifications\\Entities\\EntityByNameSpec.cs",
+              "RelativeToolTip": "GenCo.Application\\Specifications\\Entities\\EntityByNameSpec.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-22T10:07:41.109Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "EntityByIdSpec.cs",
+              "DocumentMoniker": "C:\\Users\\SirCryALot\\source\\repos\\GenCo\\GenCo.Application\\Specifications\\Entities\\EntityByIdSpec.cs",
+              "RelativeDocumentMoniker": "GenCo.Application\\Specifications\\Entities\\EntityByIdSpec.cs",
+              "ToolTip": "C:\\Users\\SirCryALot\\source\\repos\\GenCo\\GenCo.Application\\Specifications\\Entities\\EntityByIdSpec.cs",
+              "RelativeToolTip": "GenCo.Application\\Specifications\\Entities\\EntityByIdSpec.cs",
+              "ViewState": "AgIAAAEAAAAAAAAAAADwvw4AAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-22T10:07:15.764Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "CreateProjectCommand.cs",
+              "DocumentMoniker": "C:\\Users\\SirCryALot\\source\\repos\\GenCo\\GenCo.Application\\Features\\Projects\\Commands\\CreateProject\\CreateProjectCommand.cs",
+              "RelativeDocumentMoniker": "GenCo.Application\\Features\\Projects\\Commands\\CreateProject\\CreateProjectCommand.cs",
+              "ToolTip": "C:\\Users\\SirCryALot\\source\\repos\\GenCo\\GenCo.Application\\Features\\Projects\\Commands\\CreateProject\\CreateProjectCommand.cs",
+              "RelativeToolTip": "GenCo.Application\\Features\\Projects\\Commands\\CreateProject\\CreateProjectCommand.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAsAAABIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-22T08:51:45.31Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "EntityByPagingLevelSpec.cs",
+              "DocumentMoniker": "C:\\Users\\SirCryALot\\source\\repos\\GenCo\\GenCo.Application\\Specifications\\Entities\\EntityByPagingLevelSpec.cs",
+              "RelativeDocumentMoniker": "GenCo.Application\\Specifications\\Entities\\EntityByPagingLevelSpec.cs",
+              "ToolTip": "C:\\Users\\SirCryALot\\source\\repos\\GenCo\\GenCo.Application\\Specifications\\Entities\\EntityByPagingLevelSpec.cs",
+              "RelativeToolTip": "GenCo.Application\\Specifications\\Entities\\EntityByPagingLevelSpec.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAC8AAABMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-22T10:14:07.407Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "Entity.cs",
+              "DocumentMoniker": "C:\\Users\\SirCryALot\\source\\repos\\GenCo\\GenCo.Domain\\Entity.cs",
+              "RelativeDocumentMoniker": "GenCo.Domain\\Entity.cs",
+              "ToolTip": "C:\\Users\\SirCryALot\\source\\repos\\GenCo\\GenCo.Domain\\Entity.cs",
+              "RelativeToolTip": "GenCo.Domain\\Entity.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwBIAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-22T09:32:57.465Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "Relation.cs",
+              "DocumentMoniker": "C:\\Users\\SirCryALot\\source\\repos\\GenCo\\GenCo.Domain\\Relation.cs",
+              "RelativeDocumentMoniker": "GenCo.Domain\\Relation.cs",
+              "ToolTip": "C:\\Users\\SirCryALot\\source\\repos\\GenCo\\GenCo.Domain\\Relation.cs",
+              "RelativeToolTip": "GenCo.Domain\\Relation.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-22T10:17:16.406Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 30,
+              "Title": "FieldResponseDto.cs",
+              "DocumentMoniker": "C:\\Users\\SirCryALot\\source\\repos\\GenCo\\GenCo.Application\\DTOs\\Field\\Responses\\FieldResponseDto.cs",
+              "RelativeDocumentMoniker": "GenCo.Application\\DTOs\\Field\\Responses\\FieldResponseDto.cs",
+              "ToolTip": "C:\\Users\\SirCryALot\\source\\repos\\GenCo\\GenCo.Application\\DTOs\\Field\\Responses\\FieldResponseDto.cs",
+              "RelativeToolTip": "GenCo.Application\\DTOs\\Field\\Responses\\FieldResponseDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-22T10:01:35.032Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 31,
+              "Title": "GetEntityByIdQueryHandler.cs",
+              "DocumentMoniker": "C:\\Users\\SirCryALot\\source\\repos\\GenCo\\GenCo.Application\\Features\\Entities\\Queries\\GetEntityById\\GetEntityByIdQueryHandler.cs",
+              "RelativeDocumentMoniker": "GenCo.Application\\Features\\Entities\\Queries\\GetEntityById\\GetEntityByIdQueryHandler.cs",
+              "ToolTip": "C:\\Users\\SirCryALot\\source\\repos\\GenCo\\GenCo.Application\\Features\\Entities\\Queries\\GetEntityById\\GetEntityByIdQueryHandler.cs",
+              "RelativeToolTip": "GenCo.Application\\Features\\Entities\\Queries\\GetEntityById\\GetEntityByIdQueryHandler.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-22T09:49:02.182Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 32,
+              "Title": "GetEntityByIdQuery.cs",
+              "DocumentMoniker": "C:\\Users\\SirCryALot\\source\\repos\\GenCo\\GenCo.Application\\Features\\Entities\\Queries\\GetEntityById\\GetEntityByIdQuery.cs",
+              "RelativeDocumentMoniker": "GenCo.Application\\Features\\Entities\\Queries\\GetEntityById\\GetEntityByIdQuery.cs",
+              "ToolTip": "C:\\Users\\SirCryALot\\source\\repos\\GenCo\\GenCo.Application\\Features\\Entities\\Queries\\GetEntityById\\GetEntityByIdQuery.cs",
+              "RelativeToolTip": "GenCo.Application\\Features\\Entities\\Queries\\GetEntityById\\GetEntityByIdQuery.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-22T09:49:00.68Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "Field.cs",
+              "DocumentMoniker": "C:\\Users\\SirCryALot\\source\\repos\\GenCo\\GenCo.Domain\\Field.cs",
+              "RelativeDocumentMoniker": "GenCo.Domain\\Field.cs",
+              "ToolTip": "C:\\Users\\SirCryALot\\source\\repos\\GenCo\\GenCo.Domain\\Field.cs",
+              "RelativeToolTip": "GenCo.Domain\\Field.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-22T09:33:05.877Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "BaseSpecification.cs",
+              "DocumentMoniker": "C:\\Users\\SirCryALot\\source\\repos\\GenCo\\GenCo.Application\\Specifications\\Common\\BaseSpecification.cs",
+              "RelativeDocumentMoniker": "GenCo.Application\\Specifications\\Common\\BaseSpecification.cs",
+              "ToolTip": "C:\\Users\\SirCryALot\\source\\repos\\GenCo\\GenCo.Application\\Specifications\\Common\\BaseSpecification.cs",
+              "RelativeToolTip": "GenCo.Application\\Specifications\\Common\\BaseSpecification.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAuAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-22T08:54:58.617Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 34,
+              "Title": "ProjectResponseDto.cs",
+              "DocumentMoniker": "C:\\Users\\SirCryALot\\source\\repos\\GenCo\\GenCo.Application\\DTOs\\Project\\Responses\\ProjectResponseDto.cs",
+              "RelativeDocumentMoniker": "GenCo.Application\\DTOs\\Project\\Responses\\ProjectResponseDto.cs",
+              "ToolTip": "C:\\Users\\SirCryALot\\source\\repos\\GenCo\\GenCo.Application\\DTOs\\Project\\Responses\\ProjectResponseDto.cs",
+              "RelativeToolTip": "GenCo.Application\\DTOs\\Project\\Responses\\ProjectResponseDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-22T09:47:08.123Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 36,
+              "Title": "EntityResponseDto.cs",
+              "DocumentMoniker": "C:\\Users\\SirCryALot\\source\\repos\\GenCo\\GenCo.Application\\DTOs\\Entity\\Responses\\EntityResponseDto.cs",
+              "RelativeDocumentMoniker": "GenCo.Application\\DTOs\\Entity\\Responses\\EntityResponseDto.cs",
+              "ToolTip": "C:\\Users\\SirCryALot\\source\\repos\\GenCo\\GenCo.Application\\DTOs\\Entity\\Responses\\EntityResponseDto.cs",
+              "RelativeToolTip": "GenCo.Application\\DTOs\\Entity\\Responses\\EntityResponseDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-22T09:46:20.171Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 33,
+              "Title": "EntityDetailsResponseDto.cs",
+              "DocumentMoniker": "C:\\Users\\SirCryALot\\source\\repos\\GenCo\\GenCo.Application\\DTOs\\Entity\\Responses\\EntityDetailsResponseDto.cs",
+              "RelativeDocumentMoniker": "GenCo.Application\\DTOs\\Entity\\Responses\\EntityDetailsResponseDto.cs",
+              "ToolTip": "C:\\Users\\SirCryALot\\source\\repos\\GenCo\\GenCo.Application\\DTOs\\Entity\\Responses\\EntityDetailsResponseDto.cs",
+              "RelativeToolTip": "GenCo.Application\\DTOs\\Entity\\Responses\\EntityDetailsResponseDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAsAAAArAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-22T09:46:40.569Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 35,
+              "Title": "ProjectListResponseDto.cs",
+              "DocumentMoniker": "C:\\Users\\SirCryALot\\source\\repos\\GenCo\\GenCo.Application\\DTOs\\Project\\Responses\\ProjectListResponseDto.cs",
+              "RelativeDocumentMoniker": "GenCo.Application\\DTOs\\Project\\Responses\\ProjectListResponseDto.cs",
+              "ToolTip": "C:\\Users\\SirCryALot\\source\\repos\\GenCo\\GenCo.Application\\DTOs\\Project\\Responses\\ProjectListResponseDto.cs",
+              "RelativeToolTip": "GenCo.Application\\DTOs\\Project\\Responses\\ProjectListResponseDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-22T09:45:30.936Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 38,
+              "Title": "ProjectByKeywordSpec.cs",
+              "DocumentMoniker": "C:\\Users\\SirCryALot\\source\\repos\\GenCo\\GenCo.Application\\Specifications\\Projects\\ProjectByKeywordSpec.cs",
+              "RelativeDocumentMoniker": "GenCo.Application\\Specifications\\Projects\\ProjectByKeywordSpec.cs",
+              "ToolTip": "C:\\Users\\SirCryALot\\source\\repos\\GenCo\\GenCo.Application\\Specifications\\Projects\\ProjectByKeywordSpec.cs",
+              "RelativeToolTip": "GenCo.Application\\Specifications\\Projects\\ProjectByKeywordSpec.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-22T09:30:58.712Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 37,
+              "Title": "ProjectByIdSpec.cs",
+              "DocumentMoniker": "C:\\Users\\SirCryALot\\source\\repos\\GenCo\\GenCo.Application\\Specifications\\Projects\\ProjectByIdSpec.cs",
+              "RelativeDocumentMoniker": "GenCo.Application\\Specifications\\Projects\\ProjectByIdSpec.cs",
+              "ToolTip": "C:\\Users\\SirCryALot\\source\\repos\\GenCo\\GenCo.Application\\Specifications\\Projects\\ProjectByIdSpec.cs",
+              "RelativeToolTip": "GenCo.Application\\Specifications\\Projects\\ProjectByIdSpec.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-22T09:28:19.408Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 39,
+              "Title": "Project.cs",
+              "DocumentMoniker": "C:\\Users\\SirCryALot\\source\\repos\\GenCo\\GenCo.Domain\\Project.cs",
+              "RelativeDocumentMoniker": "GenCo.Domain\\Project.cs",
+              "ToolTip": "C:\\Users\\SirCryALot\\source\\repos\\GenCo\\GenCo.Domain\\Project.cs",
+              "RelativeToolTip": "GenCo.Domain\\Project.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-22T09:17:50.353Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 41,
               "Title": "ISpecification.cs",
               "DocumentMoniker": "C:\\Users\\SirCryALot\\source\\repos\\GenCo\\GenCo.Application\\Specifications\\Common\\ISpecification.cs",
               "RelativeDocumentMoniker": "GenCo.Application\\Specifications\\Common\\ISpecification.cs",
@@ -293,12 +685,11 @@
               "RelativeToolTip": "GenCo.Application\\Specifications\\Common\\ISpecification.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAqwAkAAAAVAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-22T08:58:56.216Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-08-22T08:58:56.216Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 40,
               "Title": "IGenericRepository.cs",
               "DocumentMoniker": "C:\\Users\\SirCryALot\\source\\repos\\GenCo\\GenCo.Application\\Persistence\\Contracts\\Common\\IGenericRepository.cs",
               "RelativeDocumentMoniker": "GenCo.Application\\Persistence\\Contracts\\Common\\IGenericRepository.cs",
@@ -306,34 +697,7 @@
               "RelativeToolTip": "GenCo.Application\\Persistence\\Contracts\\Common\\IGenericRepository.cs",
               "ViewState": "AgIAAEkAAAAAAAAAAAAUwFIAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-22T08:52:49.529Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 17,
-              "Title": "CreateProjectCommand.cs",
-              "DocumentMoniker": "C:\\Users\\SirCryALot\\source\\repos\\GenCo\\GenCo.Application\\Features\\Projects\\Commands\\CreateProject\\CreateProjectCommand.cs",
-              "RelativeDocumentMoniker": "GenCo.Application\\Features\\Projects\\Commands\\CreateProject\\CreateProjectCommand.cs",
-              "ToolTip": "C:\\Users\\SirCryALot\\source\\repos\\GenCo\\GenCo.Application\\Features\\Projects\\Commands\\CreateProject\\CreateProjectCommand.cs",
-              "RelativeToolTip": "GenCo.Application\\Features\\Projects\\Commands\\CreateProject\\CreateProjectCommand.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-22T08:51:45.31Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 18,
-              "Title": "CreateEntityCommand.cs",
-              "DocumentMoniker": "C:\\Users\\SirCryALot\\source\\repos\\GenCo\\GenCo.Application\\Features\\Entities\\Commands\\CreateEntity\\CreateEntityCommand.cs",
-              "RelativeDocumentMoniker": "GenCo.Application\\Features\\Entities\\Commands\\CreateEntity\\CreateEntityCommand.cs",
-              "ToolTip": "C:\\Users\\SirCryALot\\source\\repos\\GenCo\\GenCo.Application\\Features\\Entities\\Commands\\CreateEntity\\CreateEntityCommand.cs",
-              "RelativeToolTip": "GenCo.Application\\Features\\Entities\\Commands\\CreateEntity\\CreateEntityCommand.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-22T08:51:33.829Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-08-22T08:52:49.529Z"
             }
           ]
         }

@@ -1,7 +1,4 @@
-﻿using AutoMapper;
-using GenCo.Application.DTOs.Common;
-using GenCo.Application.DTOs.Project.Responses;
-using GenCo.Application.Persistence.Contracts;
+﻿using GenCo.Application.DTOs.Project.Responses;
 using GenCo.Application.Persistence.Contracts.Common;
 using GenCo.Domain;
 using MediatR;
@@ -11,29 +8,29 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace GenCo.Application.Features.Projects.Commands.DeleteProject
+namespace GenCo.Application.Features.Projects.Commands.SoftDeleteProject
 {
-    public class DeleteProjectCommandHandler : IRequestHandler<DeleteProjectCommand, DeleteProjectResponseDto>
+    public class SoftDeleteProjectCommandHandler : IRequestHandler<SoftDeleteProjectCommand, DeleteProjectResponseDto>
     {
         private readonly IGenericRepository<Project> _repository;
         private readonly IUnitOfWork _unitOfWork;
 
-        public DeleteProjectCommandHandler(IGenericRepository<Project> repository, IUnitOfWork unitOfWork)
+        public SoftDeleteProjectCommandHandler(IGenericRepository<Project> repository, IUnitOfWork unitOfWork)
         {
             _repository = repository;
             _unitOfWork = unitOfWork;
         }
 
-        public async Task<DeleteProjectResponseDto> Handle(DeleteProjectCommand request, CancellationToken cancellationToken)
+        public async Task<DeleteProjectResponseDto> Handle(SoftDeleteProjectCommand request, CancellationToken cancellationToken)
         {
             var project = await _repository.GetByIdAsync(request.Id, cancellationToken: cancellationToken);
             if (project == null)
                 return new DeleteProjectResponseDto { Success = false, Message = "Project not found" };
 
-            await _repository.DeleteAsync(project, cancellationToken);
+            await _repository.SoftDeleteAsync(project, cancellationToken);
             await _unitOfWork.SaveChangesAsync(cancellationToken);
 
-            return new DeleteProjectResponseDto { Success = true, Message = "Project deleted permanently" };
+            return new DeleteProjectResponseDto { Success = true, Message = "Project soft-deleted successfully" };
         }
     }
 }

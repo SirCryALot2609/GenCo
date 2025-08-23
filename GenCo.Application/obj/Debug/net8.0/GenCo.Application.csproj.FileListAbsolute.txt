@@ -13,3 +13,4 @@ C:\Users\SirCryALot\source\repos\GenCo\GenCo.Application\obj\Debug\net8.0\GenCo.
 C:\Users\SirCryALot\source\repos\GenCo\GenCo.Application\obj\Debug\net8.0\refint\GenCo.Application.dll
 C:\Users\SirCryALot\source\repos\GenCo\GenCo.Application\obj\Debug\net8.0\GenCo.Application.pdb
 C:\Users\SirCryALot\source\repos\GenCo\GenCo.Application\obj\Debug\net8.0\ref\GenCo.Application.dll
+C:\Users\SirCryALot\source\repos\GenCo\GenCo.Application\obj\Debug\net8.0\GenCo.Application.sourcelink.json

@@ -10,12 +10,29 @@ namespace GenCo.Application.Specifications.Projects
 {
     public class ProjectByKeywordSpec : BaseSpecification<Project>
     {
-        public ProjectByKeywordSpec(string keyword, int skip = 0, int take = 10)
-            : base(p => !string.IsNullOrEmpty(keyword) &&
-                        (p.Name.Contains(keyword) || (p.Description != null && p.Description.Contains(keyword))))
+        public ProjectByKeywordSpec(string? keyword = null, int skip = 0, int take = 10, bool includeAllCollections = false)
+            : base(p => string.IsNullOrEmpty(keyword)
+                        || p.Name.Contains(keyword)
+                        || (p.Description != null && p.Description.Contains(keyword)))
         {
-            ApplyOrderBy(p => p.Name);
+            // Paging
             ApplyPaging(skip, take);
+
+            // Sort
+            ApplyOrderBy(p => p.Name);
+
+            // Optional include
+            if (includeAllCollections)
+            {
+                AddInclude(p => p.Entities);
+                AddInclude(p => p.Entities.Select(e => e.Fields));
+                AddInclude(p => p.Entities.SelectMany(e => e.Fields).Select(f => f.Validators));
+                AddInclude(p => p.Relations);
+                AddInclude(p => p.Workflows);
+                AddInclude(p => p.UIConfigs);
+                AddInclude(p => p.ServiceConfigs);
+            }
         }
     }
+
 }

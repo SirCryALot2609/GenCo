@@ -11,3 +11,4 @@ namespace GenCo.Application.Persistence.Contracts
     public interface IFieldRepository : IGenericRepository<Field>
     {
     }
+}

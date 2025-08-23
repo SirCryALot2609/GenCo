@@ -14,5 +14,7 @@ namespace GenCo.Domain
         public string Name { get; set; } = default!;
         public string? Label { get; set; }
         public ICollection<Field> Fields { get; set; } = [];
+        public ICollection<Relation> FromRelations { get; set; } = []; 
+        public ICollection<Relation> ToRelations { get; set; } = []; 
     }
 }

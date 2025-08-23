@@ -5,11 +5,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace GenCo.Application.DTOs.Project.Requests
+namespace GenCo.Application.DTOs.Project
 {
-    public class UpdateProjectRequestDto : BaseRequestDto
+    public class ProjectListItemDto : BaseDto
     {
-        public Guid Id { get; set; }
         public string Name { get; set; } = default!;
         public string? Description { get; set; }
     }

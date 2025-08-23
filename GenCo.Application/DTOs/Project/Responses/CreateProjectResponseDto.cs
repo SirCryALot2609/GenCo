@@ -9,7 +9,6 @@ namespace GenCo.Application.DTOs.Project.Responses
 {
     public class CreateProjectResponseDto : BaseResponseDto
     {
-        public string Name { get; set; } = default!;
-        public string? Description { get; set; }
+        public ProjectResponseDto Project { get; set; } = default!;
     }
 }

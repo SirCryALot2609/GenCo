@@ -1,5 +1,6 @@
 ﻿using GenCo.Application.DTOs.Common;
 using GenCo.Application.DTOs.Project.Requests;
+using GenCo.Application.DTOs.Project.Responses;
 using MediatR;
 using System;
 using System.Collections.Generic;
@@ -9,8 +10,6 @@ using System.Threading.Tasks;
 
 namespace GenCo.Application.Features.Projects.Commands.CreateProject
 {
-    public class CreateProjectCommand : IRequest<BaseCreateResponseDto>
-    {
-        public CreateProjectRequestDto Request { get; set; } = default!;
-    }
+    public record CreateProjectCommand(CreateProjectRequestDto Request)
+    : IRequest<CreateProjectResponseDto>;
 }

@@ -15,8 +15,6 @@ namespace GenCo.Application.DTOs.Field.Responses
         public bool IsRequired { get; set; }
         public bool IsPrimaryKey { get; set; }
         public string? DefaultValue { get; set; }
-
-        // Trả về list validator id (nếu có)
         public List<Guid> ValidatorIds { get; set; } = new();
     }
 

@@ -1,6 +1,8 @@
 ﻿using AutoMapper;
 using GenCo.Application.DTOs.Common;
+using GenCo.Application.DTOs.Project.Responses;
 using GenCo.Application.Persistence.Contracts;
+using GenCo.Application.Persistence.Contracts.Common;
 using GenCo.Domain;
 using MediatR;
 using System;
@@ -11,25 +13,28 @@ using System.Threading.Tasks;
 
 namespace GenCo.Application.Features.Projects.Commands.CreateProject
 {
-    public class CreateProjectCommandHandler(IProjectRepository repository, IMapper mapper)
-        : IRequestHandler<CreateProjectCommand, BaseCreateResponseDto>
+    public class CreateProjectCommandHandler(IGenericRepository<Project> repository,
+                                       IUnitOfWork unitOfWork,
+                                       IMapper mapper) : IRequestHandler<CreateProjectCommand, CreateProjectResponseDto>
     {
-        private readonly IProjectRepository _repository = repository;
+        private readonly IGenericRepository<Project> _repository = repository;
+        private readonly IUnitOfWork _unitOfWork = unitOfWork;
         private readonly IMapper _mapper = mapper;
 
-        public async Task<BaseCreateResponseDto> Handle(CreateProjectCommand request, CancellationToken cancellationToken)
+        public async Task<CreateProjectResponseDto> Handle(CreateProjectCommand request, CancellationToken cancellationToken)
         {
-            var project = _mapper.Map<Project>(request.Request);
-            project.CreatedAt = DateTime.UtcNow;
-            project.CreatedBy = "system"; // TODO: lấy từ context user hiện tại
-            var created = await _repository.AddAsync(project);
-            return new BaseCreateResponseDto
+            var project = new Project
             {
-                Success = true,
-                Message = "Project created successfully.",
-                CreatedAt = created.CreatedAt,
-                CreatedBy = created.CreatedBy,
+                Name = request.Request.Name,
+                Description = request.Request.Description,
+                CreatedAt = DateTime.UtcNow
             };
+
+            await _repository.AddAsync(project, cancellationToken);
+            await _unitOfWork.SaveChangesAsync(cancellationToken);
+
+            var dto = _mapper.Map<ProjectResponseDto>(project);
+            return new CreateProjectResponseDto { Project = dto, Success = true, CreatedAt = DateTime.UtcNow };
         }
     }
 }

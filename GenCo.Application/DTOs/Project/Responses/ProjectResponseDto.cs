@@ -12,9 +12,7 @@ using System.Threading.Tasks;
 
 namespace GenCo.Application.DTOs.Project.Responses
 {
-    public class ProjectResponseDto : BaseResponseDto
+    public class ProjectResponseDto : ProjectBaseDto
     {
-        public string Name { get; set; } = default!;
-        public string? Description { get; set; }
     }
 }
