@@ -1,4 +1,6 @@
-﻿using GenCo.Application.DTOs.Project.Responses;
+﻿using GenCo.Application.DTOs.Common;
+using GenCo.Application.DTOs.Project.Requests;
+using GenCo.Application.DTOs.Project.Responses;
 using MediatR;
 using System;
 using System.Collections.Generic;
@@ -8,5 +10,6 @@ using System.Threading.Tasks;
 
 namespace GenCo.Application.Features.Projects.Commands.SoftDeleteProject
 {
-    public record SoftDeleteProjectCommand(Guid Id) : IRequest<DeleteProjectResponseDto>;
+    public record SoftDeleteProjectCommand(DeleteProjectRequestDto Request)
+    : IRequest<BaseResponseDto<ProjectResponseDto>>;
 }

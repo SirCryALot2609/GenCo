@@ -10,6 +10,6 @@ using System.Threading.Tasks;
 
 namespace GenCo.Application.Features.Projects.Commands.DeleteProject
 {
-    public record DeleteProjectCommand(Guid Id) : IRequest<DeleteProjectResponseDto>;
-
+    public record DeleteProjectCommand(DeleteProjectRequestDto Request)
+    : IRequest<BaseResponseDto<BoolResultDto>>;
 }

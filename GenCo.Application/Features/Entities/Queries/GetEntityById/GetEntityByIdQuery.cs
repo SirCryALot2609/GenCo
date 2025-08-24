@@ -1,4 +1,5 @@
-﻿using GenCo.Application.DTOs.Entity.Responses;
+﻿using GenCo.Application.DTOs.Common;
+using GenCo.Application.DTOs.Entity.Responses;
 using MediatR;
 using System;
 using System.Collections.Generic;
@@ -8,6 +9,6 @@ using System.Threading.Tasks;
 
 namespace GenCo.Application.Features.Entities.Queries.GetEntityById
 {
-    public record GetEntityByIdQuery(Guid Id)
-        : IRequest<EntityDetailsResponseDto>;
+    public record GetEntityByIdQuery(Guid Id, bool IncludeDetails = false)
+    : IRequest<BaseResponseDto<EntityDetailsResponseDto>>;
 }

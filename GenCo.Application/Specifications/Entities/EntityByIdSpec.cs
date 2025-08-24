@@ -18,8 +18,6 @@ namespace GenCo.Application.Specifications.Entities
                 AddInclude(e => e.Fields); // load Fields
                 AddInclude(e => e.Fields.Select(f => f.Validators)); // load Validators
             }
-
-            // Optional: include Project
             AddInclude(e => e.Project);
         }
     }

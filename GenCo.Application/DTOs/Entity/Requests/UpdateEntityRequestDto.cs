@@ -13,7 +13,6 @@ namespace GenCo.Application.DTOs.Entity.Requests
         public Guid Id { get; set; }
         public Guid ProjectId { get; set; }
         public string Name { get; set; } = default!;
-        public string? Description { get; set; }
-        public ICollection<UpdateFieldRequestDto>? Fields { get; set; }
+        public string? Label { get; set; }
     }
 }

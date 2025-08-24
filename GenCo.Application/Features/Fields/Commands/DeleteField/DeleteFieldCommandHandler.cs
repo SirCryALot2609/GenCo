@@ -1,6 +1,8 @@
 ﻿using AutoMapper;
 using GenCo.Application.DTOs.Common;
+using GenCo.Application.DTOs.Field.Responses;
 using GenCo.Application.Persistence.Contracts;
+using GenCo.Application.Persistence.Contracts.Common;
 using GenCo.Domain;
 using MediatR;
 using System;
@@ -11,36 +13,28 @@ using System.Threading.Tasks;
 
 namespace GenCo.Application.Features.Fields.Commands.DeleteField
 {
-    public class DeleteFieldCommandHandler(IFieldRepository repository, IMapper mapper)
-        : IRequestHandler<DeleteFieldCommand, BaseDeleteResponseDto>
+    public class DeleteFieldCommandHandler(
+        IFieldRepository repository, 
+        IUnitOfWork unitOfWork,
+        IMapper mapper)
+        : IRequestHandler<DeleteFieldCommand, BaseResponseDto<BoolResultDto>>
     {
         private readonly IFieldRepository _repository = repository;
+        private readonly IUnitOfWork _unitOfWork = unitOfWork;
         private readonly IMapper _mapper = mapper;
 
-        public async Task<BaseDeleteResponseDto> Handle(DeleteFieldCommand request, CancellationToken cancellationToken)
+        public async Task<BaseResponseDto<BoolResultDto>> Handle(DeleteFieldCommand request, CancellationToken cancellationToken)
         {
-            var field = await _repository.GetByIdAsync(request.Request.Id);
+            var field = await _repository.GetByIdAsync(request.Request.Id, cancellationToken: cancellationToken);
             if (field == null)
             {
-                return new BaseDeleteResponseDto
-                {
-                    Success = false,
-                    Message = "Field not found.",
-                    DeleteAt = DateTime.UtcNow,
-                    DeleteBy = "system"
-                };
+                return BaseResponseDto<BoolResultDto>.Fail("Field not found");
             }
-            await _repository.DeleteAsync(field);
-            var deleted = await _repository.GetByIdAsync(field.Id);
-            return new BaseDeleteResponseDto
-            {
-                Success = deleted.IsDelete,
-                Message = deleted.IsDelete
-                    ? "Field deleted successfully."
-                    : "Failed to delete field.",
-                DeleteAt = deleted.DeleteAt,
-                DeleteBy = deleted.DeleteBy,
-            };
+
+            await _repository.DeleteAsync(field, cancellationToken);
+            await _unitOfWork.SaveChangesAsync(cancellationToken);
+
+            return BaseResponseDto<BoolResultDto>.Ok(new BoolResultDto { Value = true }, "Field deleted successfully");
         }
     }
 }

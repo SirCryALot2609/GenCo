@@ -11,5 +11,5 @@ using System.Threading.Tasks;
 namespace GenCo.Application.Features.Projects.Commands.UpdateProject
 {
     public record UpdateProjectCommand(UpdateProjectRequestDto Request)
-    : IRequest<UpdateProjectResponseDto>;
+    : IRequest<BaseResponseDto<ProjectResponseDto>>;
 }

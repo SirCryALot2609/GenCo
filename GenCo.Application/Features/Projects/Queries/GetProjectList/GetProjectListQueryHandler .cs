@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using GenCo.Application.DTOs.Common;
 using GenCo.Application.DTOs.Project;
 using GenCo.Application.DTOs.Project.Responses;
 using GenCo.Application.Persistence.Contracts;
@@ -14,35 +15,43 @@ using System.Threading.Tasks;
 
 namespace GenCo.Application.Features.Projects.Queries.GetProjectList
 {
-    public class GetProjectListQueryHandler(IGenericRepository<Project> repository, IMapper mapper) : IRequestHandler<GetProjectListQuery, ProjectListResponseDto>
+    public class GetProjectListQueryHandler
+    : IRequestHandler<GetProjectListQuery, PagedResponseDto<ProjectListItemDto>>
     {
-        private readonly IGenericRepository<Project> _repository = repository;
-        private readonly IMapper _mapper = mapper;
+        private readonly IGenericRepository<Project> _repository;
+        private readonly IMapper _mapper;
 
-        public async Task<ProjectListResponseDto> Handle(GetProjectListQuery request, CancellationToken cancellationToken)
+        public GetProjectListQueryHandler(IGenericRepository<Project> repository, IMapper mapper)
         {
-            // Tạo specification
-            int skip = (request.PageNumber - 1) * request.PageSize;
+            _repository = repository;
+            _mapper = mapper;
+        }
+
+        public async Task<PagedResponseDto<ProjectListItemDto>> Handle(
+            GetProjectListQuery request,
+            CancellationToken cancellationToken)
+        {
             var spec = new ProjectByKeywordSpec(
                 keyword: request.Keyword,
-                skip: skip,
-                take: request.PageSize,
                 includeAllCollections: request.IncludeAllCollections
             );
 
-            // Gọi repository
-            var (projects, totalCount) = await _repository.GetPagedAsync(spec, request.PageNumber, request.PageSize, cancellationToken: cancellationToken);
+            var (projects, totalCount) = await _repository.GetPagedAsync(
+                spec,
+                request.PageNumber,
+                request.PageSize,
+                cancellationToken: cancellationToken
+            );
 
-            // Ánh xạ sang DTO
             var items = _mapper.Map<IReadOnlyCollection<ProjectListItemDto>>(projects);
 
-            return new ProjectListResponseDto
-            {
-                Items = items,
-                TotalCount = totalCount,
-                Success = true,
-                Message = "Projects retrieved successfully"
-            };
+            return PagedResponseDto<ProjectListItemDto>.Ok(
+                items,
+                totalCount,
+                request.PageNumber,
+                request.PageSize,
+                "Projects retrieved successfully"
+            );
         }
     }
 }

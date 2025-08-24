@@ -11,5 +11,5 @@ using System.Threading.Tasks;
 namespace GenCo.Application.Features.Entities.Commands.UpdateEntity
 {
     public record UpdateEntityCommand(UpdateEntityRequestDto Request)
-        : IRequest<UpdateEntityResponseDto>;
+        : IRequest<BaseResponseDto<EntityResponseDto>>;
 }

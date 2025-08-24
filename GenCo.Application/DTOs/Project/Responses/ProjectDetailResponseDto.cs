@@ -7,8 +7,8 @@ using System.Threading.Tasks;
 
 namespace GenCo.Application.DTOs.Project.Responses
 {
-    public class ProjectDetailResponseDto : BaseResponseDto
+    public class ProjectDetailResponseDto
+    : BaseResponseDto<ProjectDetailDto>
     {
-        public ProjectDetailDto? Project { get; set; }
     }
 }

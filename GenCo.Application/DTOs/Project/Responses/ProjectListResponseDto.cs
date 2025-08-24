@@ -7,9 +7,8 @@ using System.Threading.Tasks;
 
 namespace GenCo.Application.DTOs.Project.Responses
 {
-    public class ProjectListResponseDto : BaseResponseDto
+    public class ProjectListResponseDto
+    : PagedResponseDto<ProjectListItemDto>
     {
-        public IReadOnlyCollection<ProjectListItemDto> Items { get; set; } = [];
-        public int TotalCount { get; set; }
     }
 }

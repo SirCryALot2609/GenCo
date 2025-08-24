@@ -1,4 +1,7 @@
-﻿using GenCo.Application.DTOs.Field.Responses;
+﻿using GenCo.Application.DTOs.Common;
+using GenCo.Application.DTOs.Field.Responses;
+using GenCo.Application.DTOs.Project;
+using GenCo.Application.DTOs.Project.Responses;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,8 +10,8 @@ using System.Threading.Tasks;
 
 namespace GenCo.Application.DTOs.Entity.Responses
 {
-    public class EntityDetailsResponseDto : EntityResponseDto
+    public class EntityDetailsResponseDto 
+        : BaseResponseDto<EntityDetailDto>
     {
-        public ICollection<FieldResponseDto>? Fields { get; set; }
     }
 }

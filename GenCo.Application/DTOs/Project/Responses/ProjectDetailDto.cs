@@ -11,7 +11,7 @@ using System.Threading.Tasks;
 
 namespace GenCo.Application.DTOs.Project.Responses
 {
-    public class ProjectDetailDto : ProjectResponseDto
+    public class ProjectDetailDto : ProjectBaseDto
     {
         public ICollection<EntityDetailsResponseDto>? Entities { get; set; }
         public ICollection<RelationResponseDto>? Relations { get; set; }

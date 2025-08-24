@@ -1,5 +1,6 @@
 ﻿using GenCo.Application.DTOs.Common;
 using GenCo.Application.DTOs.Field.Requests;
+using GenCo.Application.DTOs.Field.Responses;
 using MediatR;
 using System;
 using System.Collections.Generic;
@@ -9,8 +10,8 @@ using System.Threading.Tasks;
 
 namespace GenCo.Application.Features.Fields.Commands.UpdateField
 {
-    public class UpdateFieldCommand : IRequest<BaseUpdateResponseDto>
+    public record UpdateFieldCommand(UpdateFieldRequestDto Request) 
+        : IRequest<BaseResponseDto<FieldResponseDto>>
     {
-        public UpdateFieldRequestDto Request { get; set; } = default!;
     }
 }

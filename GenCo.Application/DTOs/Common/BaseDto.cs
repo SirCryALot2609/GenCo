@@ -11,6 +11,11 @@ namespace GenCo.Application.DTOs.Common
         public Guid Id { get; set; }
     }
 
+    public class BoolResultDto
+    {
+        public bool Value { get; set; }
+    }
+
     public abstract class AuditableDto : BaseDto
     {
         public DateTime CreatedAt { get; set; }
@@ -21,41 +26,60 @@ namespace GenCo.Application.DTOs.Common
         public string? DeletedBy { get; set; }
     }
 
-    public class ApiResponse<T> where T : class
+    public abstract class BaseRequestDto
+    {
+        public Guid CorrelationId { get; set; } = Guid.NewGuid();
+        public DateTime RequestedAt { get; set; } = DateTime.UtcNow;
+    }
+
+    /// <summary>
+    /// Generic API response wrapper
+    /// </summary>
+    public class BaseResponseDto<T> where T : class
     {
         public bool Success { get; set; }
         public string Message { get; set; } = string.Empty;
         public T? Data { get; set; }
 
-        public static ApiResponse<T> Ok(T data, string? message = null)
-        {
-            return new ApiResponse<T>
+        public static BaseResponseDto<T> Ok(T data, string? message = null)
+            => new() { Success = true, Message = message ?? "Success", Data = data };
+
+        public static BaseResponseDto<T> Fail(string message)
+            => new() { Success = false, Message = message };
+    }
+
+    public class PagedResponseDto<T> : BaseResponseDto<IReadOnlyCollection<T>>
+    {
+        public int TotalCount { get; set; }
+        public int PageNumber { get; set; }
+        public int PageSize { get; set; }
+
+        // Factory helpers
+        public static PagedResponseDto<T> Ok(
+            IReadOnlyCollection<T> items,
+            int totalCount,
+            int pageNumber,
+            int pageSize,
+            string? message = null)
+            => new()
             {
                 Success = true,
                 Message = message ?? "Success",
-                Data = data
+                Data = items,
+                TotalCount = totalCount,
+                PageNumber = pageNumber,
+                PageSize = pageSize
             };
-        }
 
-        public static ApiResponse<T> Fail(string message)
-        {
-            return new ApiResponse<T>
+        public static PagedResponseDto<T> Fail(string message)
+            => new()
             {
                 Success = false,
                 Message = message,
-                Data = null
+                Data = [],
+                TotalCount = 0,
+                PageNumber = 0,
+                PageSize = 0
             };
-        }
-    }
-
-    public abstract class BaseRequestDto
-    {
-        public Guid CorrelationId { get; set; } = Guid.NewGuid();
-    }
-
-    public abstract class BaseResponseDto : AuditableDto
-    {
-        public bool Success { get; set; } = true;
-        public string Message { get; set; } = string.Empty;
     }
 }

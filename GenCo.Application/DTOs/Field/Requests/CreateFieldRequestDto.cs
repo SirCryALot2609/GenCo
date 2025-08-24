@@ -15,6 +15,5 @@ namespace GenCo.Application.DTOs.Field.Requests
         public bool IsRequired { get; set; }
         public bool IsPrimaryKey { get; set; }
         public string? DefaultValue { get; set; }
-        public List<Guid>? ValidatorIds { get; set; }
     }
 }

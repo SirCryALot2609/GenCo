@@ -8,10 +8,7 @@ using System.Threading.Tasks;
 
 namespace GenCo.Application.DTOs.Entity.Responses
 {
-    public class EntityResponseDto : BaseResponseDto
+    public class EntityResponseDto : EntityBaseDto
     {
-        public Guid ProjectId { get; set; }
-        public string Name { get; set; } = default!;
-        public string? Description { get; set; }
     }
 }

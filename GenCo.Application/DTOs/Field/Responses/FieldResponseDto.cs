@@ -7,15 +7,7 @@ using System.Threading.Tasks;
 
 namespace GenCo.Application.DTOs.Field.Responses
 {
-    public class FieldResponseDto : BaseResponseDto
+    public class FieldResponseDto : FieldBaseDto
     {
-        public Guid EntityId { get; set; }
-        public string Name { get; set; } = default!;
-        public string Type { get; set; } = default!;
-        public bool IsRequired { get; set; }
-        public bool IsPrimaryKey { get; set; }
-        public string? DefaultValue { get; set; }
-        public List<Guid> ValidatorIds { get; set; } = new();
     }
-
 }

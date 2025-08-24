@@ -11,5 +11,5 @@ using System.Threading.Tasks;
 namespace GenCo.Application.Features.Entities.Commands.DeleteEntity
 {
     public record DeleteEntityCommand(DeleteEntityRequestDto Request)
-        : IRequest<DeleteEntityResponseDto>;
+        : IRequest<BaseResponseDto<BoolResultDto>>;
 }

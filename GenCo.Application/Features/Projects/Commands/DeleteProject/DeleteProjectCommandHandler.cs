@@ -13,27 +13,27 @@ using System.Threading.Tasks;
 
 namespace GenCo.Application.Features.Projects.Commands.DeleteProject
 {
-    public class DeleteProjectCommandHandler : IRequestHandler<DeleteProjectCommand, DeleteProjectResponseDto>
+    public class DeleteProjectCommandHandler(
+        IGenericRepository<Project> repository,
+        IUnitOfWork unitOfWork)
+        : IRequestHandler<DeleteProjectCommand, BaseResponseDto<BoolResultDto>>
     {
-        private readonly IGenericRepository<Project> _repository;
-        private readonly IUnitOfWork _unitOfWork;
+        private readonly IGenericRepository<Project> _repository = repository;
+        private readonly IUnitOfWork _unitOfWork = unitOfWork;
 
-        public DeleteProjectCommandHandler(IGenericRepository<Project> repository, IUnitOfWork unitOfWork)
+        public async Task<BaseResponseDto<BoolResultDto>> Handle(DeleteProjectCommand request, CancellationToken cancellationToken)
         {
-            _repository = repository;
-            _unitOfWork = unitOfWork;
-        }
-
-        public async Task<DeleteProjectResponseDto> Handle(DeleteProjectCommand request, CancellationToken cancellationToken)
-        {
-            var project = await _repository.GetByIdAsync(request.Id, cancellationToken: cancellationToken);
+            var project = await _repository.GetByIdAsync(request.Request.Id, cancellationToken: cancellationToken);
             if (project == null)
-                return new DeleteProjectResponseDto { Success = false, Message = "Project not found" };
+            {
+                return BaseResponseDto<BoolResultDto>.Fail("Project not found");
+            }
 
             await _repository.DeleteAsync(project, cancellationToken);
             await _unitOfWork.SaveChangesAsync(cancellationToken);
 
-            return new DeleteProjectResponseDto { Success = true, Message = "Project deleted permanently" };
+            return BaseResponseDto<BoolResultDto>.Ok(new BoolResultDto { Value = true }, "Project deleted permanently");
         }
     }
+
 }

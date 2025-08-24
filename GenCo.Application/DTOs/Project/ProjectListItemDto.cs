@@ -7,9 +7,10 @@ using System.Threading.Tasks;
 
 namespace GenCo.Application.DTOs.Project
 {
-    public class ProjectListItemDto : BaseDto
+    public class ProjectListItemDto : AuditableDto
     {
         public string Name { get; set; } = default!;
         public string? Description { get; set; }
     }
+
 }

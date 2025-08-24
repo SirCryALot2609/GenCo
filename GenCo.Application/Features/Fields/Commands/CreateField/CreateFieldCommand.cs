@@ -1,5 +1,6 @@
 ﻿using GenCo.Application.DTOs.Common;
 using GenCo.Application.DTOs.Field.Requests;
+using GenCo.Application.DTOs.Field.Responses;
 using MediatR;
 using System;
 using System.Collections.Generic;
@@ -9,8 +10,6 @@ using System.Threading.Tasks;
 
 namespace GenCo.Application.Features.Fields.Commands.CreateField
 {
-    public class CreateFieldCommand : IRequest<BaseCreateResponseDto>
-    {
-        public CreateFieldRequestDto Request { get; set; } = default!;
-    }
+    public record CreateFieldCommand(CreateFieldRequestDto Request)
+        : IRequest<BaseResponseDto<FieldResponseDto>>;
 }

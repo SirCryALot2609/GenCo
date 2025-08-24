@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using GenCo.Application.DTOs.Common;
 using GenCo.Application.DTOs.Project.Responses;
 using GenCo.Application.Persistence.Contracts;
 using GenCo.Application.Persistence.Contracts.Common;
@@ -13,40 +14,33 @@ using System.Threading.Tasks;
 
 namespace GenCo.Application.Features.Projects.Queries.GetProjectById
 {
-    public class GetProjectByIdQueryHandler : IRequestHandler<GetProjectByIdQuery, ProjectDetailResponseDto>
+    public class GetProjectByIdQueryHandler(
+        IGenericRepository<Project> repository,
+        IMapper mapper)
+        : IRequestHandler<GetProjectByIdQuery, BaseResponseDto<ProjectDetailDto>>
     {
-        private readonly IGenericRepository<Project> _repository;
-        private readonly IMapper _mapper;
+        private readonly IGenericRepository<Project> _repository = repository;
+        private readonly IMapper _mapper = mapper;
 
-        public GetProjectByIdQueryHandler(IGenericRepository<Project> repository, IMapper mapper)
+        public async Task<BaseResponseDto<ProjectDetailDto>> Handle(
+            GetProjectByIdQuery request,
+            CancellationToken cancellationToken)
         {
-            _repository = repository;
-            _mapper = mapper;
-        }
-
-        public async Task<ProjectDetailResponseDto> Handle(GetProjectByIdQuery request, CancellationToken cancellationToken)
-        {
-            // Sử dụng Specification
             var spec = new ProjectByIdSpec(request.ProjectId, request.IncludeAllCollections);
             var project = await _repository.FirstOrDefaultAsync(spec, cancellationToken: cancellationToken);
 
-            if (project == null)
-                throw new Exception("Project not found");
-
-            // Ánh xạ sang DTO
-            var dto = _mapper.Map<ProjectDetailDto>(project);
-
-            return new ProjectDetailResponseDto
+            if (project is null)
             {
-                Project = dto,
-                Success = true,
-                UpdatedAt = project.UpdatedAt,
-                CreatedAt = project.CreatedAt,
-                CreatedBy = project.CreatedBy,
-                UpdatedBy = project.UpdatedBy,
-                DeletedAt = project.DeletedAt,
-                DeletedBy = project.DeletedBy
-            };
+                return new BaseResponseDto<ProjectDetailDto>
+                {
+                    Success = false,
+                    Message = "Project not found"
+                };
+            }
+
+            var dto = _mapper.Map<ProjectDetailDto>(project);
+            return BaseResponseDto<ProjectDetailDto>.Ok(dto);
         }
     }
+
 }

@@ -11,5 +11,6 @@ using System.Threading.Tasks;
 namespace GenCo.Application.Features.Projects.Commands.CreateProject
 {
     public record CreateProjectCommand(CreateProjectRequestDto Request)
-    : IRequest<CreateProjectResponseDto>;
+    : IRequest<BaseResponseDto<ProjectResponseDto>>;
+
 }

@@ -7,8 +7,8 @@ using System.Threading.Tasks;
 
 namespace GenCo.Application.DTOs.Field.Responses
 {
-    public class DeleteFieldResponseDto : BaseResponseDto
+    public class FieldDetailResponseDto
+        : BaseResponseDto<FieldDetailDto>
     {
-        public bool Deleted { get; set; }
     }
 }

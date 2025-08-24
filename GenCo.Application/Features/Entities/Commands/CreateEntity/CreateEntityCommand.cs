@@ -11,5 +11,5 @@ using System.Threading.Tasks;
 namespace GenCo.Application.Features.Entities.Commands.CreateEntity
 {
     public record CreateEntityCommand(CreateEntityRequestDto Request)
-        : IRequest<CreateEntityResponseDto>;
+        : IRequest<BaseResponseDto<EntityResponseDto>>;
 }

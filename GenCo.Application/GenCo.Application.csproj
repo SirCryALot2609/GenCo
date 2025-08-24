@@ -16,6 +16,8 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Folder Include="DTOs\FieldValidator\Responses\" />
+    <Folder Include="DTOs\FieldValidator\Requests\" />
     <Folder Include="Features\Relations\Queries\" />
     <Folder Include="Features\WorkflowStep\Commands\" />
     <Folder Include="Features\WorkflowStep\Queries\" />

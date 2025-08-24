@@ -1,4 +1,6 @@
-﻿using GenCo.Application.DTOs.Project.Responses;
+﻿using GenCo.Application.DTOs.Common;
+using GenCo.Application.DTOs.Project;
+using GenCo.Application.DTOs.Project.Responses;
 using MediatR;
 using System;
 using System.Collections.Generic;
@@ -12,5 +14,5 @@ namespace GenCo.Application.Features.Projects.Queries.GetProjectList
     string? Keyword = null,
     int PageNumber = 1,
     int PageSize = 10,
-    bool IncludeAllCollections = false) : IRequest<ProjectListResponseDto>;
+    bool IncludeAllCollections = false) : IRequest<PagedResponseDto<ProjectListItemDto>>;
 }

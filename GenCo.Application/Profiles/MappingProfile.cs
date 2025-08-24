@@ -3,6 +3,7 @@ using GenCo.Application.DTOs.Entity.Requests;
 using GenCo.Application.DTOs.Entity.Responses;
 using GenCo.Application.DTOs.Field.Requests;
 using GenCo.Application.DTOs.Field.Responses;
+using GenCo.Application.DTOs.Project;
 using GenCo.Application.DTOs.Project.Requests;
 using GenCo.Application.DTOs.Project.Responses;
 using GenCo.Application.DTOs.Relation.Requests;
@@ -27,23 +28,29 @@ namespace GenCo.Application.Profiles
         public MappingProfile()
         {
             // -------- Project --------
-            CreateMap<CreateProjectRequestDto, Project>();
-            CreateMap<UpdateProjectRequestDto, Project>();
-            CreateMap<Project, ProjectResponseDto>().ReverseMap();
-            CreateMap<Project, ProjectDetailsResponseDto>().ReverseMap();
-            CreateMap<Project, ProjectListResponseDto>().ReverseMap();
+            CreateMap<Project, ProjectResponseDto>();
+            CreateMap<Project, ProjectDetailDto>()
+                .ForMember(dest => dest.Entities, opt => opt.MapFrom(src => src.Entities))
+                .ForMember(dest => dest.Relations, opt => opt.MapFrom(src => src.Relations))
+                .ForMember(dest => dest.Workflows, opt => opt.MapFrom(src => src.Workflows))
+                .ForMember(dest => dest.UIConfigs, opt => opt.MapFrom(src => src.UIConfigs))
+                .ForMember(dest => dest.ServiceConfigs, opt => opt.MapFrom(src => src.ServiceConfigs));
+            CreateMap<Project, ProjectListItemDto>();
+            CreateMap<ProjectResponseDto, Project>();
+            CreateMap<ProjectDetailDto, Project>();
+            CreateMap<ProjectListItemDto, Project>();
 
             // -------- Entity --------
             CreateMap<CreateEntityRequestDto, Entity>();
             CreateMap<UpdateEntityRequestDto, Entity>();
-            CreateMap<Entity, EntityResponseDto>();
+            CreateMap<Entity, DTOs.Entity.Responses.EntityResponseDto>();
             CreateMap<Entity, CreateEntityResponseDto>();
             CreateMap<Entity, UpdateEntityResponseDto>();
 
             // -------- Field --------
             CreateMap<CreateFieldRequestDto, Field>();
             CreateMap<UpdateFieldRequestDto, Field>();
-            CreateMap<Field, FieldResponseDto>().ReverseMap();
+            CreateMap<Field, DTOs.Field.Responses.FieldResponseDto>().ReverseMap();
 
             // -------- Relation --------
             CreateMap<CreateRelationRequestDto, Relation>();

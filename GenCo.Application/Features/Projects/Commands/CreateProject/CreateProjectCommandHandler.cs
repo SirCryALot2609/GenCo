@@ -13,28 +13,25 @@ using System.Threading.Tasks;
 
 namespace GenCo.Application.Features.Projects.Commands.CreateProject
 {
-    public class CreateProjectCommandHandler(IGenericRepository<Project> repository,
-                                       IUnitOfWork unitOfWork,
-                                       IMapper mapper) : IRequestHandler<CreateProjectCommand, CreateProjectResponseDto>
+    public class CreateProjectCommandHandler(
+    IGenericRepository<Project> repository,
+    IUnitOfWork unitOfWork,
+    IMapper mapper)
+    : IRequestHandler<CreateProjectCommand, BaseResponseDto<ProjectResponseDto>>
     {
         private readonly IGenericRepository<Project> _repository = repository;
         private readonly IUnitOfWork _unitOfWork = unitOfWork;
         private readonly IMapper _mapper = mapper;
 
-        public async Task<CreateProjectResponseDto> Handle(CreateProjectCommand request, CancellationToken cancellationToken)
+        public async Task<BaseResponseDto<ProjectResponseDto>> Handle(CreateProjectCommand request, CancellationToken cancellationToken)
         {
-            var project = new Project
-            {
-                Name = request.Request.Name,
-                Description = request.Request.Description,
-                CreatedAt = DateTime.UtcNow
-            };
-
+            var project = _mapper.Map<Project>(request.Request);
+            project.CreatedAt = DateTime.UtcNow;
+            project.CreatedBy = "system"; // sau này lấy từ context user
             await _repository.AddAsync(project, cancellationToken);
             await _unitOfWork.SaveChangesAsync(cancellationToken);
-
             var dto = _mapper.Map<ProjectResponseDto>(project);
-            return new CreateProjectResponseDto { Project = dto, Success = true, CreatedAt = DateTime.UtcNow };
+            return BaseResponseDto<ProjectResponseDto>.Ok(dto, "Project created successfully");
         }
     }
 }
