@@ -3,36 +3,16 @@
   "WorkspaceRootPath": "C:\\Users\\SirCryALot\\source\\repos\\GenCo\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{95FBC8D5-50C0-469A-A54D-59C26FC250D6}|GenCo.Application\\GenCo.Application.csproj|c:\\users\\sircryalot\\source\\repos\\genco\\genco.application\\features\\fields\\queries\\getfieldbyid\\getfieldbyidqueryhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{95FBC8D5-50C0-469A-A54D-59C26FC250D6}|GenCo.Application\\GenCo.Application.csproj|solutionrelative:genco.application\\features\\fields\\queries\\getfieldbyid\\getfieldbyidqueryhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{95FBC8D5-50C0-469A-A54D-59C26FC250D6}|GenCo.Application\\GenCo.Application.csproj|c:\\users\\sircryalot\\source\\repos\\genco\\genco.application\\dtos\\entity\\requests\\createentityrequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{95FBC8D5-50C0-469A-A54D-59C26FC250D6}|GenCo.Application\\GenCo.Application.csproj|solutionrelative:genco.application\\dtos\\entity\\requests\\createentityrequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{95FBC8D5-50C0-469A-A54D-59C26FC250D6}|GenCo.Application\\GenCo.Application.csproj|c:\\users\\sircryalot\\source\\repos\\genco\\genco.application\\features\\fields\\queries\\getfieldbyid\\getfieldbyidquery.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{95FBC8D5-50C0-469A-A54D-59C26FC250D6}|GenCo.Application\\GenCo.Application.csproj|solutionrelative:genco.application\\features\\fields\\queries\\getfieldbyid\\getfieldbyidquery.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{9DAFC978-AF9F-478B-884D-A0D707485210}|GenCo.Domain\\GenCo.Domain.csproj|c:\\users\\sircryalot\\source\\repos\\genco\\genco.domain\\relation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9DAFC978-AF9F-478B-884D-A0D707485210}|GenCo.Domain\\GenCo.Domain.csproj|solutionrelative:genco.domain\\relation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{95FBC8D5-50C0-469A-A54D-59C26FC250D6}|GenCo.Application\\GenCo.Application.csproj|c:\\users\\sircryalot\\source\\repos\\genco\\genco.application\\features\\entities\\queries\\getentitybyid\\getentitybyidqueryhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{95FBC8D5-50C0-469A-A54D-59C26FC250D6}|GenCo.Application\\GenCo.Application.csproj|solutionrelative:genco.application\\features\\entities\\queries\\getentitybyid\\getentitybyidqueryhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{95FBC8D5-50C0-469A-A54D-59C26FC250D6}|GenCo.Application\\GenCo.Application.csproj|c:\\users\\sircryalot\\source\\repos\\genco\\genco.application\\features\\entities\\queries\\getentitybyid\\getentitybyidquery.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{95FBC8D5-50C0-469A-A54D-59C26FC250D6}|GenCo.Application\\GenCo.Application.csproj|solutionrelative:genco.application\\features\\entities\\queries\\getentitybyid\\getentitybyidquery.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{95FBC8D5-50C0-469A-A54D-59C26FC250D6}|GenCo.Application\\GenCo.Application.csproj|c:\\users\\sircryalot\\source\\repos\\genco\\genco.application\\specifications\\entities\\entitybyidspec.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{95FBC8D5-50C0-469A-A54D-59C26FC250D6}|GenCo.Application\\GenCo.Application.csproj|solutionrelative:genco.application\\specifications\\entities\\entitybyidspec.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{95FBC8D5-50C0-469A-A54D-59C26FC250D6}|GenCo.Application\\GenCo.Application.csproj|c:\\users\\sircryalot\\source\\repos\\genco\\genco.application\\specifications\\fields\\fieldbyidspec.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{95FBC8D5-50C0-469A-A54D-59C26FC250D6}|GenCo.Application\\GenCo.Application.csproj|solutionrelative:genco.application\\specifications\\fields\\fieldbyidspec.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{95FBC8D5-50C0-469A-A54D-59C26FC250D6}|GenCo.Application\\GenCo.Application.csproj|c:\\users\\sircryalot\\source\\repos\\genco\\genco.application\\specifications\\entities\\entitybynamespec.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{95FBC8D5-50C0-469A-A54D-59C26FC250D6}|GenCo.Application\\GenCo.Application.csproj|solutionrelative:genco.application\\specifications\\entities\\entitybynamespec.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9DAFC978-AF9F-478B-884D-A0D707485210}|GenCo.Domain\\GenCo.Domain.csproj|c:\\users\\sircryalot\\source\\repos\\genco\\genco.domain\\entity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9DAFC978-AF9F-478B-884D-A0D707485210}|GenCo.Domain\\GenCo.Domain.csproj|solutionrelative:genco.domain\\entity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{9DAFC978-AF9F-478B-884D-A0D707485210}|GenCo.Domain\\GenCo.Domain.csproj|c:\\users\\sircryalot\\source\\repos\\genco\\genco.domain\\project.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9DAFC978-AF9F-478B-884D-A0D707485210}|GenCo.Domain\\GenCo.Domain.csproj|solutionrelative:genco.domain\\project.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{9DAFC978-AF9F-478B-884D-A0D707485210}|GenCo.Domain\\GenCo.Domain.csproj|c:\\users\\sircryalot\\source\\repos\\genco\\genco.domain\\fieldvalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -43,88 +23,8 @@
       "RelativeMoniker": "D:0:0:{9DAFC978-AF9F-478B-884D-A0D707485210}|GenCo.Domain\\GenCo.Domain.csproj|solutionrelative:genco.domain\\field.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{95FBC8D5-50C0-469A-A54D-59C26FC250D6}|GenCo.Application\\GenCo.Application.csproj|c:\\users\\sircryalot\\source\\repos\\genco\\genco.application\\features\\fields\\commands\\softdeletefield\\softdeletefieldcommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{95FBC8D5-50C0-469A-A54D-59C26FC250D6}|GenCo.Application\\GenCo.Application.csproj|solutionrelative:genco.application\\features\\fields\\commands\\softdeletefield\\softdeletefieldcommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{95FBC8D5-50C0-469A-A54D-59C26FC250D6}|GenCo.Application\\GenCo.Application.csproj|c:\\users\\sircryalot\\source\\repos\\genco\\genco.application\\features\\entities\\commands\\softdeleteentity\\softdeleteentitycommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{95FBC8D5-50C0-469A-A54D-59C26FC250D6}|GenCo.Application\\GenCo.Application.csproj|solutionrelative:genco.application\\features\\entities\\commands\\softdeleteentity\\softdeleteentitycommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{95FBC8D5-50C0-469A-A54D-59C26FC250D6}|GenCo.Application\\GenCo.Application.csproj|c:\\users\\sircryalot\\source\\repos\\genco\\genco.application\\features\\fields\\commands\\softdeletefield\\softdeletefieldcommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{95FBC8D5-50C0-469A-A54D-59C26FC250D6}|GenCo.Application\\GenCo.Application.csproj|solutionrelative:genco.application\\features\\fields\\commands\\softdeletefield\\softdeletefieldcommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{95FBC8D5-50C0-469A-A54D-59C26FC250D6}|GenCo.Application\\GenCo.Application.csproj|c:\\users\\sircryalot\\source\\repos\\genco\\genco.application\\features\\entities\\commands\\restoreentity\\restoreentitycommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{95FBC8D5-50C0-469A-A54D-59C26FC250D6}|GenCo.Application\\GenCo.Application.csproj|solutionrelative:genco.application\\features\\entities\\commands\\restoreentity\\restoreentitycommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{95FBC8D5-50C0-469A-A54D-59C26FC250D6}|GenCo.Application\\GenCo.Application.csproj|c:\\users\\sircryalot\\source\\repos\\genco\\genco.application\\features\\projects\\commands\\softdeleteproject\\softdeleteprojectcommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{95FBC8D5-50C0-469A-A54D-59C26FC250D6}|GenCo.Application\\GenCo.Application.csproj|solutionrelative:genco.application\\features\\projects\\commands\\softdeleteproject\\softdeleteprojectcommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{95FBC8D5-50C0-469A-A54D-59C26FC250D6}|GenCo.Application\\GenCo.Application.csproj|c:\\users\\sircryalot\\source\\repos\\genco\\genco.application\\features\\projects\\commands\\softdeleteproject\\softdeleteprojectcommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{95FBC8D5-50C0-469A-A54D-59C26FC250D6}|GenCo.Application\\GenCo.Application.csproj|solutionrelative:genco.application\\features\\projects\\commands\\softdeleteproject\\softdeleteprojectcommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{95FBC8D5-50C0-469A-A54D-59C26FC250D6}|GenCo.Application\\GenCo.Application.csproj|c:\\users\\sircryalot\\source\\repos\\genco\\genco.application\\features\\entities\\commands\\softdeleteentity\\softdeleteentitycommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{95FBC8D5-50C0-469A-A54D-59C26FC250D6}|GenCo.Application\\GenCo.Application.csproj|solutionrelative:genco.application\\features\\entities\\commands\\softdeleteentity\\softdeleteentitycommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{95FBC8D5-50C0-469A-A54D-59C26FC250D6}|GenCo.Application\\GenCo.Application.csproj|c:\\users\\sircryalot\\source\\repos\\genco\\genco.application\\features\\entities\\commands\\deleteentity\\deleteentitycommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{95FBC8D5-50C0-469A-A54D-59C26FC250D6}|GenCo.Application\\GenCo.Application.csproj|solutionrelative:genco.application\\features\\entities\\commands\\deleteentity\\deleteentitycommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{95FBC8D5-50C0-469A-A54D-59C26FC250D6}|GenCo.Application\\GenCo.Application.csproj|c:\\users\\sircryalot\\source\\repos\\genco\\genco.application\\features\\fields\\commands\\restorefield\\restorefieldcommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{95FBC8D5-50C0-469A-A54D-59C26FC250D6}|GenCo.Application\\GenCo.Application.csproj|solutionrelative:genco.application\\features\\fields\\commands\\restorefield\\restorefieldcommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{95FBC8D5-50C0-469A-A54D-59C26FC250D6}|GenCo.Application\\GenCo.Application.csproj|c:\\users\\sircryalot\\source\\repos\\genco\\genco.application\\features\\fields\\commands\\restorefield\\restorefieldcommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{95FBC8D5-50C0-469A-A54D-59C26FC250D6}|GenCo.Application\\GenCo.Application.csproj|solutionrelative:genco.application\\features\\fields\\commands\\restorefield\\restorefieldcommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{95FBC8D5-50C0-469A-A54D-59C26FC250D6}|GenCo.Application\\GenCo.Application.csproj|c:\\users\\sircryalot\\source\\repos\\genco\\genco.application\\features\\entities\\commands\\restoreentity\\restoreentitycommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{95FBC8D5-50C0-469A-A54D-59C26FC250D6}|GenCo.Application\\GenCo.Application.csproj|solutionrelative:genco.application\\features\\entities\\commands\\restoreentity\\restoreentitycommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{95FBC8D5-50C0-469A-A54D-59C26FC250D6}|GenCo.Application\\GenCo.Application.csproj|c:\\users\\sircryalot\\source\\repos\\genco\\genco.application\\features\\fields\\commands\\updatefield\\updatefieldcommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{95FBC8D5-50C0-469A-A54D-59C26FC250D6}|GenCo.Application\\GenCo.Application.csproj|solutionrelative:genco.application\\features\\fields\\commands\\updatefield\\updatefieldcommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{95FBC8D5-50C0-469A-A54D-59C26FC250D6}|GenCo.Application\\GenCo.Application.csproj|c:\\users\\sircryalot\\source\\repos\\genco\\genco.application\\features\\entities\\commands\\updateentity\\updateentitycommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{95FBC8D5-50C0-469A-A54D-59C26FC250D6}|GenCo.Application\\GenCo.Application.csproj|solutionrelative:genco.application\\features\\entities\\commands\\updateentity\\updateentitycommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{95FBC8D5-50C0-469A-A54D-59C26FC250D6}|GenCo.Application\\GenCo.Application.csproj|c:\\users\\sircryalot\\source\\repos\\genco\\genco.application\\features\\fields\\commands\\updatefield\\updatefieldcommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{95FBC8D5-50C0-469A-A54D-59C26FC250D6}|GenCo.Application\\GenCo.Application.csproj|solutionrelative:genco.application\\features\\fields\\commands\\updatefield\\updatefieldcommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{95FBC8D5-50C0-469A-A54D-59C26FC250D6}|GenCo.Application\\GenCo.Application.csproj|c:\\users\\sircryalot\\source\\repos\\genco\\genco.application\\features\\fields\\commands\\createfield\\createfieldcommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{95FBC8D5-50C0-469A-A54D-59C26FC250D6}|GenCo.Application\\GenCo.Application.csproj|solutionrelative:genco.application\\features\\fields\\commands\\createfield\\createfieldcommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{95FBC8D5-50C0-469A-A54D-59C26FC250D6}|GenCo.Application\\GenCo.Application.csproj|c:\\users\\sircryalot\\source\\repos\\genco\\genco.application\\features\\fields\\commands\\deletefield\\deletefieldcommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{95FBC8D5-50C0-469A-A54D-59C26FC250D6}|GenCo.Application\\GenCo.Application.csproj|solutionrelative:genco.application\\features\\fields\\commands\\deletefield\\deletefieldcommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{95FBC8D5-50C0-469A-A54D-59C26FC250D6}|GenCo.Application\\GenCo.Application.csproj|c:\\users\\sircryalot\\source\\repos\\genco\\genco.application\\features\\fields\\commands\\deletefield\\deletefieldcommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{95FBC8D5-50C0-469A-A54D-59C26FC250D6}|GenCo.Application\\GenCo.Application.csproj|solutionrelative:genco.application\\features\\fields\\commands\\deletefield\\deletefieldcommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{95FBC8D5-50C0-469A-A54D-59C26FC250D6}|GenCo.Application\\GenCo.Application.csproj|c:\\users\\sircryalot\\source\\repos\\genco\\genco.application\\features\\entities\\commands\\deleteentity\\deleteentitycommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{95FBC8D5-50C0-469A-A54D-59C26FC250D6}|GenCo.Application\\GenCo.Application.csproj|solutionrelative:genco.application\\features\\entities\\commands\\deleteentity\\deleteentitycommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{95FBC8D5-50C0-469A-A54D-59C26FC250D6}|GenCo.Application\\GenCo.Application.csproj|c:\\users\\sircryalot\\source\\repos\\genco\\genco.application\\features\\fields\\commands\\createfield\\createfieldcommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{95FBC8D5-50C0-469A-A54D-59C26FC250D6}|GenCo.Application\\GenCo.Application.csproj|solutionrelative:genco.application\\features\\fields\\commands\\createfield\\createfieldcommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{95FBC8D5-50C0-469A-A54D-59C26FC250D6}|GenCo.Application\\GenCo.Application.csproj|c:\\users\\sircryalot\\source\\repos\\genco\\genco.application\\features\\entities\\commands\\createentity\\createentitycommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{95FBC8D5-50C0-469A-A54D-59C26FC250D6}|GenCo.Application\\GenCo.Application.csproj|solutionrelative:genco.application\\features\\entities\\commands\\createentity\\createentitycommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{95FBC8D5-50C0-469A-A54D-59C26FC250D6}|GenCo.Application\\GenCo.Application.csproj|c:\\users\\sircryalot\\source\\repos\\genco\\genco.application\\features\\entities\\commands\\createentity\\createentitycommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{95FBC8D5-50C0-469A-A54D-59C26FC250D6}|GenCo.Application\\GenCo.Application.csproj|solutionrelative:genco.application\\features\\entities\\commands\\createentity\\createentitycommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{9DAFC978-AF9F-478B-884D-A0D707485210}|GenCo.Domain\\GenCo.Domain.csproj|c:\\users\\sircryalot\\source\\repos\\genco\\genco.domain\\entity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9DAFC978-AF9F-478B-884D-A0D707485210}|GenCo.Domain\\GenCo.Domain.csproj|solutionrelative:genco.domain\\entity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -134,409 +34,84 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "EntityByNameSpec.cs",
-              "DocumentMoniker": "C:\\Users\\SirCryALot\\source\\repos\\GenCo\\GenCo.Application\\Specifications\\Entities\\EntityByNameSpec.cs",
-              "RelativeDocumentMoniker": "GenCo.Application\\Specifications\\Entities\\EntityByNameSpec.cs",
-              "ToolTip": "C:\\Users\\SirCryALot\\source\\repos\\GenCo\\GenCo.Application\\Specifications\\Entities\\EntityByNameSpec.cs",
-              "RelativeToolTip": "GenCo.Application\\Specifications\\Entities\\EntityByNameSpec.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-24T06:20:28.444Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "Entity.cs",
-              "DocumentMoniker": "C:\\Users\\SirCryALot\\source\\repos\\GenCo\\GenCo.Domain\\Entity.cs",
-              "RelativeDocumentMoniker": "GenCo.Domain\\Entity.cs",
-              "ToolTip": "C:\\Users\\SirCryALot\\source\\repos\\GenCo\\GenCo.Domain\\Entity.cs",
-              "RelativeToolTip": "GenCo.Domain\\Entity.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-24T06:20:03.534Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "FieldByIdSpec.cs",
-              "DocumentMoniker": "C:\\Users\\SirCryALot\\source\\repos\\GenCo\\GenCo.Application\\Specifications\\Fields\\FieldByIdSpec.cs",
-              "RelativeDocumentMoniker": "GenCo.Application\\Specifications\\Fields\\FieldByIdSpec.cs",
-              "ToolTip": "C:\\Users\\SirCryALot\\source\\repos\\GenCo\\GenCo.Application\\Specifications\\Fields\\FieldByIdSpec.cs",
-              "RelativeToolTip": "GenCo.Application\\Specifications\\Fields\\FieldByIdSpec.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAuAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-24T06:14:31.332Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "EntityByIdSpec.cs",
-              "DocumentMoniker": "C:\\Users\\SirCryALot\\source\\repos\\GenCo\\GenCo.Application\\Specifications\\Entities\\EntityByIdSpec.cs",
-              "RelativeDocumentMoniker": "GenCo.Application\\Specifications\\Entities\\EntityByIdSpec.cs",
-              "ToolTip": "C:\\Users\\SirCryALot\\source\\repos\\GenCo\\GenCo.Application\\Specifications\\Entities\\EntityByIdSpec.cs",
-              "RelativeToolTip": "GenCo.Application\\Specifications\\Entities\\EntityByIdSpec.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAMAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-24T06:14:00.328Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "GetEntityByIdQueryHandler.cs",
-              "DocumentMoniker": "C:\\Users\\SirCryALot\\source\\repos\\GenCo\\GenCo.Application\\Features\\Entities\\Queries\\GetEntityById\\GetEntityByIdQueryHandler.cs",
-              "RelativeDocumentMoniker": "GenCo.Application\\Features\\Entities\\Queries\\GetEntityById\\GetEntityByIdQueryHandler.cs",
-              "ToolTip": "C:\\Users\\SirCryALot\\source\\repos\\GenCo\\GenCo.Application\\Features\\Entities\\Queries\\GetEntityById\\GetEntityByIdQueryHandler.cs",
-              "RelativeToolTip": "GenCo.Application\\Features\\Entities\\Queries\\GetEntityById\\GetEntityByIdQueryHandler.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABwAAAAMAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-24T06:09:41.756Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "GetFieldByIdQueryHandler.cs",
-              "DocumentMoniker": "C:\\Users\\SirCryALot\\source\\repos\\GenCo\\GenCo.Application\\Features\\Fields\\Queries\\GetFieldById\\GetFieldByIdQueryHandler.cs",
-              "RelativeDocumentMoniker": "GenCo.Application\\Features\\Fields\\Queries\\GetFieldById\\GetFieldByIdQueryHandler.cs",
-              "ToolTip": "C:\\Users\\SirCryALot\\source\\repos\\GenCo\\GenCo.Application\\Features\\Fields\\Queries\\GetFieldById\\GetFieldByIdQueryHandler.cs",
-              "RelativeToolTip": "GenCo.Application\\Features\\Fields\\Queries\\GetFieldById\\GetFieldByIdQueryHandler.cs",
-              "ViewState": "AgIAAAQAAAAAAAAAAAAMwB4AAABVAAAAAAAAAA==",
+              "Title": "CreateEntityRequestDto.cs",
+              "DocumentMoniker": "C:\\Users\\SirCryALot\\source\\repos\\GenCo\\GenCo.Application\\DTOs\\Entity\\Requests\\CreateEntityRequestDto.cs",
+              "RelativeDocumentMoniker": "GenCo.Application\\DTOs\\Entity\\Requests\\CreateEntityRequestDto.cs",
+              "ToolTip": "C:\\Users\\SirCryALot\\source\\repos\\GenCo\\GenCo.Application\\DTOs\\Entity\\Requests\\CreateEntityRequestDto.cs",
+              "RelativeToolTip": "GenCo.Application\\DTOs\\Entity\\Requests\\CreateEntityRequestDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-24T06:09:00.805Z",
+              "WhenOpened": "2025-08-25T02:13:03.081Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "GetFieldByIdQuery.cs",
-              "DocumentMoniker": "C:\\Users\\SirCryALot\\source\\repos\\GenCo\\GenCo.Application\\Features\\Fields\\Queries\\GetFieldById\\GetFieldByIdQuery.cs",
-              "RelativeDocumentMoniker": "GenCo.Application\\Features\\Fields\\Queries\\GetFieldById\\GetFieldByIdQuery.cs",
-              "ToolTip": "C:\\Users\\SirCryALot\\source\\repos\\GenCo\\GenCo.Application\\Features\\Fields\\Queries\\GetFieldById\\GetFieldByIdQuery.cs",
-              "RelativeToolTip": "GenCo.Application\\Features\\Fields\\Queries\\GetFieldById\\GetFieldByIdQuery.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAsAAABIAAAAAAAAAA==",
+              "Title": "Relation.cs",
+              "DocumentMoniker": "C:\\Users\\SirCryALot\\source\\repos\\GenCo\\GenCo.Domain\\Relation.cs",
+              "RelativeDocumentMoniker": "GenCo.Domain\\Relation.cs",
+              "ToolTip": "C:\\Users\\SirCryALot\\source\\repos\\GenCo\\GenCo.Domain\\Relation.cs",
+              "RelativeToolTip": "GenCo.Domain\\Relation.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-24T06:08:57.007Z",
+              "WhenOpened": "2025-08-25T02:04:31.966Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Project.cs",
+              "DocumentMoniker": "C:\\Users\\SirCryALot\\source\\repos\\GenCo\\GenCo.Domain\\Project.cs",
+              "RelativeDocumentMoniker": "GenCo.Domain\\Project.cs",
+              "ToolTip": "C:\\Users\\SirCryALot\\source\\repos\\GenCo\\GenCo.Domain\\Project.cs",
+              "RelativeToolTip": "GenCo.Domain\\Project.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-25T02:03:57.127Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "GetEntityByIdQuery.cs",
-              "DocumentMoniker": "C:\\Users\\SirCryALot\\source\\repos\\GenCo\\GenCo.Application\\Features\\Entities\\Queries\\GetEntityById\\GetEntityByIdQuery.cs",
-              "RelativeDocumentMoniker": "GenCo.Application\\Features\\Entities\\Queries\\GetEntityById\\GetEntityByIdQuery.cs",
-              "ToolTip": "C:\\Users\\SirCryALot\\source\\repos\\GenCo\\GenCo.Application\\Features\\Entities\\Queries\\GetEntityById\\GetEntityByIdQuery.cs",
-              "RelativeToolTip": "GenCo.Application\\Features\\Entities\\Queries\\GetEntityById\\GetEntityByIdQuery.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAABJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-24T06:09:40.685Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
               "Title": "FieldValidator.cs",
               "DocumentMoniker": "C:\\Users\\SirCryALot\\source\\repos\\GenCo\\GenCo.Domain\\FieldValidator.cs",
               "RelativeDocumentMoniker": "GenCo.Domain\\FieldValidator.cs",
               "ToolTip": "C:\\Users\\SirCryALot\\source\\repos\\GenCo\\GenCo.Domain\\FieldValidator.cs",
               "RelativeToolTip": "GenCo.Domain\\FieldValidator.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAfAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-24T06:19:35.624Z",
+              "WhenOpened": "2025-08-25T02:03:49.156Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 4,
               "Title": "Field.cs",
               "DocumentMoniker": "C:\\Users\\SirCryALot\\source\\repos\\GenCo\\GenCo.Domain\\Field.cs",
               "RelativeDocumentMoniker": "GenCo.Domain\\Field.cs",
               "ToolTip": "C:\\Users\\SirCryALot\\source\\repos\\GenCo\\GenCo.Domain\\Field.cs",
               "RelativeToolTip": "GenCo.Domain\\Field.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-24T06:17:02.334Z",
+              "WhenOpened": "2025-08-25T02:03:41.396Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "SoftDeleteFieldCommandHandler.cs",
-              "DocumentMoniker": "C:\\Users\\SirCryALot\\source\\repos\\GenCo\\GenCo.Application\\Features\\Fields\\Commands\\SoftDeleteField\\SoftDeleteFieldCommandHandler.cs",
-              "RelativeDocumentMoniker": "GenCo.Application\\Features\\Fields\\Commands\\SoftDeleteField\\SoftDeleteFieldCommandHandler.cs",
-              "ToolTip": "C:\\Users\\SirCryALot\\source\\repos\\GenCo\\GenCo.Application\\Features\\Fields\\Commands\\SoftDeleteField\\SoftDeleteFieldCommandHandler.cs",
-              "RelativeToolTip": "GenCo.Application\\Features\\Fields\\Commands\\SoftDeleteField\\SoftDeleteFieldCommandHandler.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB8AAABCAAAAAAAAAA==",
+              "DocumentIndex": 5,
+              "Title": "Entity.cs",
+              "DocumentMoniker": "C:\\Users\\SirCryALot\\source\\repos\\GenCo\\GenCo.Domain\\Entity.cs",
+              "RelativeDocumentMoniker": "GenCo.Domain\\Entity.cs",
+              "ToolTip": "C:\\Users\\SirCryALot\\source\\repos\\GenCo\\GenCo.Domain\\Entity.cs",
+              "RelativeToolTip": "GenCo.Domain\\Entity.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-24T06:05:39.217Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "SoftDeleteFieldCommand.cs",
-              "DocumentMoniker": "C:\\Users\\SirCryALot\\source\\repos\\GenCo\\GenCo.Application\\Features\\Fields\\Commands\\SoftDeleteField\\SoftDeleteFieldCommand.cs",
-              "RelativeDocumentMoniker": "GenCo.Application\\Features\\Fields\\Commands\\SoftDeleteField\\SoftDeleteFieldCommand.cs",
-              "ToolTip": "C:\\Users\\SirCryALot\\source\\repos\\GenCo\\GenCo.Application\\Features\\Fields\\Commands\\SoftDeleteField\\SoftDeleteFieldCommand.cs",
-              "RelativeToolTip": "GenCo.Application\\Features\\Fields\\Commands\\SoftDeleteField\\SoftDeleteFieldCommand.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAyAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-24T06:05:29.67Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "SoftDeleteProjectCommandHandler.cs",
-              "DocumentMoniker": "C:\\Users\\SirCryALot\\source\\repos\\GenCo\\GenCo.Application\\Features\\Projects\\Commands\\SoftDeleteProject\\SoftDeleteProjectCommandHandler.cs",
-              "RelativeDocumentMoniker": "GenCo.Application\\Features\\Projects\\Commands\\SoftDeleteProject\\SoftDeleteProjectCommandHandler.cs",
-              "ToolTip": "C:\\Users\\SirCryALot\\source\\repos\\GenCo\\GenCo.Application\\Features\\Projects\\Commands\\SoftDeleteProject\\SoftDeleteProjectCommandHandler.cs",
-              "RelativeToolTip": "GenCo.Application\\Features\\Projects\\Commands\\SoftDeleteProject\\SoftDeleteProjectCommandHandler.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAAtAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-24T06:02:48.927Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "SoftDeleteProjectCommand.cs",
-              "DocumentMoniker": "C:\\Users\\SirCryALot\\source\\repos\\GenCo\\GenCo.Application\\Features\\Projects\\Commands\\SoftDeleteProject\\SoftDeleteProjectCommand.cs",
-              "RelativeDocumentMoniker": "GenCo.Application\\Features\\Projects\\Commands\\SoftDeleteProject\\SoftDeleteProjectCommand.cs",
-              "ToolTip": "C:\\Users\\SirCryALot\\source\\repos\\GenCo\\GenCo.Application\\Features\\Projects\\Commands\\SoftDeleteProject\\SoftDeleteProjectCommand.cs",
-              "RelativeToolTip": "GenCo.Application\\Features\\Projects\\Commands\\SoftDeleteProject\\SoftDeleteProjectCommand.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAABKAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-24T06:02:35.416Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "SoftDeleteEntityCommandHandler.cs",
-              "DocumentMoniker": "C:\\Users\\SirCryALot\\source\\repos\\GenCo\\GenCo.Application\\Features\\Entities\\Commands\\SoftDeleteEntity\\SoftDeleteEntityCommandHandler.cs",
-              "RelativeDocumentMoniker": "GenCo.Application\\Features\\Entities\\Commands\\SoftDeleteEntity\\SoftDeleteEntityCommandHandler.cs",
-              "ToolTip": "C:\\Users\\SirCryALot\\source\\repos\\GenCo\\GenCo.Application\\Features\\Entities\\Commands\\SoftDeleteEntity\\SoftDeleteEntityCommandHandler.cs",
-              "RelativeToolTip": "GenCo.Application\\Features\\Entities\\Commands\\SoftDeleteEntity\\SoftDeleteEntityCommandHandler.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACAAAABiAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-24T06:01:49.039Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 17,
-              "Title": "DeleteEntityCommand.cs",
-              "DocumentMoniker": "C:\\Users\\SirCryALot\\source\\repos\\GenCo\\GenCo.Application\\Features\\Entities\\Commands\\DeleteEntity\\DeleteEntityCommand.cs",
-              "RelativeDocumentMoniker": "GenCo.Application\\Features\\Entities\\Commands\\DeleteEntity\\DeleteEntityCommand.cs",
-              "ToolTip": "C:\\Users\\SirCryALot\\source\\repos\\GenCo\\GenCo.Application\\Features\\Entities\\Commands\\DeleteEntity\\DeleteEntityCommand.cs",
-              "RelativeToolTip": "GenCo.Application\\Features\\Entities\\Commands\\DeleteEntity\\DeleteEntityCommand.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAA8AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-24T06:01:27.484Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 16,
-              "Title": "SoftDeleteEntityCommand.cs",
-              "DocumentMoniker": "C:\\Users\\SirCryALot\\source\\repos\\GenCo\\GenCo.Application\\Features\\Entities\\Commands\\SoftDeleteEntity\\SoftDeleteEntityCommand.cs",
-              "RelativeDocumentMoniker": "GenCo.Application\\Features\\Entities\\Commands\\SoftDeleteEntity\\SoftDeleteEntityCommand.cs",
-              "ToolTip": "C:\\Users\\SirCryALot\\source\\repos\\GenCo\\GenCo.Application\\Features\\Entities\\Commands\\SoftDeleteEntity\\SoftDeleteEntityCommand.cs",
-              "RelativeToolTip": "GenCo.Application\\Features\\Entities\\Commands\\SoftDeleteEntity\\SoftDeleteEntityCommand.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAABIAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-24T06:01:25.428Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "RestoreEntityCommandHandler.cs",
-              "DocumentMoniker": "C:\\Users\\SirCryALot\\source\\repos\\GenCo\\GenCo.Application\\Features\\Entities\\Commands\\RestoreEntity\\RestoreEntityCommandHandler.cs",
-              "RelativeDocumentMoniker": "GenCo.Application\\Features\\Entities\\Commands\\RestoreEntity\\RestoreEntityCommandHandler.cs",
-              "ToolTip": "C:\\Users\\SirCryALot\\source\\repos\\GenCo\\GenCo.Application\\Features\\Entities\\Commands\\RestoreEntity\\RestoreEntityCommandHandler.cs",
-              "RelativeToolTip": "GenCo.Application\\Features\\Entities\\Commands\\RestoreEntity\\RestoreEntityCommandHandler.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACUAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-24T06:00:06.322Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 20,
-              "Title": "RestoreEntityCommand.cs",
-              "DocumentMoniker": "C:\\Users\\SirCryALot\\source\\repos\\GenCo\\GenCo.Application\\Features\\Entities\\Commands\\RestoreEntity\\RestoreEntityCommand.cs",
-              "RelativeDocumentMoniker": "GenCo.Application\\Features\\Entities\\Commands\\RestoreEntity\\RestoreEntityCommand.cs",
-              "ToolTip": "C:\\Users\\SirCryALot\\source\\repos\\GenCo\\GenCo.Application\\Features\\Entities\\Commands\\RestoreEntity\\RestoreEntityCommand.cs",
-              "RelativeToolTip": "GenCo.Application\\Features\\Entities\\Commands\\RestoreEntity\\RestoreEntityCommand.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-24T05:57:02.634Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 18,
-              "Title": "RestoreFieldCommandHandler.cs",
-              "DocumentMoniker": "C:\\Users\\SirCryALot\\source\\repos\\GenCo\\GenCo.Application\\Features\\Fields\\Commands\\RestoreField\\RestoreFieldCommandHandler.cs",
-              "RelativeDocumentMoniker": "GenCo.Application\\Features\\Fields\\Commands\\RestoreField\\RestoreFieldCommandHandler.cs",
-              "ToolTip": "C:\\Users\\SirCryALot\\source\\repos\\GenCo\\GenCo.Application\\Features\\Fields\\Commands\\RestoreField\\RestoreFieldCommandHandler.cs",
-              "RelativeToolTip": "GenCo.Application\\Features\\Fields\\Commands\\RestoreField\\RestoreFieldCommandHandler.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAABPAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-24T05:56:12.068Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 19,
-              "Title": "RestoreFieldCommand.cs",
-              "DocumentMoniker": "C:\\Users\\SirCryALot\\source\\repos\\GenCo\\GenCo.Application\\Features\\Fields\\Commands\\RestoreField\\RestoreFieldCommand.cs",
-              "RelativeDocumentMoniker": "GenCo.Application\\Features\\Fields\\Commands\\RestoreField\\RestoreFieldCommand.cs",
-              "ToolTip": "C:\\Users\\SirCryALot\\source\\repos\\GenCo\\GenCo.Application\\Features\\Fields\\Commands\\RestoreField\\RestoreFieldCommand.cs",
-              "RelativeToolTip": "GenCo.Application\\Features\\Fields\\Commands\\RestoreField\\RestoreFieldCommand.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAzAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-24T05:56:03.177Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 22,
-              "Title": "UpdateEntityCommandHandler.cs",
-              "DocumentMoniker": "C:\\Users\\SirCryALot\\source\\repos\\GenCo\\GenCo.Application\\Features\\Entities\\Commands\\UpdateEntity\\UpdateEntityCommandHandler.cs",
-              "RelativeDocumentMoniker": "GenCo.Application\\Features\\Entities\\Commands\\UpdateEntity\\UpdateEntityCommandHandler.cs",
-              "ToolTip": "C:\\Users\\SirCryALot\\source\\repos\\GenCo\\GenCo.Application\\Features\\Entities\\Commands\\UpdateEntity\\UpdateEntityCommandHandler.cs",
-              "RelativeToolTip": "GenCo.Application\\Features\\Entities\\Commands\\UpdateEntity\\UpdateEntityCommandHandler.cs",
-              "ViewState": "AgIAAAwAAAAAAAAAAAAAACwAAABdAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-24T05:53:10.22Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 21,
-              "Title": "UpdateFieldCommandHandler.cs",
-              "DocumentMoniker": "C:\\Users\\SirCryALot\\source\\repos\\GenCo\\GenCo.Application\\Features\\Fields\\Commands\\UpdateField\\UpdateFieldCommandHandler.cs",
-              "RelativeDocumentMoniker": "GenCo.Application\\Features\\Fields\\Commands\\UpdateField\\UpdateFieldCommandHandler.cs",
-              "ToolTip": "C:\\Users\\SirCryALot\\source\\repos\\GenCo\\GenCo.Application\\Features\\Fields\\Commands\\UpdateField\\UpdateFieldCommandHandler.cs",
-              "RelativeToolTip": "GenCo.Application\\Features\\Fields\\Commands\\UpdateField\\UpdateFieldCommandHandler.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAA+AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-24T05:52:19.991Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 23,
-              "Title": "UpdateFieldCommand.cs",
-              "DocumentMoniker": "C:\\Users\\SirCryALot\\source\\repos\\GenCo\\GenCo.Application\\Features\\Fields\\Commands\\UpdateField\\UpdateFieldCommand.cs",
-              "RelativeDocumentMoniker": "GenCo.Application\\Features\\Fields\\Commands\\UpdateField\\UpdateFieldCommand.cs",
-              "ToolTip": "C:\\Users\\SirCryALot\\source\\repos\\GenCo\\GenCo.Application\\Features\\Fields\\Commands\\UpdateField\\UpdateFieldCommand.cs",
-              "RelativeToolTip": "GenCo.Application\\Features\\Fields\\Commands\\UpdateField\\UpdateFieldCommand.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAA0AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-24T05:51:02.127Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 27,
-              "Title": "DeleteEntityCommandHandler.cs",
-              "DocumentMoniker": "C:\\Users\\SirCryALot\\source\\repos\\GenCo\\GenCo.Application\\Features\\Entities\\Commands\\DeleteEntity\\DeleteEntityCommandHandler.cs",
-              "RelativeDocumentMoniker": "GenCo.Application\\Features\\Entities\\Commands\\DeleteEntity\\DeleteEntityCommandHandler.cs",
-              "ToolTip": "C:\\Users\\SirCryALot\\source\\repos\\GenCo\\GenCo.Application\\Features\\Entities\\Commands\\DeleteEntity\\DeleteEntityCommandHandler.cs",
-              "RelativeToolTip": "GenCo.Application\\Features\\Entities\\Commands\\DeleteEntity\\DeleteEntityCommandHandler.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACIAAAB4AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-24T05:49:44.597Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 26,
-              "Title": "DeleteFieldCommandHandler.cs",
-              "DocumentMoniker": "C:\\Users\\SirCryALot\\source\\repos\\GenCo\\GenCo.Application\\Features\\Fields\\Commands\\DeleteField\\DeleteFieldCommandHandler.cs",
-              "RelativeDocumentMoniker": "GenCo.Application\\Features\\Fields\\Commands\\DeleteField\\DeleteFieldCommandHandler.cs",
-              "ToolTip": "C:\\Users\\SirCryALot\\source\\repos\\GenCo\\GenCo.Application\\Features\\Fields\\Commands\\DeleteField\\DeleteFieldCommandHandler.cs",
-              "RelativeToolTip": "GenCo.Application\\Features\\Fields\\Commands\\DeleteField\\DeleteFieldCommandHandler.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAACQAAABbAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-24T05:48:51.157Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 25,
-              "Title": "DeleteFieldCommand.cs",
-              "DocumentMoniker": "C:\\Users\\SirCryALot\\source\\repos\\GenCo\\GenCo.Application\\Features\\Fields\\Commands\\DeleteField\\DeleteFieldCommand.cs",
-              "RelativeDocumentMoniker": "GenCo.Application\\Features\\Fields\\Commands\\DeleteField\\DeleteFieldCommand.cs",
-              "ToolTip": "C:\\Users\\SirCryALot\\source\\repos\\GenCo\\GenCo.Application\\Features\\Fields\\Commands\\DeleteField\\DeleteFieldCommand.cs",
-              "RelativeToolTip": "GenCo.Application\\Features\\Fields\\Commands\\DeleteField\\DeleteFieldCommand.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAwAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-24T05:47:42.014Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 28,
-              "Title": "CreateFieldCommandHandler.cs",
-              "DocumentMoniker": "C:\\Users\\SirCryALot\\source\\repos\\GenCo\\GenCo.Application\\Features\\Fields\\Commands\\CreateField\\CreateFieldCommandHandler.cs",
-              "RelativeDocumentMoniker": "GenCo.Application\\Features\\Fields\\Commands\\CreateField\\CreateFieldCommandHandler.cs",
-              "ToolTip": "C:\\Users\\SirCryALot\\source\\repos\\GenCo\\GenCo.Application\\Features\\Fields\\Commands\\CreateField\\CreateFieldCommandHandler.cs",
-              "RelativeToolTip": "GenCo.Application\\Features\\Fields\\Commands\\CreateField\\CreateFieldCommandHandler.cs",
-              "ViewState": "AgIAABEAAAAAAAAAAAAQwAcAAAAhAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-24T04:06:07.036Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 24,
-              "Title": "CreateFieldCommand.cs",
-              "DocumentMoniker": "C:\\Users\\SirCryALot\\source\\repos\\GenCo\\GenCo.Application\\Features\\Fields\\Commands\\CreateField\\CreateFieldCommand.cs",
-              "RelativeDocumentMoniker": "GenCo.Application\\Features\\Fields\\Commands\\CreateField\\CreateFieldCommand.cs",
-              "ToolTip": "C:\\Users\\SirCryALot\\source\\repos\\GenCo\\GenCo.Application\\Features\\Fields\\Commands\\CreateField\\CreateFieldCommand.cs",
-              "RelativeToolTip": "GenCo.Application\\Features\\Fields\\Commands\\CreateField\\CreateFieldCommand.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAzAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-24T04:04:58.413Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 29,
-              "Title": "CreateEntityCommandHandler.cs",
-              "DocumentMoniker": "C:\\Users\\SirCryALot\\source\\repos\\GenCo\\GenCo.Application\\Features\\Entities\\Commands\\CreateEntity\\CreateEntityCommandHandler.cs",
-              "RelativeDocumentMoniker": "GenCo.Application\\Features\\Entities\\Commands\\CreateEntity\\CreateEntityCommandHandler.cs",
-              "ToolTip": "C:\\Users\\SirCryALot\\source\\repos\\GenCo\\GenCo.Application\\Features\\Entities\\Commands\\CreateEntity\\CreateEntityCommandHandler.cs",
-              "RelativeToolTip": "GenCo.Application\\Features\\Entities\\Commands\\CreateEntity\\CreateEntityCommandHandler.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABsAAAAwAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-24T04:06:08.943Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 30,
-              "Title": "CreateEntityCommand.cs",
-              "DocumentMoniker": "C:\\Users\\SirCryALot\\source\\repos\\GenCo\\GenCo.Application\\Features\\Entities\\Commands\\CreateEntity\\CreateEntityCommand.cs",
-              "RelativeDocumentMoniker": "GenCo.Application\\Features\\Entities\\Commands\\CreateEntity\\CreateEntityCommand.cs",
-              "ToolTip": "C:\\Users\\SirCryALot\\source\\repos\\GenCo\\GenCo.Application\\Features\\Entities\\Commands\\CreateEntity\\CreateEntityCommand.cs",
-              "RelativeToolTip": "GenCo.Application\\Features\\Entities\\Commands\\CreateEntity\\CreateEntityCommand.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAA0AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-24T04:05:09.722Z",
+              "WhenOpened": "2025-08-25T02:03:33.802Z",
               "EditorCaption": ""
             }
           ]

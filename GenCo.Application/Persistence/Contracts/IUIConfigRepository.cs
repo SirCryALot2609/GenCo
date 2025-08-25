@@ -1,5 +1,5 @@
 ﻿using GenCo.Application.Persistence.Contracts.Common;
-using GenCo.Domain;
+using GenCo.Domain.Entities;
 using System;
 using System.Collections.Generic;
 using System.Linq;

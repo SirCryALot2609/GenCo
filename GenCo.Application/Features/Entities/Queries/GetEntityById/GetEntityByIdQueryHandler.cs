@@ -4,7 +4,7 @@ using GenCo.Application.DTOs.Entity.Responses;
 using GenCo.Application.Persistence.Contracts;
 using GenCo.Application.Persistence.Contracts.Common;
 using GenCo.Application.Specifications.Entities;
-using GenCo.Domain;
+using GenCo.Domain.Entities;
 using MediatR;
 using System;
 using System.Collections;

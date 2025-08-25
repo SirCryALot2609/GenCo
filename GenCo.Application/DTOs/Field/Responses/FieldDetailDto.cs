@@ -1,4 +1,5 @@
 ﻿using GenCo.Application.DTOs.Entity;
+using GenCo.Application.DTOs.FieldValidator;
 using GenCo.Domain;
 using System;
 using System.Collections.Generic;
@@ -12,6 +13,5 @@ namespace GenCo.Application.DTOs.Field.Responses
     {
         public EntityBaseDto Entity { get; set; } = default!;
         public ICollection<FieldValidatorBaseDto> Validators { get; set; } = [];
-
     }
 }

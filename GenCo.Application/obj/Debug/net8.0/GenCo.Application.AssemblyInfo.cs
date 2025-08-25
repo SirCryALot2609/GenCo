@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("GenCo.Application")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+616a5f238ce9bb382d7bf3c669f181d7ce2534ca")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+0f39edc7148c11d7e90eec9a258b2024cf69ee91")]
 [assembly: System.Reflection.AssemblyProductAttribute("GenCo.Application")]
 [assembly: System.Reflection.AssemblyTitleAttribute("GenCo.Application")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

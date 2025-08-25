@@ -1,4 +1,5 @@
 ﻿using GenCo.Application.DTOs.Common;
+using GenCo.Application.DTOs.Relation;
 using GenCo.Application.DTOs.Relation.Requests;
 using MediatR;
 using System;
@@ -9,8 +10,8 @@ using System.Threading.Tasks;
 
 namespace GenCo.Application.Features.Relations.Commands.DeleteRelation
 {
-    public class DeleteRelationCommand :IRequest<BaseDeleteResponseDto>
+    public record DeleteRelationCommand(DeleteRelationRequestDto Request)
+        : IRequest<BaseResponseDto<BoolResultDto>>
     {
-        public DeleteRelationRequestDto Request { get; set; } = default!;
     }
 }

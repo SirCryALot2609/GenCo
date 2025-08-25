@@ -4,7 +4,7 @@ using GenCo.Application.DTOs.Entity.Responses;
 using GenCo.Application.DTOs.Project.Responses;
 using GenCo.Application.Features.Projects.Commands.RestoreProject;
 using GenCo.Application.Persistence.Contracts.Common;
-using GenCo.Domain;
+using GenCo.Domain.Entities;
 using MediatR;
 using System;
 using System.Collections.Generic;

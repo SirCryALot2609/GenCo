@@ -31,18 +31,12 @@ namespace GenCo.Application.Features.Fields.Commands.UpdateField
             {
                 return BaseResponseDto<FieldResponseDto>.Fail("Field not found");
             }
-
-            // Map từ request sang entity
             _mapper.Map(request.Request, field);
-
             field.UpdatedAt = DateTime.UtcNow;
             field.UpdatedBy = "system"; // sau này lấy từ context user
-
             await _repository.UpdateAsync(field, cancellationToken);
             await _unitOfWork.SaveChangesAsync(cancellationToken);
-
             var dto = _mapper.Map<FieldResponseDto>(field);
-
             return BaseResponseDto<FieldResponseDto>.Ok(dto, "Field updated successfully");
         }
     }

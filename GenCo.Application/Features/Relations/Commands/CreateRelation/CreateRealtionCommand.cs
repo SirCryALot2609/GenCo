@@ -1,4 +1,5 @@
 ﻿using GenCo.Application.DTOs.Common;
+using GenCo.Application.DTOs.Relation;
 using GenCo.Application.DTOs.Relation.Requests;
 using MediatR;
 using System;
@@ -9,8 +10,7 @@ using System.Threading.Tasks;
 
 namespace GenCo.Application.Features.Relations.Commands.CreateRelation
 {
-    public class CreateRealtionCommand : IRequest<BaseCreateResponseDto>
+    public record CreateRealtionCommand(CreateRelationRequestDto Request) : IRequest<BaseResponseDto<RelationBaseDto>>
     {
-        public CreateRelationRequestDto Request { get; set; } = default!;
     }
 }

@@ -5,7 +5,7 @@ using System.Linq.Expressions;
 using System.Threading;
 using System.Threading.Tasks;
 using GenCo.Application.Specifications.Common;
-using GenCo.Domain.Common; // để enforce BaseEntity
+using GenCo.Domain.Entities.Common; // để enforce BaseEntity
 
 namespace GenCo.Application.Persistence.Contracts.Common
 {

@@ -8,6 +8,7 @@
 
   <ItemGroup>
     <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="12.0.1" />
+    <PackageReference Include="FluentValidation.DependencyInjectionExtensions" Version="12.0.0" />
     <PackageReference Include="MediatR.Extensions.Microsoft.DependencyInjection" Version="11.1.0" />
   </ItemGroup>
 
@@ -16,9 +17,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="DTOs\FieldValidator\Responses\" />
-    <Folder Include="DTOs\FieldValidator\Requests\" />
-    <Folder Include="Features\Relations\Queries\" />
     <Folder Include="Features\WorkflowStep\Commands\" />
     <Folder Include="Features\WorkflowStep\Queries\" />
     <Folder Include="Features\Workflows\Commands\CreateWorkflow\" />

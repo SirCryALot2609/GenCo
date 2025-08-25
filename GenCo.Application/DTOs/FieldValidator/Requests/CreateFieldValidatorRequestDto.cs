@@ -1,17 +1,15 @@
-﻿using GenCo.Domain.Common;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace GenCo.Domain
+namespace GenCo.Application.DTOs.FieldValidator.Requests
 {
-    public class FieldValidator : BaseEntity
+    public class CreateFieldValidatorRequestDto
     {
         public Guid FeildId { get; set; }
-        public Field Field { get; set; } = default!;
         public string ValidatorType { get; set; } = default!;
-        public string? Config {  get; set; }
+        public string? Config { get; set; }
     }
 }

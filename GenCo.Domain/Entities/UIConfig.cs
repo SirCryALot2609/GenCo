@@ -1,11 +1,11 @@
-﻿using GenCo.Domain.Common;
+﻿using GenCo.Domain.Entities.Common;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace GenCo.Domain
+namespace GenCo.Domain.Entities
 {
     public class UIConfig : BaseEntity
     {

@@ -1,5 +1,6 @@
 ﻿using GenCo.Application.DTOs.Field;
 using GenCo.Application.DTOs.Project;
+using GenCo.Application.DTOs.Relation;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,7 +14,7 @@ namespace GenCo.Application.DTOs.Entity.Responses
         public ProjectBaseDto Project { get; set; } = default!;
 
         public ICollection<FieldBaseDto> Fields { get; set; } = [];
-        public ICollection<RelationDto> FromRelations { get; set; } = [];
-        public ICollection<RelationDto> ToRelations { get; set; } = [];
+        public ICollection<RelationBaseDto> FromRelations { get; set; } = [];
+        public ICollection<RelationBaseDto> ToRelations { get; set; } = [];
     }
 }

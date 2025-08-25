@@ -1,6 +1,8 @@
 ﻿using AutoMapper;
 using GenCo.Application.DTOs.Common;
+using GenCo.Application.DTOs.Relation;
 using GenCo.Application.Persistence.Contracts;
+using GenCo.Application.Persistence.Contracts.Common;
 using GenCo.Domain;
 using MediatR;
 using System;
@@ -11,36 +13,28 @@ using System.Threading.Tasks;
 
 namespace GenCo.Application.Features.Relations.Commands.DeleteRelation
 {
-    public class DeleteRelationCommandHandler(IRelationRepository repository, IMapper mapper)
-        : IRequestHandler<DeleteRelationCommand, BaseDeleteResponseDto>
+    public class DeleteRelationCommandHandler(
+        IRelationRepository repository, 
+        IUnitOfWork unitOfWork,
+        IMapper mapper)
+        : IRequestHandler<DeleteRelationCommand, BaseResponseDto<BoolResultDto>>
     {
         private readonly IRelationRepository _repository = repository;
+        private readonly IUnitOfWork _unitOfWork = unitOfWork;
         private readonly IMapper _mapper = mapper;
 
-        public async Task<BaseDeleteResponseDto> Handle(DeleteRelationCommand request, CancellationToken cancellationToken)
+        public async Task<BaseResponseDto<BoolResultDto>> Handle(DeleteRelationCommand request, CancellationToken cancellationToken)
         {
-            var realation = await _repository.GetByIdAsync(request.Request.Id);
-            if (realation == null)
+            var relation = await _repository.GetByIdAsync(request.Request.Id, cancellationToken: cancellationToken);
+            if (relation == null)
             {
-                return new BaseDeleteResponseDto
-                {
-                    Success = false,
-                    Message = "Relation not found.",
-                    DeleteAt = DateTime.UtcNow,
-                    DeleteBy = "system"
-                };
+                return BaseResponseDto<BoolResultDto>.Fail("Relation Validator not found");
             }
-            await _repository.DeleteAsync(realation);
-            var deleted = await _repository.GetByIdAsync(realation.Id);
-            return new BaseDeleteResponseDto
-            {
-                Success = deleted.IsDelete,
-                Message = deleted.IsDelete
-                    ? "Project deleted successfully."
-                    : "Failed to delete project.",
-                DeleteAt = deleted.DeleteAt,
-                DeleteBy = deleted.DeleteBy,
-            };
+
+            await _repository.DeleteAsync(relation, cancellationToken);
+            await _unitOfWork.SaveChangesAsync(cancellationToken);
+
+            return BaseResponseDto<BoolResultDto>.Ok(new BoolResultDto { Value = true }, "Relation deleted successfully");
         }
     }
 }

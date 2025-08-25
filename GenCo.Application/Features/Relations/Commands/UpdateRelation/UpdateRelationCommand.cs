@@ -1,4 +1,5 @@
 ﻿using GenCo.Application.DTOs.Common;
+using GenCo.Application.DTOs.Relation;
 using GenCo.Application.DTOs.Relation.Requests;
 using MediatR;
 using System;
@@ -9,8 +10,8 @@ using System.Threading.Tasks;
 
 namespace GenCo.Application.Features.Relations.Commands.UpdateRelation
 {
-    public class UpdateRelationCommand : IRequest<BaseUpdateResponseDto>
+    public record UpdateRelationCommand(UpdateRelationRequestDto Request) 
+        : IRequest<BaseResponseDto<RelationBaseDto>>
     {
-        public UpdateRelationRequestDto Request { get; set; } = default!;
     }
 }

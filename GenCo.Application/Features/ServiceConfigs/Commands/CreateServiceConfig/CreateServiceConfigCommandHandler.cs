@@ -1,7 +1,7 @@
 ﻿using AutoMapper;
 using GenCo.Application.DTOs.Common;
 using GenCo.Application.Persistence.Contracts;
-using GenCo.Domain;
+using GenCo.Domain.Entities;
 using MediatR;
 using System;
 using System.Collections.Generic;

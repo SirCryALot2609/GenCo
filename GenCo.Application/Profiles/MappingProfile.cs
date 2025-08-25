@@ -14,7 +14,7 @@ using GenCo.Application.DTOs.UIConfig.Requests;
 using GenCo.Application.DTOs.UIConfig.Responses;
 using GenCo.Application.DTOs.Workflow.Requests;
 using GenCo.Application.DTOs.Workflow.Responses;
-using GenCo.Domain;
+using GenCo.Domain.Entities;
 using System;
 using System.Collections.Generic;
 using System.Linq;

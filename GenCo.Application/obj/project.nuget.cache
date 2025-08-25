@@ -1,11 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "/ar2gWYE79A=",
+  "dgSpecHash": "JJQPYoTyWqg=",
   "success": true,
   "projectFilePath": "C:\\Users\\SirCryALot\\source\\repos\\GenCo\\GenCo.Application\\GenCo.Application.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\SirCryALot\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
     "C:\\Users\\SirCryALot\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\12.0.1\\automapper.extensions.microsoft.dependencyinjection.12.0.1.nupkg.sha512",
+    "C:\\Users\\SirCryALot\\.nuget\\packages\\fluentvalidation\\12.0.0\\fluentvalidation.12.0.0.nupkg.sha512",
+    "C:\\Users\\SirCryALot\\.nuget\\packages\\fluentvalidation.dependencyinjectionextensions\\12.0.0\\fluentvalidation.dependencyinjectionextensions.12.0.0.nupkg.sha512",
     "C:\\Users\\SirCryALot\\.nuget\\packages\\mediatr\\11.0.0\\mediatr.11.0.0.nupkg.sha512",
     "C:\\Users\\SirCryALot\\.nuget\\packages\\mediatr.contracts\\1.0.1\\mediatr.contracts.1.0.1.nupkg.sha512",
     "C:\\Users\\SirCryALot\\.nuget\\packages\\mediatr.extensions.microsoft.dependencyinjection\\11.1.0\\mediatr.extensions.microsoft.dependencyinjection.11.1.0.nupkg.sha512",

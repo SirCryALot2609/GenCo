@@ -7,11 +7,7 @@ using System.Threading.Tasks;
 
 namespace GenCo.Application.DTOs.Relation.Responses
 {
-    public class RelationResponseDto : BaseResponseDto
+    public class RelationResponseDto : RelationBaseDto
     {
-        public Guid ProjectId { get; set; }
-        public Guid FromEntityId { get; set; }
-        public Guid ToEntityId { get; set; }
-        public string RelationType { get; set; } = default!;
     }
 }

@@ -3,7 +3,7 @@ using GenCo.Application.DTOs.Common;
 using GenCo.Application.DTOs.Project.Responses;
 using GenCo.Application.Persistence.Contracts;
 using GenCo.Application.Persistence.Contracts.Common;
-using GenCo.Domain;
+using GenCo.Domain.Entities;
 using MediatR;
 using System;
 using System.Collections.Generic;
