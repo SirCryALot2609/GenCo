@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace GenCo.Application.DTOs.Relation.Responses
 {
-    public class RelationDetailResponseDto
+    public class RelationDetailsesponseDto
         : BaseResponseDto<RelationDetailDto>
     {
     }

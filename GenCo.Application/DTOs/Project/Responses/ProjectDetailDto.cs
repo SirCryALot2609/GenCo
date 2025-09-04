@@ -13,10 +13,10 @@ namespace GenCo.Application.DTOs.Project.Responses
 {
     public class ProjectDetailDto : ProjectBaseDto
     {
-        public ICollection<EntityDetailsResponseDto>? Entities { get; set; }
-        public ICollection<RelationResponseDto>? Relations { get; set; }
-        public ICollection<WorkflowResponseDto>? Workflows { get; set; }
-        public ICollection<UIConfigResponseDto>? UIConfigs { get; set; }
-        public ICollection<ServiceConfigResponseDto>? ServiceConfigs { get; set; }
+      public ICollection<EntityDetailDto> Entities { get; set; } = [];
+      public ICollection<RelationDetailDto> Relations { get; set; } = [];
+      public ICollection<WorkflowDetailDto> Workflows { get; set; } = [];
+      public ICollection<UIConfigDetailDto> UIConfigs { get; set; } = [];
+      public ICollection<ServiceConfigDetailDto> ServiceConfigs { get; set; } = [];
     }
 }

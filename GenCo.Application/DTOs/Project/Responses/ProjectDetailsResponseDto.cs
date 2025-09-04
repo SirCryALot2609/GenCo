@@ -5,10 +5,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace GenCo.Application.DTOs.Field.Responses
+namespace GenCo.Application.DTOs.Project.Responses
 {
-    public class FieldDetailResponseDto
-        : BaseResponseDto<FieldDetailDto>
+    public class ProjectDetailsResponseDto
+    : BaseResponseDto<ProjectDetailDto>
     {
     }
 }

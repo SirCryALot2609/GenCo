@@ -10,10 +10,11 @@ namespace GenCo.Application.DTOs.Field.Requests
     public class CreateFieldRequestDto : BaseRequestDto
     {
         public Guid EntityId { get; set; }
-        public string Name { get; set; } = default!;
-        public string Type { get; set; } = default!;
-        public bool IsRequired { get; set; }
-        public bool IsPrimaryKey { get; set; }
-        public string? DefaultValue { get; set; }
+        public string ColumnName { get; set; } = default!;
+        public string? Label { get; set; }
+        public string DataType { get; set; } = default!;
+        public bool IsNullable { get; set; }
+        public int? MaxLength { get; set; }
+        public int Ordinal { get; set; }
     }
 }
