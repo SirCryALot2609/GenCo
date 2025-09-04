@@ -1,4 +1,6 @@
-namespace GenCo.GenCo.Application.DTOs.RelationFieldMapping;
+using GenCo.Application.DTOs.Common;
+
+namespace GenCo.Application.DTOs.RelationFieldMapping;
 
 public class RelationFieldMappingBaseDto : AuditableDto
 {

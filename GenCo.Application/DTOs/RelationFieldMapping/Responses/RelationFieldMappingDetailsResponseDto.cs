@@ -1,4 +1,6 @@
-namespace GenCo.GenCo.Application.DTOs.RelationFieldMapping.Responses;
+using GenCo.Application.DTOs.Common;
+
+namespace GenCo.Application.DTOs.RelationFieldMapping.Responses;
 
 public class RelationFieldMappingDetailsResponseDto 
     : BaseResponseDto<RelationFieldMappingDetailDto>

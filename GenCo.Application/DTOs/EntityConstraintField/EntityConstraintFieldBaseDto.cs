@@ -1,4 +1,6 @@
-namespace GenCo.GenCo.Application.DTOs.EntityConstraintField.Responses;
+using GenCo.Application.DTOs.Common;
+
+namespace GenCo.Application.DTOs.EntityConstraintField;
 
 public class EntityConstraintFieldBaseDto : AuditableDto
 {

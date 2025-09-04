@@ -1,5 +1,3 @@
-namespace GenCo.GenCo.Application.DTOs.EntityConstraintField.Responses;
+namespace GenCo.Application.DTOs.EntityConstraintField.Responses;
 
-public class EntityConstraintFieldResponseDto : EntityConstraintFieldBaseDto
-{
-}
+public class EntityConstraintFieldResponseDto : EntityConstraintFieldBaseDto;

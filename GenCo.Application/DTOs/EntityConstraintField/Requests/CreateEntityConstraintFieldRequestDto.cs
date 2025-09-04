@@ -1,4 +1,6 @@
-namespace GenCo.GenCo.Application.DTOs.EntityConstraintField.Requests;
+using GenCo.Application.DTOs.Common;
+
+namespace GenCo.Application.DTOs.EntityConstraintField.Requests;
 
 public class CreateEntityConstraintFieldRequestDto : BaseRequestDto
 {
