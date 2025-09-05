@@ -3,7 +3,6 @@ using GenCo.Application.DTOs.EntityConstraintField;
 using GenCo.Application.DTOs.EntityConstraintField.Requests;
 using GenCo.Application.DTOs.EntityConstraintField.Responses;
 using GenCo.Domain.Entities;
-using GenCo.GenCo.Application.DTOs.EntityConstraintField.Requests;
 
 namespace GenCo.Application.Profiles;
 
@@ -12,16 +11,28 @@ public class EntityConstraintFieldMappingProfile : Profile
     public EntityConstraintFieldMappingProfile()
     {
         // ===== EntityConstraintField -> DTO =====
-        CreateMap<EntityConstraintField, EntityConstraintFieldBaseDto>();
-        CreateMap<EntityConstraintField, EntityConstraintFieldResponseDto>();
+        CreateMap<EntityConstraintField, EntityConstraintFieldBaseDto>()
+            .ForMember(dest => dest.ConstraintId, opt => opt.MapFrom(src => src.ConstraintId))
+            .ForMember(dest => dest.FieldId, opt => opt.MapFrom(src => src.FieldId));
+
+        CreateMap<EntityConstraintField, EntityConstraintFieldResponseDto>()
+            .IncludeBase<EntityConstraintField, EntityConstraintFieldBaseDto>();
+
         CreateMap<EntityConstraintField, EntityConstraintFieldDetailDto>()
-            .ForMember(dest => dest.Constraint, opt => opt.MapFrom(src => src.Constraint))
-            .ForMember(dest => dest.Field, opt => opt.MapFrom(src => src.Field));
+            .IncludeBase<EntityConstraintField, EntityConstraintFieldBaseDto>()
+            .ForMember(dest => dest.ConstraintName, opt => opt.MapFrom(src => src.Constraint.ConstraintName))
+            .ForMember(dest => dest.FieldName, opt => opt.MapFrom(src => src.Field.ColumnName));
 
         // ===== DTO -> EntityConstraintField =====
-        CreateMap<CreateEntityConstraintFieldRequestDto, EntityConstraintField>();
-        CreateMap<UpdateEntityConstraintFieldRequestDto, EntityConstraintField>();
-        CreateMap<DeleteEntityConstraintFieldRequestDto, EntityConstraintField>()
-            .ForMember(dest => dest.Id, opt => opt.MapFrom(src => src.Id));
+        CreateMap<CreateEntityConstraintFieldRequestDto, EntityConstraintField>()
+            .ForMember(dest => dest.ConstraintId, opt => opt.MapFrom(src => src.ConstraintId))
+            .ForMember(dest => dest.FieldId, opt => opt.MapFrom(src => src.FieldId));
+
+        CreateMap<UpdateEntityConstraintFieldRequestDto, EntityConstraintField>()
+            .ForMember(dest => dest.Id, opt => opt.MapFrom(src => src.Id))
+            .ForMember(dest => dest.ConstraintId, opt => opt.MapFrom(src => src.ConstraintId))
+            .ForMember(dest => dest.FieldId, opt => opt.MapFrom(src => src.FieldId))
+            .ForAllMembers(opt =>
+                opt.Condition((_, _, srcMember) => srcMember != null));
     }
 }

@@ -1,11 +1,9 @@
-﻿using GenCo.Application.DTOs.Field;
-using GenCo.Domain.Entities;
+﻿using GenCo.Domain.Entities;
 
-namespace GenCo.Application.DTOs.FieldValidator.Responses
+namespace GenCo.Application.DTOs.FieldValidator.Responses;
+
+public class FieldValidatorDetailDto : FieldValidatorBaseDto
 {
-    public class FieldValidatorDetailDto
-    {
-        public FieldBaseDto Field { get; set; } = default!;
-        public FieldValidatorConfig ConfigObject { get; set; } = new();
-    }
+    public FieldValidatorConfig? ConfigObject { get; set; } // deserialize từ ConfigJson
+    public string? FieldName { get; set; } // map từ Field.ColumnName hoặc Field.Name
 }

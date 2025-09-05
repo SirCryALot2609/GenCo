@@ -1,15 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿namespace GenCo.Domain.Enum;
 
-namespace GenCo.Domain.Enum
-{
-    public enum RelationType 
-    { 
-        OneToOne, 
-        OneToMany, 
-        ManyToMany 
-    }
+public enum RelationType 
+{ 
+    OneToOne, 
+    OneToMany, 
+    ManyToMany 
 }

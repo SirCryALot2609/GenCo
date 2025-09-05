@@ -1,21 +1,18 @@
-﻿using GenCo.Application.Profiles;
-using MediatR;
+﻿using MediatR;
 using Microsoft.Extensions.DependencyInjection;
-using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Reflection;
-using System.Text;
-using System.Threading.Tasks;
+using GenCo.Application.Behaviors;
 
-namespace GenCo.Application
+namespace GenCo.Application;
+
+public static class ApplicationServicesRegistration
 {
-    public static class ApplicationServicesRegistration
+    public static void ConfigureApplicationServices(this IServiceCollection services)
     {
-        public static void ConfigureApplicationServices(this IServiceCollection services)
-        {
-            services.AddAutoMapper(Assembly.GetExecutingAssembly());
-            services.AddMediatR(Assembly.GetExecutingAssembly());
-        }
+        services.AddAutoMapper(Assembly.GetExecutingAssembly());
+        // MediatR
+        services.AddMediatR(Assembly.GetExecutingAssembly());
+        // Exception handling pipeline
+        services.AddTransient(typeof(IPipelineBehavior<,>), typeof(ExceptionHandlingBehavior<,>));
     }
 }

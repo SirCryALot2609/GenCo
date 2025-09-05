@@ -1,36 +1,28 @@
 ﻿using AutoMapper;
 using GenCo.Application.DTOs.Common;
 using GenCo.Application.DTOs.Entity.Responses;
-using GenCo.Application.DTOs.Project.Responses;
 using GenCo.Application.Persistence.Contracts.Common;
 using GenCo.Domain.Entities;
 using MediatR;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace GenCo.Application.Features.Entities.Commands.SoftDeleteEntity
-{
-    public class SoftDeleteEntityCommandHandler(
+namespace GenCo.Application.Features.Entities.Commands.SoftDeleteEntity;
+
+public class SoftDeleteEntityCommandHandler(
     IGenericRepository<Entity> repository,
-    IUnitOfWork unitOfWork,
-    IMapper mapper) : IRequestHandler<SoftDeleteEntityCommand, BaseResponseDto<EntityResponseDto>>
+    IUnitOfWork unitOfWork)
+    : IRequestHandler<SoftDeleteEntityCommand, BaseResponseDto<bool>>
+{
+    public async Task<BaseResponseDto<bool>> Handle(SoftDeleteEntityCommand request, CancellationToken cancellationToken)
     {
-        private readonly IGenericRepository<Entity> _repository = repository;
-        private readonly IUnitOfWork _unitOfWork = unitOfWork;
-        private readonly IMapper _mapper = mapper;
+        var entity = await repository.GetByIdAsync(request.Id, cancellationToken: cancellationToken);
+        if (entity == null)
+            return BaseResponseDto<bool>.Fail("Entity not found");
 
-        public async Task<BaseResponseDto<EntityResponseDto>> Handle(SoftDeleteEntityCommand request, CancellationToken cancellationToken)
-        {
-            var entity = await _repository.GetByIdAsync(request.Request.Id, cancellationToken : cancellationToken);
-            if (entity == null)
-                return BaseResponseDto<EntityResponseDto>.Fail("Entity not found.");
-            await _repository.SoftDeleteAsync(entity, cancellationToken);
-            await _unitOfWork.SaveChangesAsync(cancellationToken);
-            var dto = _mapper.Map<EntityResponseDto>(entity);
-            return BaseResponseDto<EntityResponseDto>.Ok(dto, "Entity soft deleted successfully");
-        }
+        await repository.SoftDeleteAsync(entity, cancellationToken);
+        entity.UpdatedAt = DateTime.UtcNow;
+
+        await unitOfWork.SaveChangesAsync(cancellationToken);
+
+        return BaseResponseDto<bool>.Ok(true, "Entity soft deleted successfully");
     }
 }

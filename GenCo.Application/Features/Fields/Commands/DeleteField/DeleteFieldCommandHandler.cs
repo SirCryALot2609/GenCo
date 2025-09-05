@@ -1,40 +1,24 @@
-﻿using AutoMapper;
-using GenCo.Application.DTOs.Common;
-using GenCo.Application.DTOs.Field.Responses;
-using GenCo.Application.Persistence.Contracts;
+﻿using GenCo.Application.DTOs.Common;
 using GenCo.Application.Persistence.Contracts.Common;
-using GenCo.Domain;
+using GenCo.Domain.Entities;
 using MediatR;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace GenCo.Application.Features.Fields.Commands.DeleteField
+namespace GenCo.Application.Features.Fields.Commands.DeleteField;
+
+public class DeleteFieldCommandHandler(
+    IGenericRepository<Field> repository,
+    IUnitOfWork unitOfWork)
+    : IRequestHandler<DeleteFieldCommand, BaseResponseDto<bool>>
 {
-    public class DeleteFieldCommandHandler(
-        IFieldRepository repository, 
-        IUnitOfWork unitOfWork,
-        IMapper mapper)
-        : IRequestHandler<DeleteFieldCommand, BaseResponseDto<BoolResultDto>>
+    public async Task<BaseResponseDto<bool>> Handle(DeleteFieldCommand request, CancellationToken cancellationToken)
     {
-        private readonly IFieldRepository _repository = repository;
-        private readonly IUnitOfWork _unitOfWork = unitOfWork;
-        private readonly IMapper _mapper = mapper;
+        var field = await repository.GetByIdAsync(request.Id, cancellationToken: cancellationToken);
+        if (field == null)
+            return BaseResponseDto<bool>.Fail("Field not found");
 
-        public async Task<BaseResponseDto<BoolResultDto>> Handle(DeleteFieldCommand request, CancellationToken cancellationToken)
-        {
-            var field = await _repository.GetByIdAsync(request.Request.Id, cancellationToken: cancellationToken);
-            if (field == null)
-            {
-                return BaseResponseDto<BoolResultDto>.Fail("Field not found");
-            }
+        await repository.DeleteAsync(field, cancellationToken);
+        await unitOfWork.SaveChangesAsync(cancellationToken);
 
-            await _repository.DeleteAsync(field, cancellationToken);
-            await _unitOfWork.SaveChangesAsync(cancellationToken);
-
-            return BaseResponseDto<BoolResultDto>.Ok(new BoolResultDto { Value = true }, "Field deleted successfully");
-        }
+        return BaseResponseDto<bool>.Ok(true, "Field deleted successfully");
     }
 }

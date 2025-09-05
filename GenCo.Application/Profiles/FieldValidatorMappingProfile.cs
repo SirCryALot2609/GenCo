@@ -2,28 +2,49 @@ using AutoMapper;
 using GenCo.Application.DTOs.FieldValidator;
 using GenCo.Application.DTOs.FieldValidator.Requests;
 using GenCo.Application.DTOs.FieldValidator.Responses;
-using GenCo.Application.Resolvers;
 using GenCo.Domain.Entities;
+using GenCo.Domain.Enum;
 
 namespace GenCo.Application.Profiles;
 
-public class FieldValidatorMappingProfile : Profile
+public class FieldValidatorProfile : Profile
 {
-    public class FieldValidatorProfile : Profile
+    public FieldValidatorProfile()
     {
-        public FieldValidatorProfile()
-        {
-            CreateMap<FieldValidator, FieldValidatorBaseDto>();
-            CreateMap<FieldValidator, FieldValidatorResponseDto>();
+        CreateMap<CreateFieldValidatorRequestDto, FieldValidator>()
+            .ForMember(dest => dest.ConfigObject, opt => opt.Ignore())
+            .AfterMap((src, dest) =>
+            {
+                dest.Type = (ValidatorType)Enum.Parse(typeof(ValidatorType), src.Type, true);
+                dest.ConfigJson = src.ConfigObject == null ? null : System.Text.Json.JsonSerializer.Serialize(src.ConfigObject);
+            });
 
-            CreateMap<FieldValidator, FieldValidatorDetailDto>()
-                .ForMember(dest => dest.Field, opt => opt.MapFrom(src => src.Field))
-                .ForMember(dest => dest.ConfigObject, opt => opt.MapFrom<FieldValidatorConfigResolver>());
+        CreateMap<UpdateFieldValidatorRequestDto, FieldValidator>()
+            .ForMember(dest => dest.ConfigObject, opt => opt.Ignore())
+            .AfterMap((src, dest) =>
+            {
+                dest.Type = (ValidatorType)Enum.Parse(typeof(ValidatorType), src.Type, true);
+                dest.ConfigJson = src.ConfigObject == null ? null : System.Text.Json.JsonSerializer.Serialize(src.ConfigObject);
+            });
 
-            CreateMap<CreateFieldValidatorRequestDto, FieldValidator>();
-            CreateMap<UpdateFieldValidatorRequestDto, FieldValidator>();
-            CreateMap<DeleteFieldValidatorRequestDto, FieldValidator>()
-                .ForMember(dest => dest.Id, opt => opt.MapFrom(src => src.Id));
-        }
+        // Entity -> BaseDto
+        CreateMap<FieldValidator, FieldValidatorBaseDto>()
+            .ForMember(dest => dest.Type,
+                opt => opt.MapFrom(src => src.Type.ToString()))
+            .ForMember(dest => dest.ConfigJson,
+                opt => opt.MapFrom(src => src.ConfigJson));
+
+        // Entity -> ResponseDto
+        CreateMap<FieldValidator, FieldValidatorResponseDto>()
+            .IncludeBase<FieldValidator, FieldValidatorBaseDto>();
+
+        // Entity -> DetailDto
+        CreateMap<FieldValidator, FieldValidatorDetailDto>()
+            .IncludeBase<FieldValidator, FieldValidatorBaseDto>()
+            .ForMember(dest => dest.ConfigObject,
+                opt => opt.MapFrom(src => src.ConfigObject))
+            .ForMember(dest => dest.FieldName,
+                opt => opt.MapFrom(src => src.Field.ColumnName));
+
     }
 }

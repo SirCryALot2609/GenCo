@@ -1,17 +1,11 @@
 ﻿using GenCo.Domain.Entities.Common;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace GenCo.Domain.Entities
+namespace GenCo.Domain.Entities;
+
+public class Workflow : BaseEntity
 {
-    public class Workflow : BaseEntity
-    {
-        public Guid ProjectId { get; set; }
-        public Project Project { get; set; } = default!;
-        public string Name { get; set; } = default!;
-        public ICollection<WorkflowStep> Steps { get; set; } = [];
-    }
+    public Guid ProjectId { get; set; }
+    public virtual Project Project { get; set; } = null!;
+    public required string Name { get; set; }
+    public virtual ICollection<WorkflowStep> Steps { get; set; } = [];
 }

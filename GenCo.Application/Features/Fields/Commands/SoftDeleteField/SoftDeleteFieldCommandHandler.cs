@@ -1,37 +1,26 @@
-﻿using AutoMapper;
-using GenCo.Application.DTOs.Common;
-using GenCo.Application.DTOs.Entity.Responses;
-using GenCo.Application.DTOs.Field.Responses;
-using GenCo.Application.Persistence.Contracts;
+﻿using GenCo.Application.DTOs.Common;
 using GenCo.Application.Persistence.Contracts.Common;
 using MediatR;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using GenCo.Domain.Entities;
 
-namespace GenCo.Application.Features.Fields.Commands.SoftDeleteField
+namespace GenCo.Application.Features.Fields.Commands.SoftDeleteField;
+
+public class SoftDeleteFieldCommandHandler(
+    IGenericRepository<Field> repository,
+    IUnitOfWork unitOfWork)
+    : IRequestHandler<SoftDeleteFieldCommand, BaseResponseDto<bool>>
 {
-    public class SoftDeleteFieldCommandHandler(
-        IFieldRepository repository,
-        IUnitOfWork unitOfWork,
-        IMapper mapper
-        ) : IRequestHandler<SoftDeleteFieldCommand, BaseResponseDto<FieldResponseDto>>
+    public async Task<BaseResponseDto<bool>> Handle(SoftDeleteFieldCommand request, CancellationToken cancellationToken)
     {
-        private readonly IFieldRepository _repository = repository;
-        private readonly IUnitOfWork _unitOfWork = unitOfWork;
-        private readonly IMapper _mapper = mapper;
+        var field = await repository.GetByIdAsync(request.Id, cancellationToken: cancellationToken);
+        if (field == null)
+            return BaseResponseDto<bool>.Fail("Field not found");
 
-        public async Task<BaseResponseDto<FieldResponseDto>> Handle(SoftDeleteFieldCommand request, CancellationToken cancellationToken)
-        {
-            var field = await _repository.GetByIdAsync(request.Request.Id, cancellationToken: cancellationToken);
-            if (field == null)
-                return BaseResponseDto<FieldResponseDto>.Fail("Field not found.");
-            await _repository.SoftDeleteAsync(field, cancellationToken);
-            await _unitOfWork.SaveChangesAsync(cancellationToken);
-            var dto = _mapper.Map<FieldResponseDto>(field);
-            return BaseResponseDto<FieldResponseDto>.Ok(dto, "Field soft deleted successfully");
-        }
+        await repository.SoftDeleteAsync(field, cancellationToken);
+        field.UpdatedAt = DateTime.UtcNow;
+
+        await unitOfWork.SaveChangesAsync(cancellationToken);
+
+        return BaseResponseDto<bool>.Ok(true, "Field soft deleted successfully");
     }
 }

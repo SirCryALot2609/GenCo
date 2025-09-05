@@ -11,16 +11,51 @@ public class FieldMappingProfile : Profile
     public FieldMappingProfile()
     {
         // ===== Field -> DTO =====
-        CreateMap<Field, FieldBaseDto>();
-        CreateMap<Field, FieldResponseDto>();
+        CreateMap<Field, FieldBaseDto>()
+            .ForMember(dest => dest.ColumnName, opt => opt.MapFrom(src => src.ColumnName))
+            .ForMember(dest => dest.Type, opt => opt.MapFrom(src => src.Type))
+            .ForMember(dest => dest.Length, opt => opt.MapFrom(src => src.Length))
+            .ForMember(dest => dest.Scale, opt => opt.MapFrom(src => src.Scale))
+            .ForMember(dest => dest.IsRequired, opt => opt.MapFrom(src => src.IsRequired))
+            .ForMember(dest => dest.IsAutoIncrement, opt => opt.MapFrom(src => src.IsAutoIncrement))
+            .ForMember(dest => dest.DefaultValue, opt => opt.MapFrom(src => src.DefaultValue))
+            .ForMember(dest => dest.Comment, opt => opt.MapFrom(src => src.Comment))
+            .ForMember(dest => dest.ColumnOrder, opt => opt.MapFrom(src => src.ColumnOrder));
+
+        CreateMap<Field, FieldResponseDto>()
+            .IncludeBase<Field, FieldBaseDto>();
+
         CreateMap<Field, FieldDetailDto>()
-            .ForMember(dest => dest.Entity, opt => opt.MapFrom(src => src.Entity))
+            .IncludeBase<Field, FieldBaseDto>()
+            .ForMember(dest => dest.EntityId, opt => opt.MapFrom(src => src.EntityId))
             .ForMember(dest => dest.Validators, opt => opt.MapFrom(src => src.Validators));
 
         // ===== DTO -> Field =====
-        CreateMap<CreateFieldRequestDto, Field>();
-        CreateMap<UpdateFieldRequestDto, Field>();
-        CreateMap<DeleteFieldRequestDto, Field>()
-            .ForMember(dest => dest.Id, opt => opt.MapFrom(src => src.Id));
+        CreateMap<CreateFieldRequestDto, Field>()
+            .ForMember(dest => dest.EntityId, opt => opt.MapFrom(src => src.EntityId))
+            .ForMember(dest => dest.ColumnName, opt => opt.MapFrom(src => src.ColumnName))
+            .ForMember(dest => dest.Type, opt => opt.MapFrom(src => src.Type))
+            .ForMember(dest => dest.Length, opt => opt.MapFrom(src => src.Length))
+            .ForMember(dest => dest.Scale, opt => opt.MapFrom(src => src.Scale))
+            .ForMember(dest => dest.IsRequired, opt => opt.MapFrom(src => src.IsRequired))
+            .ForMember(dest => dest.IsAutoIncrement, opt => opt.MapFrom(src => src.IsAutoIncrement))
+            .ForMember(dest => dest.DefaultValue, opt => opt.MapFrom(src => src.DefaultValue))
+            .ForMember(dest => dest.Comment, opt => opt.MapFrom(src => src.Comment))
+            .ForMember(dest => dest.ColumnOrder, opt => opt.MapFrom(src => src.ColumnOrder));
+
+        CreateMap<UpdateFieldRequestDto, Field>()
+            .ForMember(dest => dest.Id, opt => opt.MapFrom(src => src.Id))
+            .ForMember(dest => dest.EntityId, opt => opt.MapFrom(src => src.EntityId))
+            .ForMember(dest => dest.ColumnName, opt => opt.MapFrom(src => src.ColumnName))
+            .ForMember(dest => dest.Type, opt => opt.MapFrom(src => src.Type))
+            .ForMember(dest => dest.Length, opt => opt.MapFrom(src => src.Length))
+            .ForMember(dest => dest.Scale, opt => opt.MapFrom(src => src.Scale))
+            .ForMember(dest => dest.IsRequired, opt => opt.MapFrom(src => src.IsRequired))
+            .ForMember(dest => dest.IsAutoIncrement, opt => opt.MapFrom(src => src.IsAutoIncrement))
+            .ForMember(dest => dest.DefaultValue, opt => opt.MapFrom(src => src.DefaultValue))
+            .ForMember(dest => dest.Comment, opt => opt.MapFrom(src => src.Comment))
+            .ForMember(dest => dest.ColumnOrder, opt => opt.MapFrom(src => src.ColumnOrder))
+            .ForAllMembers(opt =>
+                opt.Condition((_, _, srcMember) => srcMember != null));
     }
 }

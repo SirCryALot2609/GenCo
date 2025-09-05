@@ -1,85 +1,86 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿namespace GenCo.Application.DTOs.Common;
 
-namespace GenCo.Application.DTOs.Common
+public abstract class BaseDto
 {
-    public abstract class BaseDto
-    {
-        public Guid Id { get; set; }
-    }
-
-    public class BoolResultDto
-    {
-        public bool Value { get; set; }
-    }
-
-    public abstract class AuditableDto : BaseDto
-    {
-        public DateTime CreatedAt { get; set; }
-        public string? CreatedBy { get; set; }
-        public DateTime? UpdatedAt { get; set; }
-        public string? UpdatedBy { get; set; }
-        public DateTime? DeletedAt { get; set; }
-        public string? DeletedBy { get; set; }
-    }
-
-    public abstract class BaseRequestDto
-    {
-        public Guid CorrelationId { get; set; } = Guid.NewGuid();
-        public DateTime RequestedAt { get; set; } = DateTime.UtcNow;
-    }
-
-    /// <summary>
-    /// Generic API response wrapper
-    /// </summary>
-    public class BaseResponseDto<T> where T : class
-    {
-        public bool Success { get; set; }
-        public string Message { get; set; } = string.Empty;
-        public T? Data { get; set; }
-
-        public static BaseResponseDto<T> Ok(T data, string? message = null)
-            => new() { Success = true, Message = message ?? "Success", Data = data };
-
-        public static BaseResponseDto<T> Fail(string message)
-            => new() { Success = false, Message = message };
-    }
-
-    public class PagedResponseDto<T> : BaseResponseDto<IReadOnlyCollection<T>>
-    {
-        public int TotalCount { get; set; }
-        public int PageNumber { get; set; }
-        public int PageSize { get; set; }
-
-        // Factory helpers
-        public static PagedResponseDto<T> Ok(
-            IReadOnlyCollection<T> items,
-            int totalCount,
-            int pageNumber,
-            int pageSize,
-            string? message = null)
-            => new()
-            {
-                Success = true,
-                Message = message ?? "Success",
-                Data = items,
-                TotalCount = totalCount,
-                PageNumber = pageNumber,
-                PageSize = pageSize
-            };
-
-        public static PagedResponseDto<T> Fail(string message)
-            => new()
-            {
-                Success = false,
-                Message = message,
-                Data = [],
-                TotalCount = 0,
-                PageNumber = 0,
-                PageSize = 0
-            };
-    }
+    public Guid Id { get; set; }
 }
+
+public abstract class AuditableDto : BaseDto
+{
+    public DateTimeOffset CreatedAt { get; set; }
+    public string? CreatedBy { get; set; }
+    public DateTimeOffset? UpdatedAt { get; set; }
+    public string? UpdatedBy { get; set; }
+    public DateTimeOffset? DeletedAt { get; set; }
+    public string? DeletedBy { get; set; }
+}
+
+public abstract class BaseRequestDto
+{
+    public Guid CorrelationId { get; set; } = Guid.NewGuid();
+    public DateTimeOffset RequestedAt { get; set; } = DateTimeOffset.UtcNow;
+
+    public string? TraceId { get; set; }
+    public Guid? UserId { get; set; }
+}
+
+public class BaseResponseDto<T>
+{
+    public bool Success { get; set; }
+    public string Message { get; set; } = "Success";
+    public string? ErrorCode { get; set; }
+    public T? Data { get; set; }
+
+    public static BaseResponseDto<T> Ok(T data, string? message = null)
+        => new()
+        {
+            Success = true,
+            Message = message ?? "Success",
+            Data = data
+        };
+
+    public static BaseResponseDto<T> Fail(string message, string? errorCode = null)
+        => new()
+        {
+            Success = false,
+            Message = message,
+            ErrorCode = errorCode,
+            Data = default
+        };
+}
+
+public class PagedResponseDto<T> : BaseResponseDto<IReadOnlyCollection<T>>
+{
+    public int TotalCount { get; set; }
+    public int PageNumber { get; set; }
+    public int PageSize { get; set; }
+
+    public static PagedResponseDto<T> Ok(
+        IReadOnlyCollection<T> items,
+        int totalCount,
+        int pageNumber,
+        int pageSize,
+        string? message = null)
+        => new()
+        {
+            Success = true,
+            Message = message ?? "Success",
+            Data = items,
+            TotalCount = totalCount,
+            PageNumber = pageNumber,
+            PageSize = pageSize
+        };
+
+    public new static PagedResponseDto<T> Fail(string message, string? errorCode = null)
+        => new()
+        {
+            Success = false,
+            Message = message,
+            ErrorCode = errorCode,
+            Data = Array.Empty<T>(),
+            TotalCount = 0,
+            PageNumber = 0,
+            PageSize = 0
+        };
+}
+

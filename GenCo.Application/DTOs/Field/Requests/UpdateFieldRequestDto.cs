@@ -1,21 +1,21 @@
 ﻿using GenCo.Application.DTOs.Common;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace GenCo.Application.DTOs.Field.Requests
+namespace GenCo.Application.DTOs.Field.Requests;
+
+public class UpdateFieldRequestDto : BaseRequestDto
 {
-    public class UpdateFieldRequestDto : BaseRequestDto
-    {
-        public Guid Id { get; set; }
-        public Guid EntityId { get; set; }
-        public string ColumnName { get; set; } = default!;
-        public string? Label { get; set; }
-        public string DataType { get; set; } = default!;
-        public bool IsNullable { get; set; }
-        public int? MaxLength { get; set; }
-        public int Ordinal { get; set; }
-    }
+    public Guid Id { get; set; }
+    public Guid EntityId { get; set; }
+
+    public string ColumnName { get; set; } = string.Empty;
+    public string Type { get; set; } = string.Empty;
+    public int? Length { get; set; }
+    public int? Scale { get; set; }
+
+    public bool IsRequired { get; set; }
+    public bool IsAutoIncrement { get; set; }
+    public string? DefaultValue { get; set; }
+
+    public string? Comment { get; set; }
+    public int ColumnOrder { get; set; }
 }

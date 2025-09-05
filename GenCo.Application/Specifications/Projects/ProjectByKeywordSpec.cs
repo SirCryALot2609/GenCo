@@ -29,7 +29,7 @@ namespace GenCo.Application.Specifications.Projects
                 AddInclude(p => p.Entities.SelectMany(e => e.Fields).Select(f => f.Validators));
                 AddInclude(p => p.Relations);
                 AddInclude(p => p.Workflows);
-                AddInclude(p => p.UIConfigs);
+                AddInclude(p => p.UiConfigs);
                 AddInclude(p => p.ServiceConfigs);
             }
         }

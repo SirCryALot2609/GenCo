@@ -1,48 +1,31 @@
 ﻿using AutoMapper;
 using GenCo.Application.DTOs.Common;
 using GenCo.Application.DTOs.Entity.Responses;
-using GenCo.Application.Persistence.Contracts;
 using GenCo.Application.Persistence.Contracts.Common;
 using GenCo.Domain.Entities;
 using MediatR;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace GenCo.Application.Features.Entities.Commands.UpdateEntity
-{
-    public class UpdateEntityCommandHandler(
+namespace GenCo.Application.Features.Entities.Commands.UpdateEntity;
+public class UpdateEntityCommandHandler(
     IGenericRepository<Entity> repository,
     IUnitOfWork unitOfWork,
     IMapper mapper)
     : IRequestHandler<UpdateEntityCommand, BaseResponseDto<EntityResponseDto>>
+{
+    public async Task<BaseResponseDto<EntityResponseDto>> Handle(UpdateEntityCommand request, CancellationToken cancellationToken)
     {
-        private readonly IGenericRepository<Entity> _repository = repository;
-        private readonly IUnitOfWork _unitOfWork = unitOfWork;
-        private readonly IMapper _mapper = mapper;
+        var entity = await repository.GetByIdAsync(request.Request.Id, cancellationToken: cancellationToken);
+        if (entity == null)
+            return BaseResponseDto<EntityResponseDto>.Fail("Entity not found");
 
-        public async Task<BaseResponseDto<EntityResponseDto>> Handle(UpdateEntityCommand request, CancellationToken cancellationToken)
-        {
-            var entity = await _repository.GetByIdAsync(request.Request.Id, cancellationToken: cancellationToken);
-            if (entity == null)
-            {
-                return BaseResponseDto<EntityResponseDto>.Fail("Entity not found");
-            }
+        // Chỉ update field khác null
+        mapper.Map(request.Request, entity);
 
-            // Map từ request sang entity
-            _mapper.Map(request.Request, entity);
+        entity.UpdatedAt = DateTime.UtcNow;
 
-            entity.UpdatedAt = DateTime.UtcNow;
-            entity.UpdatedBy = "system"; // sau này lấy từ context user
+        await repository.UpdateAsync(entity, cancellationToken);
+        await unitOfWork.SaveChangesAsync(cancellationToken);
 
-            await _repository.UpdateAsync(entity, cancellationToken);
-            await _unitOfWork.SaveChangesAsync(cancellationToken);
-
-            var dto = _mapper.Map<EntityResponseDto>(entity);
-
-            return BaseResponseDto<EntityResponseDto>.Ok(dto, "Entity updated successfully");
-        }
+        var dto = mapper.Map<EntityResponseDto>(entity);
+        return BaseResponseDto<EntityResponseDto>.Ok(dto, "Entity updated successfully");
     }
 }

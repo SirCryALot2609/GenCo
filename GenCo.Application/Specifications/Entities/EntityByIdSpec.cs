@@ -1,24 +1,18 @@
 ﻿using GenCo.Application.Specifications.Common;
 using GenCo.Domain.Entities;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace GenCo.Application.Specifications.Entities
+namespace GenCo.Application.Specifications.Entities;
+
+public class EntityByIdSpec : BaseSpecification<Entity>
 {
-    public class EntityByIdSpec : BaseSpecification<Entity>
+    public EntityByIdSpec(Guid entityId, bool includeFieldsAndValidators = false)
+        : base(e => e.Id == entityId)
     {
-        public EntityByIdSpec(Guid entityId, bool includeFieldsAndValidators = false)
-            : base(e => e.Id == entityId)
+        if (includeFieldsAndValidators)
         {
-            if (includeFieldsAndValidators)
-            {
-                AddInclude(e => e.Fields); // load Fields
-                AddInclude(e => e.Fields.Select(f => f.Validators)); // load Validators
-            }
-            AddInclude(e => e.Project);
+            AddInclude(e => e.Fields); // load Fields
+            AddInclude(e => e.Fields.Select(f => f.Validators)); // load Validators
         }
+        AddInclude(e => e.Project);
     }
 }

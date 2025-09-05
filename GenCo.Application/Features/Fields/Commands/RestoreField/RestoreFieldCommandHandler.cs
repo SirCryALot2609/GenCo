@@ -1,41 +1,26 @@
-﻿using AutoMapper;
-using GenCo.Application.DTOs.Common;
-using GenCo.Application.DTOs.Entity.Responses;
-using GenCo.Application.DTOs.Field;
-using GenCo.Application.DTOs.Field.Responses;
-using GenCo.Application.Persistence.Contracts;
+﻿using GenCo.Application.DTOs.Common;
 using GenCo.Application.Persistence.Contracts.Common;
-using GenCo.Domain;
+using GenCo.Domain.Entities;
 using MediatR;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace GenCo.Application.Features.Fields.Commands.RestoreField
+namespace GenCo.Application.Features.Fields.Commands.RestoreField;
+
+public class RestoreFieldCommandHandler(
+    IGenericRepository<Field> repository,
+    IUnitOfWork unitOfWork)
+    : IRequestHandler<RestoreFieldCommand, BaseResponseDto<bool>>
 {
-    public class RestoreFieldCommandHandler(
-        IFieldRepository repository,
-        IUnitOfWork unitOfWork,
-        IMapper mapper
-        ) : IRequestHandler<RestoreFieldCommand, BaseResponseDto<FieldResponseDto>>
+    public async Task<BaseResponseDto<bool>> Handle(RestoreFieldCommand request, CancellationToken cancellationToken)
     {
-        private readonly IFieldRepository _repository = repository;
-        private readonly IUnitOfWork _unitOfWork = unitOfWork;
-        private readonly IMapper _mapper = mapper;
+        var field = await repository.GetByIdAsync(request.Id, cancellationToken: cancellationToken);
+        if (field == null)
+            return BaseResponseDto<bool>.Fail("Field not found");
 
-        public async Task<BaseResponseDto<FieldResponseDto>> Handle(RestoreFieldCommand request, CancellationToken cancellationToken)
-        {
-            var field = await _repository.GetByIdAsync( request.Id , cancellationToken: cancellationToken);
-            if (field == null)
-                return BaseResponseDto<FieldResponseDto>.Fail("Field not found");
-            await _repository.RestoreAsync(field, cancellationToken);
-            await _unitOfWork.SaveChangesAsync(cancellationToken);
+        await repository.RestoreAsync(field, cancellationToken);
+        field.UpdatedAt = DateTime.UtcNow;
 
-            var dto = _mapper.Map<FieldResponseDto>(field);
+        await unitOfWork.SaveChangesAsync(cancellationToken);
 
-            return BaseResponseDto<FieldResponseDto>.Ok(dto, "Field restored successfully");
-        }
+        return BaseResponseDto<bool>.Ok(true, "Field restored successfully");
     }
 }
