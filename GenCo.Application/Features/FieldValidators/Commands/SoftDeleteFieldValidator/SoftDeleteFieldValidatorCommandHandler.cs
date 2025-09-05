@@ -1,37 +1,25 @@
-﻿using AutoMapper;
-using GenCo.Application.DTOs.Common;
-using GenCo.Application.DTOs.Field.Responses;
-using GenCo.Application.DTOs.FieldValidator.Responses;
-using GenCo.Application.Features.FieldValidators.Commands.RestoreFieldValidator;
+﻿using GenCo.Application.DTOs.Common;
 using GenCo.Application.Persistence.Contracts.Common;
 using GenCo.Domain.Entities;
 using MediatR;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace GenCo.Application.Features.FieldValidators.Commands.SoftDeleteFieldValidator
+namespace GenCo.Application.Features.FieldValidators.Commands.SoftDeleteFieldValidator;
+public class SoftDeleteFieldValidatorCommandHandler(
+    IGenericRepository<FieldValidator> repository,
+    IUnitOfWork unitOfWork)
+    : IRequestHandler<SoftDeleteFieldValidatorCommand, BaseResponseDto<bool>>
 {
-    public class SoftDeleteFieldValidatorCommandHandler(
-        IGenericRepository<FieldValidator> repository,
-        IUnitOfWork unitOfWork,
-        IMapper mapper) : IRequestHandler<SoftDeleteFieldValidatorCommand, BaseResponseDto<FieldValidatorResponseDto>>
+    public async Task<BaseResponseDto<bool>> Handle(SoftDeleteFieldValidatorCommand request, CancellationToken cancellationToken)
     {
-        private readonly IGenericRepository<FieldValidator> _repository = repository;
-        private readonly IUnitOfWork _unitOfWork = unitOfWork;
-        private readonly IMapper _mapper = mapper;
+        var validator = await repository.GetByIdAsync(request.Id, cancellationToken: cancellationToken);
+        if (validator == null)
+            return BaseResponseDto<bool>.Fail("FieldValidator not found");
 
-        public async Task<BaseResponseDto<FieldValidatorResponseDto>> Handle(SoftDeleteFieldValidatorCommand request, CancellationToken cancellationToken)
-        {
-            var fieldValidator = await _repository.GetByIdAsync(request.Request.Id, cancellationToken: cancellationToken);
-            if (fieldValidator == null)
-                return BaseResponseDto<FieldValidatorResponseDto>.Fail("Field Validator not found.");
-            await _repository.SoftDeleteAsync(fieldValidator, cancellationToken);
-            await _unitOfWork.SaveChangesAsync(cancellationToken);
-            var dto = _mapper.Map<FieldValidatorResponseDto>(fieldValidator);
-            return BaseResponseDto<FieldValidatorResponseDto>.Ok(dto, "Field Validator soft deleted successfully");
-        }
+        await repository.SoftDeleteAsync(validator, cancellationToken);
+        validator.UpdatedAt = DateTime.UtcNow;
+
+        await unitOfWork.SaveChangesAsync(cancellationToken);
+
+        return BaseResponseDto<bool>.Ok(true, "FieldValidator soft deleted successfully");
     }
 }

@@ -6,9 +6,7 @@ public class RelationBaseDto : AuditableDto
     public Guid ProjectId { get; set; }
     public Guid FromEntityId { get; set; }
     public Guid ToEntityId { get; set; }
-
     public RelationType RelationType { get; set; }
     public DeleteBehavior OnDelete { get; set; }
-
     public string? RelationName { get; set; }
 }

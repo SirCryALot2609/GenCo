@@ -6,8 +6,8 @@ namespace GenCo.Application.DTOs.Relation.Responses;
 
 public class RelationDetailDto : RelationBaseDto
 {
-    public ProjectBaseDto Project { get; set; } = default!;
     public EntityBaseDto FromEntity { get; set; } = default!;
     public EntityBaseDto ToEntity { get; set; } = default!;
     public ICollection<RelationFieldMappingBaseDto> FieldMappings { get; set; } = [];
+    // public ICollection<RelationJoinTableBaseDto> JoinTables { get; set; } = [];
 }

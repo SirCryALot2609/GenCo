@@ -1,47 +1,26 @@
 ﻿using AutoMapper;
 using GenCo.Application.DTOs.Common;
-using GenCo.Application.DTOs.Project.Responses;
-using GenCo.Application.DTOs.Relation;
-using GenCo.Application.Features.Relations.Commands.SoftDeleteRelation;
-using GenCo.Application.Persistence.Contracts;
+using GenCo.Application.DTOs.Relation.Responses;
 using GenCo.Application.Persistence.Contracts.Common;
-using GenCo.Application.Specifications.Projects;
 using GenCo.Application.Specifications.Relations;
+using GenCo.Domain.Entities;
 using MediatR;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace GenCo.Application.Features.Relations.Queries.GetRelationById
+namespace GenCo.Application.Features.Relations.Queries.GetRelationById;
+public class GetRelationByIdQueryHandler(
+    IGenericRepository<Relation> repository,
+    IMapper mapper)
+    : IRequestHandler<GetRelationByIdQuery, BaseResponseDto<RelationDetailDto>>
 {
-    public class GetRelationByIdQueryHandler(
-        IRelationRepository repository,
-        IUnitOfWork unitOfWork,
-        IMapper mapper)
-        : IRequestHandler<GetRelationByIdQuery, BaseResponseDto<RelationBaseDto>>
+    public async Task<BaseResponseDto<RelationDetailDto>> Handle(GetRelationByIdQuery request, CancellationToken cancellationToken)
     {
-        private readonly IRelationRepository _repository = repository;
-        private readonly IUnitOfWork _unitOfWork = unitOfWork;
-        private readonly IMapper _mapper = mapper;
+        var spec = new RelationByIdSpec(request.Id, request.IncludeDetails);
+        var relation = await repository.FirstOrDefaultAsync(spec,cancellationToken : cancellationToken);
 
-        public async Task<BaseResponseDto<RelationBaseDto>> Handle(GetRelationByIdQuery request, CancellationToken cancellationToken)
-        {
-            var spec = new RelationByIdSpec(request.RelationId);
-            var relation = await _repository.FirstOrDefaultAsync(spec, cancellationToken: cancellationToken);
+        if (relation == null)
+            return BaseResponseDto<RelationDetailDto>.Fail("Relation not found");
 
-            if (relation is null)
-            {
-                return new BaseResponseDto<RelationBaseDto>
-                {
-                    Success = false,
-                    Message = "Project not found"
-                };
-            }
-
-            var dto = _mapper.Map<RelationBaseDto>(relation);
-            return BaseResponseDto<RelationBaseDto>.Ok(dto);
-        }
+        var dto = mapper.Map<RelationDetailDto>(relation);
+        return BaseResponseDto<RelationDetailDto>.Ok(dto, "Relation retrieved successfully");
     }
 }

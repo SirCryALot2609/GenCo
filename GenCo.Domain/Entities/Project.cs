@@ -6,7 +6,6 @@ public class Project : BaseEntity
 {
     public required string Name { get; set; }
     public string? Description { get; set; }
-
     public virtual ICollection<Entity> Entities { get; set; } = [];
     public virtual ICollection<Relation> Relations { get; set; } = [];
     public virtual ICollection<Workflow> Workflows { get; set; } = [];

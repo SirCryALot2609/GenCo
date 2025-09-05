@@ -1,41 +1,30 @@
 ﻿using AutoMapper;
 using GenCo.Application.DTOs.Common;
-using GenCo.Application.DTOs.Relation;
-using GenCo.Application.Persistence.Contracts;
 using GenCo.Application.Persistence.Contracts.Common;
 using GenCo.Domain.Entities;
 using MediatR;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using GenCo.Application.DTOs.Relation.Responses;
 
-namespace GenCo.Application.Features.Relations.Commands.CreateRelation
+namespace GenCo.Application.Features.Relations.Commands.CreateRelation;
+public class CreateRelationCommandHandler(
+    IGenericRepository<Relation> repository,
+    IUnitOfWork unitOfWork,
+    IMapper mapper)
+    : IRequestHandler<CreateRelationCommand, BaseResponseDto<RelationResponseDto>>
 {
-    public class CreateRelationCommandHandler(
-        IRelationRepository repository,
-        IUnitOfWork unitOfWork,
-        IMapper mapper)
-        : IRequestHandler<CreateRealtionCommand, BaseResponseDto<RelationBaseDto>>
+    public async Task<BaseResponseDto<RelationResponseDto>> Handle(
+        CreateRelationCommand request,
+        CancellationToken cancellationToken)
     {
-        private readonly IRelationRepository _repository = repository;
-        private readonly IUnitOfWork _unitOfWork = unitOfWork;
-        private readonly IMapper _mapper = mapper;
-        public async Task<BaseResponseDto<RelationBaseDto>> Handle(CreateRealtionCommand request, CancellationToken cancellationToken)
-        {
-            var relation = _mapper.Map<Relation>(request.Request);
+        var relation = mapper.Map<Relation>(request.Request);
+        relation.Id = Guid.NewGuid();
+        relation.CreatedAt = DateTime.UtcNow;
+        relation.UpdatedAt = null;
 
-            relation.Id = Guid.NewGuid();
-            relation.CreatedAt = DateTime.UtcNow;
-            relation.CreatedBy = "system"; // sau này lấy từ context user
+        await repository.AddAsync(relation, cancellationToken);
+        await unitOfWork.SaveChangesAsync(cancellationToken);
 
-            await _repository.AddAsync(relation, cancellationToken);
-            await _unitOfWork.SaveChangesAsync(cancellationToken);
-
-            var dto = _mapper.Map<RelationBaseDto>(relation);
-
-            return BaseResponseDto<RelationBaseDto>.Ok(dto, "Relation created successfully");
-        }
+        var dto = mapper.Map<RelationResponseDto>(relation);
+        return BaseResponseDto<RelationResponseDto>.Ok(dto, "Relation created successfully");
     }
 }

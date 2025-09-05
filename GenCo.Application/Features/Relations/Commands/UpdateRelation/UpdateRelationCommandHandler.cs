@@ -1,45 +1,32 @@
 ﻿using AutoMapper;
 using GenCo.Application.DTOs.Common;
-using GenCo.Application.DTOs.Field.Responses;
-using GenCo.Application.DTOs.Relation;
-using GenCo.Application.Features.Relations.Commands.SoftDeleteRelation;
-using GenCo.Application.Persistence.Contracts;
 using GenCo.Application.Persistence.Contracts.Common;
-using GenCo.Domain;
 using MediatR;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using GenCo.Application.DTOs.Relation.Responses;
+using GenCo.Domain.Entities;
 
-namespace GenCo.Application.Features.Relations.Commands.UpdateRelation
+namespace GenCo.Application.Features.Relations.Commands.UpdateRelation;
+public class UpdateRelationCommandHandler(
+    IGenericRepository<Relation> repository,
+    IUnitOfWork unitOfWork,
+    IMapper mapper)
+    : IRequestHandler<UpdateRelationCommand, BaseResponseDto<RelationResponseDto>>
 {
-    public class UpdateRelationCommandHandler(
-        IRelationRepository repository,
-        IUnitOfWork unitOfWork,
-        IMapper mapper)
-        : IRequestHandler<UpdateRelationCommand, BaseResponseDto<RelationBaseDto>>
+    public async Task<BaseResponseDto<RelationResponseDto>> Handle(
+        UpdateRelationCommand request,
+        CancellationToken cancellationToken)
     {
-        private readonly IRelationRepository _repository = repository;
-        private readonly IUnitOfWork _unitOfWork = unitOfWork;
-        private readonly IMapper _mapper = mapper;
+        var relation = await repository.GetByIdAsync(request.Request.Id, cancellationToken : cancellationToken);
+        if (relation == null)
+            return BaseResponseDto<RelationResponseDto>.Fail("Relation not found");
 
-        public async Task<BaseResponseDto<RelationBaseDto>> Handle(UpdateRelationCommand request, CancellationToken cancellationToken)
-        {
-            var relation = await _repository.GetByIdAsync(request.Request.Id, cancellationToken: cancellationToken);
-            if (relation == null)
-            {
-                return BaseResponseDto<RelationBaseDto>.Fail("Ralation not found");
-            }
+        mapper.Map(request.Request, relation);
+        relation.UpdatedAt = DateTime.UtcNow;
 
-            _mapper.Map(request.Request, relation);
-            relation.UpdatedAt = DateTime.UtcNow;
-            relation.UpdatedBy = "system"; // sau này lấy từ context user
-            await _repository.UpdateAsync(relation, cancellationToken);
-            await _unitOfWork.SaveChangesAsync(cancellationToken);
-            var dto = _mapper.Map<RelationBaseDto>(relation);
-            return BaseResponseDto<RelationBaseDto>.Ok(dto, "Ralation updated successfully");
-        }
+        await repository.UpdateAsync(relation, cancellationToken);
+        await unitOfWork.SaveChangesAsync(cancellationToken);
+
+        var dto = mapper.Map<RelationResponseDto>(relation);
+        return BaseResponseDto<RelationResponseDto>.Ok(dto, "Relation updated successfully");
     }
 }

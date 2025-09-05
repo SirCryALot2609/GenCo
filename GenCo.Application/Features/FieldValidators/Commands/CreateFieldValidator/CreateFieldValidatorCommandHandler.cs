@@ -1,42 +1,30 @@
 ﻿using AutoMapper;
 using GenCo.Application.DTOs.Common;
-using GenCo.Application.DTOs.Field.Responses;
-using GenCo.Application.DTOs.FieldValidator;
 using GenCo.Application.DTOs.FieldValidator.Responses;
 using GenCo.Application.Persistence.Contracts.Common;
 using GenCo.Domain.Entities;
 using MediatR;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace GenCo.Application.Features.FieldValidators.Commands.CreateFieldValidator
+namespace GenCo.Application.Features.FieldValidators.Commands.CreateFieldValidator;
+public class CreateFieldValidatorCommandHandler(
+    IGenericRepository<FieldValidator> repository,
+    IUnitOfWork unitOfWork,
+    IMapper mapper)
+    : IRequestHandler<CreateFieldValidatorCommand, BaseResponseDto<FieldValidatorResponseDto>>
 {
-    public class CreateFieldValidatorCommandHandler(
-        IGenericRepository<FieldValidator> repository,
-        IUnitOfWork unitOfWork,
-        IMapper mapper) : IRequestHandler<CreateFieldValidatorCommand, BaseResponseDto<FieldValidatorBaseDto>>
+    public async Task<BaseResponseDto<FieldValidatorResponseDto>> Handle(
+        CreateFieldValidatorCommand request,
+        CancellationToken cancellationToken)
     {
-        private readonly IGenericRepository<FieldValidator> _repository = repository;
-        private readonly IUnitOfWork _unitOfWork = unitOfWork;
-        private readonly IMapper _mapper = mapper;
+        var validator = mapper.Map<FieldValidator>(request.Request);
+        validator.Id = Guid.NewGuid();
+        validator.CreatedAt = DateTime.UtcNow;
+        validator.UpdatedAt = null;
 
-        public async Task<BaseResponseDto<FieldValidatorBaseDto>> Handle(CreateFieldValidatorCommand request, CancellationToken cancellationToken)
-        {
-            var fieldValidator = _mapper.Map<FieldValidator>(request.Request);
+        await repository.AddAsync(validator, cancellationToken);
+        await unitOfWork.SaveChangesAsync(cancellationToken);
 
-            fieldValidator.Id = Guid.NewGuid();
-            fieldValidator.CreatedAt = DateTime.UtcNow;
-            fieldValidator.CreatedBy = "system"; // sau này lấy từ context user
-
-            await _repository.AddAsync(fieldValidator, cancellationToken);
-            await _unitOfWork.SaveChangesAsync(cancellationToken);
-
-            var dto = _mapper.Map<FieldValidatorBaseDto>(fieldValidator);
-
-            return BaseResponseDto<FieldValidatorBaseDto>.Ok(dto, "Field Validator created successfully");
-        }
+        var dto = mapper.Map<FieldValidatorResponseDto>(validator);
+        return BaseResponseDto<FieldValidatorResponseDto>.Ok(dto, "FieldValidator created successfully");
     }
 }

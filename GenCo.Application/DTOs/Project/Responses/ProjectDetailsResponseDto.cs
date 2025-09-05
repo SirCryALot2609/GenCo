@@ -2,5 +2,5 @@
 
 namespace GenCo.Application.DTOs.Project.Responses;
 
-public class ProjectDetailsResponseDto
+public class ProjectDetailsResponseDto 
     : BaseResponseDto<ProjectDetailDto>;

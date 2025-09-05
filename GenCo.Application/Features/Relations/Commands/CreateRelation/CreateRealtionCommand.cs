@@ -1,16 +1,8 @@
 ﻿using GenCo.Application.DTOs.Common;
-using GenCo.Application.DTOs.Relation;
 using GenCo.Application.DTOs.Relation.Requests;
+using GenCo.Application.DTOs.Relation.Responses;
 using MediatR;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace GenCo.Application.Features.Relations.Commands.CreateRelation
-{
-    public record CreateRealtionCommand(CreateRelationRequestDto Request) : IRequest<BaseResponseDto<RelationBaseDto>>
-    {
-    }
-}
+namespace GenCo.Application.Features.Relations.Commands.CreateRelation;
+public record CreateRelationCommand(CreateRelationRequestDto Request)
+    : IRequest<BaseResponseDto<RelationResponseDto>>;

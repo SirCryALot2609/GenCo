@@ -2,16 +2,7 @@
 using GenCo.Application.DTOs.FieldValidator.Requests;
 using GenCo.Application.DTOs.FieldValidator.Responses;
 using MediatR;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace GenCo.Application.Features.FieldValidators.Commands.UpdateFieldValidator
-{
-    public record UpdateFieldValidatorCommand(UpdateFieldValidatorRequestDto Request)
-        : IRequest<BaseResponseDto<FieldValidatorResponseDto>>
-    {
-    }
-}
+namespace GenCo.Application.Features.FieldValidators.Commands.UpdateFieldValidator;
+public record UpdateFieldValidatorCommand(UpdateFieldValidatorRequestDto Request)
+    : IRequest<BaseResponseDto<FieldValidatorResponseDto>>;

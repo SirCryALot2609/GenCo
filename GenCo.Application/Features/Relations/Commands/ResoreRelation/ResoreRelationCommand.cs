@@ -1,16 +1,6 @@
 ﻿using GenCo.Application.DTOs.Common;
-using GenCo.Application.DTOs.Relation;
 using MediatR;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace GenCo.Application.Features.Relations.Commands.ResoreRelation
-{
-    public record ResoreRelationCommand(Guid Id) 
-        : IRequest<BaseResponseDto<RelationBaseDto>>
-    {
-    }
-}
+namespace GenCo.Application.Features.Relations.Commands.ResoreRelation;
+public record RestoreRelationCommand(Guid Id)
+    : IRequest<BaseResponseDto<bool>>;

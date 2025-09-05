@@ -1,39 +1,23 @@
-﻿using AutoMapper;
-using GenCo.Application.DTOs.Common;
-using GenCo.Application.DTOs.Project.Responses;
-using GenCo.Application.Persistence.Contracts;
+﻿using GenCo.Application.DTOs.Common;
 using GenCo.Application.Persistence.Contracts.Common;
 using GenCo.Domain.Entities;
 using MediatR;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace GenCo.Application.Features.Projects.Commands.DeleteProject
+namespace GenCo.Application.Features.Projects.Commands.DeleteProject;
+public class DeleteProjectCommandHandler(
+    IGenericRepository<Project> repository,
+    IUnitOfWork unitOfWork)
+    : IRequestHandler<DeleteProjectCommand, BaseResponseDto<bool>>
 {
-    public class DeleteProjectCommandHandler(
-        IGenericRepository<Project> repository,
-        IUnitOfWork unitOfWork)
-        : IRequestHandler<DeleteProjectCommand, BaseResponseDto<BoolResultDto>>
+    public async Task<BaseResponseDto<bool>> Handle(DeleteProjectCommand request, CancellationToken cancellationToken)
     {
-        private readonly IGenericRepository<Project> _repository = repository;
-        private readonly IUnitOfWork _unitOfWork = unitOfWork;
+        var project = await repository.GetByIdAsync(request.Id, cancellationToken: cancellationToken);
+        if (project == null)
+            return BaseResponseDto<bool>.Fail("Project not found");
 
-        public async Task<BaseResponseDto<BoolResultDto>> Handle(DeleteProjectCommand request, CancellationToken cancellationToken)
-        {
-            var project = await _repository.GetByIdAsync(request.Request.Id, cancellationToken: cancellationToken);
-            if (project == null)
-            {
-                return BaseResponseDto<BoolResultDto>.Fail("Project not found");
-            }
+        await repository.DeleteAsync(project, cancellationToken);
+        await unitOfWork.SaveChangesAsync(cancellationToken);
 
-            await _repository.DeleteAsync(project, cancellationToken);
-            await _unitOfWork.SaveChangesAsync(cancellationToken);
-
-            return BaseResponseDto<BoolResultDto>.Ok(new BoolResultDto { Value = true }, "Project deleted permanently");
-        }
+        return BaseResponseDto<bool>.Ok(true, "Project deleted successfully");
     }
-
 }
