@@ -1,5 +1,3 @@
 namespace GenCo.Application.DTOs.RelationFieldMapping.Responses;
 
-public class RelationFieldMappingResponseDto : RelationFieldMappingBaseDto
-{
-}
+public class RelationFieldMappingResponseDto : RelationFieldMappingBaseDto;

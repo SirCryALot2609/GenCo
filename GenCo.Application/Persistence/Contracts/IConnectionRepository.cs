@@ -2,4 +2,5 @@
 using GenCo.Domain.Entities;
 
 namespace GenCo.Application.Persistence.Contracts;
-public interface IProjectRepository : IGenericRepository<Project>;
+
+public interface IConnectionRepository : IGenericRepository<Connection>;

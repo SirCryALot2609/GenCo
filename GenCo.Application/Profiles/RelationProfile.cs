@@ -6,33 +6,48 @@ using GenCo.Domain.Entities;
 
 namespace GenCo.Application.Profiles;
 
-public class RelationProfile : Profile
+public class RelationMappingProfile : Profile
 {
-    public RelationProfile()
+    public RelationMappingProfile()
     {
-        // ========== Entity -> DTO ==========
-        CreateMap<Relation, RelationBaseDto>();
-        CreateMap<Relation, RelationResponseDto>();
+        // ===== Relation -> DTO =====
+        CreateMap<Relation, RelationBaseDto>()
+            .ForMember(dest => dest.ProjectId, opt => opt.MapFrom(src => src.ProjectId))
+            .ForMember(dest => dest.FromEntityId, opt => opt.MapFrom(src => src.FromEntityId))
+            .ForMember(dest => dest.ToEntityId, opt => opt.MapFrom(src => src.ToEntityId))
+            .ForMember(dest => dest.RelationType, opt => opt.MapFrom(src => src.RelationType))
+            .ForMember(dest => dest.OnDelete, opt => opt.MapFrom(src => src.OnDelete))
+            .ForMember(dest => dest.RelationName, opt => opt.MapFrom(src => src.RelationName))
+            .IncludeAllDerived();
+
+        CreateMap<Relation, RelationResponseDto>()
+            .IncludeBase<Relation, RelationBaseDto>();
+
         CreateMap<Relation, RelationDetailDto>()
-            .ForMember(dest => dest.Project, opt => opt.MapFrom(src => src.Project))
+            .IncludeBase<Relation, RelationBaseDto>()
             .ForMember(dest => dest.FromEntity, opt => opt.MapFrom(src => src.FromEntity))
             .ForMember(dest => dest.ToEntity, opt => opt.MapFrom(src => src.ToEntity))
             .ForMember(dest => dest.FieldMappings, opt => opt.MapFrom(src => src.FieldMappings));
+            // .ForMember(dest => dest.JoinTables, opt => opt.MapFrom(src => src.JoinTables));
 
-        // ========== DTO -> Entity (Create) ==========
+        // ===== DTO -> Relation =====
         CreateMap<CreateRelationRequestDto, Relation>()
-            .ForMember(dest => dest.Id, opt => opt.Ignore())   // Id do DB generate
-            .ForMember(dest => dest.CreatedAt, opt => opt.Ignore())
-            .ForMember(dest => dest.CreatedBy, opt => opt.Ignore())
-            .ForMember(dest => dest.UpdatedAt, opt => opt.Ignore())
-            .ForMember(dest => dest.UpdatedBy, opt => opt.Ignore());
+            .ForMember(dest => dest.ProjectId, opt => opt.MapFrom(src => src.ProjectId))
+            .ForMember(dest => dest.FromEntityId, opt => opt.MapFrom(src => src.FromEntityId))
+            .ForMember(dest => dest.ToEntityId, opt => opt.MapFrom(src => src.ToEntityId))
+            .ForMember(dest => dest.RelationType, opt => opt.MapFrom(src => src.RelationType))
+            .ForMember(dest => dest.OnDelete, opt => opt.MapFrom(src => src.OnDelete))
+            .ForMember(dest => dest.RelationName, opt => opt.MapFrom(src => src.RelationName));
 
-        // ========== DTO -> Entity (Update) ==========
         CreateMap<UpdateRelationRequestDto, Relation>()
-            .ForMember(dest => dest.ProjectId, opt => opt.Ignore()) // Không cho update ProjectId
-            .ForMember(dest => dest.CreatedAt, opt => opt.Ignore())
-            .ForMember(dest => dest.CreatedBy, opt => opt.Ignore())
-            .ForMember(dest => dest.UpdatedAt, opt => opt.Ignore())
-            .ForMember(dest => dest.UpdatedBy, opt => opt.Ignore());
+            .ForMember(dest => dest.Id, opt => opt.MapFrom(src => src.Id))
+            .ForMember(dest => dest.ProjectId, opt => opt.MapFrom(src => src.ProjectId))
+            .ForMember(dest => dest.FromEntityId, opt => opt.MapFrom(src => src.FromEntityId))
+            .ForMember(dest => dest.ToEntityId, opt => opt.MapFrom(src => src.ToEntityId))
+            .ForMember(dest => dest.RelationType, opt => opt.MapFrom(src => src.RelationType))
+            .ForMember(dest => dest.OnDelete, opt => opt.MapFrom(src => src.OnDelete))
+            .ForMember(dest => dest.RelationName, opt => opt.MapFrom(src => src.RelationName))
+            .ForAllMembers(opt =>
+                opt.Condition((_, _, srcMember) => srcMember != null));
     }
 }
