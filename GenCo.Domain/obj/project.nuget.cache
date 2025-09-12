@@ -1,8 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "E8QVgQfYScg=",
+  "dgSpecHash": "+rH4gsVKLqs=",
   "success": true,
   "projectFilePath": "/home/sircryalot/Documents/GenCo/GenCo.Domain/GenCo.Domain.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "/home/sircryalot/.nuget/packages/microsoft.netcore.app.ref/8.0.19/microsoft.netcore.app.ref.8.0.19.nupkg.sha512",
+    "/home/sircryalot/.nuget/packages/microsoft.aspnetcore.app.ref/8.0.19/microsoft.aspnetcore.app.ref.8.0.19.nupkg.sha512"
+  ],
   "logs": []
 }

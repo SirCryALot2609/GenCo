@@ -1,6 +1,7 @@
 ﻿using MediatR;
 using Microsoft.Extensions.DependencyInjection;
 using System.Reflection;
+using FluentValidation;
 using GenCo.Application.Behaviors;
 
 namespace GenCo.Application;
@@ -12,7 +13,11 @@ public static class ApplicationServicesRegistration
         services.AddAutoMapper(Assembly.GetExecutingAssembly());
         // MediatR
         services.AddMediatR(Assembly.GetExecutingAssembly());
-        // Exception handling pipeline
+        // FluentValidation
+        services.AddValidatorsFromAssembly(Assembly.GetExecutingAssembly());
+
+        // Pipeline Behaviors
         services.AddTransient(typeof(IPipelineBehavior<,>), typeof(ExceptionHandlingBehavior<,>));
+        services.AddTransient(typeof(IPipelineBehavior<,>), typeof(ValidationBehavior<,>));
     }
 }

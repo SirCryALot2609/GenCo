@@ -7,5 +7,4 @@ public class CreateEntityConstraintRequestDto : BaseRequestDto
     public string Type { get; set; } = string.Empty;
     public string? ConstraintName { get; set; }
     public string? Expression { get; set; }
-    public ICollection<Guid> FieldIds { get; set; } = [];
 }

@@ -30,6 +30,7 @@ public class BaseResponseDto<T>
     public string Message { get; set; } = "Success";
     public string? ErrorCode { get; set; }
     public T? Data { get; set; }
+    public List<string>? Errors { get; set; }   // ✅ thêm
 
     public static BaseResponseDto<T> Ok(T data, string? message = null)
         => new()
@@ -46,6 +47,15 @@ public class BaseResponseDto<T>
             Message = message,
             ErrorCode = errorCode,
             Data = default
+        };
+
+    public static BaseResponseDto<T> Fail(IEnumerable<string> errors, string? errorCode = null)
+        => new()
+        {
+            Success = false,
+            Message = "Validation errors occurred",
+            ErrorCode = errorCode ?? "VALIDATION_ERROR",
+            Errors = errors.ToList()
         };
 }
 

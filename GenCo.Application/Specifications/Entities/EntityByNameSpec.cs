@@ -13,7 +13,6 @@ public class EntityByNameSpec : BaseSpecification<Entity>
             AddInclude(e => e.Fields);
             AddInclude(e => e.Fields.Select(f => f.Validators));
         }
-
         AddInclude(e => e.Project);
     }
 }

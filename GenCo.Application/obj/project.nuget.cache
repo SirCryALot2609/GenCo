@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "0Ma5016yyH4=",
+  "dgSpecHash": "FJtmmlE15bc=",
   "success": true,
   "projectFilePath": "/home/sircryalot/Documents/GenCo/GenCo.Application/GenCo.Application.csproj",
   "expectedPackageFiles": [
@@ -15,7 +15,9 @@
     "/home/sircryalot/.nuget/packages/microsoft.extensions.dependencyinjection.abstractions/7.0.0/microsoft.extensions.dependencyinjection.abstractions.7.0.0.nupkg.sha512",
     "/home/sircryalot/.nuget/packages/microsoft.extensions.options/6.0.0/microsoft.extensions.options.6.0.0.nupkg.sha512",
     "/home/sircryalot/.nuget/packages/microsoft.extensions.primitives/6.0.0/microsoft.extensions.primitives.6.0.0.nupkg.sha512",
-    "/home/sircryalot/.nuget/packages/system.runtime.compilerservices.unsafe/6.0.0/system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512"
+    "/home/sircryalot/.nuget/packages/system.runtime.compilerservices.unsafe/6.0.0/system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512",
+    "/home/sircryalot/.nuget/packages/microsoft.netcore.app.ref/8.0.19/microsoft.netcore.app.ref.8.0.19.nupkg.sha512",
+    "/home/sircryalot/.nuget/packages/microsoft.aspnetcore.app.ref/8.0.19/microsoft.aspnetcore.app.ref.8.0.19.nupkg.sha512"
   ],
   "logs": []
 }

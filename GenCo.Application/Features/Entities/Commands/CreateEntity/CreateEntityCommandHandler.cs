@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using FluentValidation;
 using GenCo.Application.DTOs.Common;
 using GenCo.Application.DTOs.Entity.Responses;
 using GenCo.Application.Persistence.Contracts.Common;
