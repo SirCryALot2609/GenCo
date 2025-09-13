@@ -1,5 +1,5 @@
 ﻿using GenCo.Application.Specifications.Common;
-using GenCo.Domain.Entities.Common; // để enforce BaseEntity
+using GenCo.Domain.Entities.Common;
 
 namespace GenCo.Application.Persistence.Contracts.Common;
 
