@@ -16,14 +16,11 @@ public class UpdateEntityCommandHandler(
 {
     public async Task<BaseResponseDto<EntityResponseDto>> Handle(UpdateEntityCommand request, CancellationToken cancellationToken)
     {
-        // ✅ Validate existence
         await rules.EnsureEntityExistsAsync(request.Request.Id, cancellationToken);
         await rules.EnsureProjectExistsAsync(request.Request.ProjectId, cancellationToken);
         await rules.EnsureEntityNameUniqueOnUpdateAsync(request.Request.ProjectId, request.Request.Id, request.Request.Name, cancellationToken);
 
         var entity = await repository.GetByIdAsync(request.Request.Id, cancellationToken: cancellationToken);
-
-        // ✅ Map fields
         mapper.Map(request.Request, entity!);
         entity!.UpdatedAt = DateTime.UtcNow;
 
@@ -34,4 +31,5 @@ public class UpdateEntityCommandHandler(
         return BaseResponseDto<EntityResponseDto>.Ok(dto, "Entity updated successfully");
     }
 }
+
 

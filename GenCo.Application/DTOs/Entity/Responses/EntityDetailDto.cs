@@ -1,4 +1,5 @@
-﻿using GenCo.Application.DTOs.Field;
+﻿using GenCo.Application.DTOs.EntityConstraint;
+using GenCo.Application.DTOs.Field;
 using GenCo.Application.DTOs.Project;
 using GenCo.Application.DTOs.Relation;
 
@@ -10,5 +11,5 @@ public class EntityDetailDto : EntityBaseDto
     public ICollection<FieldBaseDto> Fields { get; set; } = [];
     public ICollection<RelationBaseDto> FromRelations { get; set; } = [];
     public ICollection<RelationBaseDto> ToRelations { get; set; } = [];
-    // public ICollection<EntityConstraintDto> Constraints { get; set; } = new List<EntityConstraintDto>(); 
+    public ICollection<EntityConstraintBaseDto> Constraints { get; set; } = new List<EntityConstraintBaseDto>(); 
 }

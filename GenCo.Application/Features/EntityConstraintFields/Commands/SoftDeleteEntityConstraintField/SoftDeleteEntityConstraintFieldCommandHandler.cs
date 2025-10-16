@@ -1,3 +1,4 @@
+using GenCo.Application.BusinessRules.EntityConstraintFields;
 using GenCo.Application.DTOs.Common;
 using GenCo.Application.Persistence.Contracts.Common;
 using GenCo.Domain.Entities;
@@ -7,20 +8,20 @@ namespace GenCo.Application.Features.EntityConstraintFields.Commands.SoftDeleteE
 
 public class SoftDeleteEntityConstraintFieldCommandHandler(
     IGenericRepository<EntityConstraintField> repository,
+    IEntityConstraintFieldBusinessRules rules,
     IUnitOfWork unitOfWork)
     : IRequestHandler<SoftDeleteEntityConstraintFieldCommand, BaseResponseDto<bool>>
 {
     public async Task<BaseResponseDto<bool>> Handle(SoftDeleteEntityConstraintFieldCommand request, CancellationToken cancellationToken)
     {
-        var entity = await repository.GetByIdAsync(request.Id, cancellationToken: cancellationToken);
-        if (entity == null)
-            return BaseResponseDto<bool>.Fail("EntityConstraintField not found");
+        await rules.EnsureFieldExistsAsync(request.Id, cancellationToken);
+        await rules.EnsureCanDeleteAsync(request.Id, cancellationToken);
 
-        await repository.SoftDeleteAsync(entity, cancellationToken);
-        entity.UpdatedAt = DateTime.UtcNow;
+        var entity = await repository.GetByIdAsync(request.Id, cancellationToken: cancellationToken);
+        await repository.SoftDeleteAsync(entity!, cancellationToken);
+        entity!.UpdatedAt = DateTime.UtcNow;
 
         await unitOfWork.SaveChangesAsync(cancellationToken);
-
         return BaseResponseDto<bool>.Ok(true, "EntityConstraintField soft deleted successfully");
     }
 }

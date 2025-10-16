@@ -1,4 +1,5 @@
 using AutoMapper;
+using GenCo.Application.BusinessRules.EntityConstraints;
 using GenCo.Application.DTOs.Common;
 using GenCo.Application.DTOs.EntityConstraint.Response;
 using GenCo.Application.Persistence.Contracts.Common;
@@ -11,6 +12,7 @@ namespace GenCo.Application.Features.EntityConstraints.Commands.UpdateEntityCons
 public class UpdateEntityConstraintCommandHandler(
     IGenericRepository<EntityConstraint> repository,
     IUnitOfWork unitOfWork,
+    IEntityConstraintBusinessRules businessRules,
     IMapper mapper)
     : IRequestHandler<UpdateEntityConstraintCommand, BaseResponseDto<EntityConstraintResponseDto>>
 {
@@ -23,6 +25,12 @@ public class UpdateEntityConstraintCommandHandler(
         mapper.Map(request.Request, constraint);
         constraint.UpdatedAt = DateTime.UtcNow;
 
+        // 🧩 Business validations
+        await businessRules.EnsureConstraintNameFollowsConventionAsync(constraint.ConstraintName);
+        await businessRules.EnsureConstraintNameUniqueOnUpdateAsync(constraint.EntityId, constraint.Id, constraint.ConstraintName, cancellationToken);
+        await businessRules.EnsureConstraintValidAsync(constraint, cancellationToken);
+
+        // ✅ Save
         await repository.UpdateAsync(constraint, cancellationToken);
         await unitOfWork.SaveChangesAsync(cancellationToken);
 

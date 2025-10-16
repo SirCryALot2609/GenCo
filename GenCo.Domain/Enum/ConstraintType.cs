@@ -2,8 +2,28 @@
 
 public enum ConstraintType
 {
-    PrimaryKey,   // Khóa chính
-    UniqueKey,    // Khóa duy nhất (rename Unique -> UniqueKey cho rõ)
-    Index,        // Index (non-unique hoặc composite)
-    CheckConstraint // Rename Check -> CheckConstraint (tránh trùng keyword "CHECK")
+    /// <summary>
+    /// Primary Key (PK) – định danh duy nhất cho mỗi bản ghi.
+    /// </summary>
+    PrimaryKey = 0,
+
+    /// <summary>
+    /// Foreign Key (FK) – tham chiếu đến Primary Key ở entity khác.
+    /// </summary>
+    ForeignKey = 1,
+
+    /// <summary>
+    /// Unique Key – đảm bảo các giá trị trong cột (hoặc nhóm cột) là duy nhất.
+    /// </summary>
+    UniqueKey = 2,
+
+    /// <summary>
+    /// Check Constraint – đảm bảo dữ liệu thỏa mãn điều kiện logic cụ thể.
+    /// </summary>
+    Check = 3,
+
+    /// <summary>
+    /// Index – chỉ mục giúp tăng tốc truy vấn.
+    /// </summary>
+    Index = 4,
 }

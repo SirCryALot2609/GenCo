@@ -1,4 +1,5 @@
-﻿using GenCo.Application.DTOs.Common;
+﻿using GenCo.Application.BusinessRules.Fields;
+using GenCo.Application.DTOs.Common;
 using GenCo.Application.Persistence.Contracts.Common;
 using MediatR;
 using GenCo.Domain.Entities;
@@ -7,6 +8,7 @@ namespace GenCo.Application.Features.Fields.Commands.SoftDeleteField;
 
 public class SoftDeleteFieldCommandHandler(
     IGenericRepository<Field> repository,
+    IFieldBusinessRules rules,
     IUnitOfWork unitOfWork)
     : IRequestHandler<SoftDeleteFieldCommand, BaseResponseDto<bool>>
 {
@@ -15,6 +17,8 @@ public class SoftDeleteFieldCommandHandler(
         var field = await repository.GetByIdAsync(request.Id, cancellationToken: cancellationToken);
         if (field == null)
             return BaseResponseDto<bool>.Fail("Field not found");
+
+        await rules.EnsureFieldCanBeDeletedAsync(field.Id, cancellationToken);
 
         await repository.SoftDeleteAsync(field, cancellationToken);
         field.UpdatedAt = DateTime.UtcNow;

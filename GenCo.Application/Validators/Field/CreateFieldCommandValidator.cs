@@ -18,20 +18,10 @@ public class CreateFieldCommandValidator : AbstractValidator<CreateFieldCommand>
 
         RuleFor(x => x.Request.ColumnName)
             .NotEmpty().WithMessage("Column name is required.")
-            .MaximumLength(100).WithMessage("Column name cannot exceed 100 characters.")
-            .MustAsync(BeUniqueColumnName).WithMessage("Column name already exists in this entity.");
+            .MaximumLength(100).WithMessage("Column name cannot exceed 100 characters.");
 
         RuleFor(x => x.Request.Type)
             .NotEmpty().WithMessage("Field type is required.");
-    }
-
-    private async Task<bool> BeUniqueColumnName(
-        CreateFieldCommand command,
-        string columnName,
-        CancellationToken cancellationToken)
-    {
-        var spec = new FieldByColumnNameSpec(columnName, command.Request.EntityId);
-        return !await _repository.ExistsAsync(spec, cancellationToken);
     }
 }
 

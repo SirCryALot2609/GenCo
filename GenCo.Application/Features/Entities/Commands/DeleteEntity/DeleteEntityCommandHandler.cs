@@ -14,7 +14,6 @@ public class DeleteEntityCommandHandler(
 {
     public async Task<BaseResponseDto<bool>> Handle(DeleteEntityCommand request, CancellationToken cancellationToken)
     {
-        // ✅ Validate
         await rules.EnsureEntityCanBeDeletedAsync(request.Id, cancellationToken);
 
         var entity = await repository.GetByIdAsync(request.Id, cancellationToken: cancellationToken);

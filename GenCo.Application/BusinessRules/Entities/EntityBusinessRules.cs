@@ -3,28 +3,21 @@ using GenCo.Application.Persistence.Contracts.Common;
 using GenCo.Application.Specifications.Entities;
 using GenCo.Application.Specifications.Projects;
 using GenCo.Domain.Entities;
+using GenCo.Domain.Enum;
 
 namespace GenCo.Application.BusinessRules.Entities;
 
-public class EntityBusinessRules : IEntityBusinessRules
+public class EntityBusinessRules(
+    IGenericRepository<Project> projectRepository,
+    IGenericRepository<Entity> entityRepository)
+    : IEntityBusinessRules
 {
-    private readonly IGenericRepository<Project> _projectRepository;
-    private readonly IGenericRepository<Entity> _entityRepository;
-
-    public EntityBusinessRules(
-        IGenericRepository<Project> projectRepository,
-        IGenericRepository<Entity> entityRepository)
-    {
-        _projectRepository = projectRepository;
-        _entityRepository = entityRepository;
-    }
-
     // ================== Project & Entity existence ==================
 
     public async Task EnsureProjectExistsAsync(Guid projectId, CancellationToken cancellationToken)
     {
         var spec = new ProjectByIdSpec(projectId);
-        var exists = await _projectRepository.ExistsAsync(spec, cancellationToken);
+        var exists = await projectRepository.ExistsAsync(spec, cancellationToken);
 
         if (!exists)
             throw new BusinessRuleValidationException(
@@ -35,7 +28,7 @@ public class EntityBusinessRules : IEntityBusinessRules
     public async Task EnsureEntityExistsAsync(Guid entityId, CancellationToken cancellationToken)
     {
         var spec = new EntityByIdSpec(entityId);
-        var exists = await _entityRepository.ExistsAsync(spec, cancellationToken);
+        var exists = await entityRepository.ExistsAsync(spec, cancellationToken);
 
         if (!exists)
             throw new BusinessRuleValidationException(
@@ -46,10 +39,7 @@ public class EntityBusinessRules : IEntityBusinessRules
     public async Task EnsureEntityBelongsToProjectAsync(Guid entityId, Guid projectId, CancellationToken cancellationToken)
     {
         var spec = new EntityByIdSpec(entityId);
-        var entity = await _entityRepository.FirstOrDefaultAsync(
-            spec,
-            asNoTracking: false, // cần tracking để load fields & relations
-            cancellationToken: cancellationToken);
+        var entity = await entityRepository.FirstOrDefaultAsync(spec, cancellationToken: cancellationToken);
 
         if (entity is null)
             throw new BusinessRuleValidationException(
@@ -67,7 +57,7 @@ public class EntityBusinessRules : IEntityBusinessRules
     public async Task EnsureEntityNameUniqueOnCreateAsync(Guid projectId, string name, CancellationToken cancellationToken)
     {
         var spec = new EntityByNameAndProjectSpec(projectId, name);
-        var exists = await _entityRepository.ExistsAsync(spec, cancellationToken);
+        var exists = await entityRepository.ExistsAsync(spec, cancellationToken);
 
         if (exists)
             throw new BusinessRuleValidationException(
@@ -78,7 +68,7 @@ public class EntityBusinessRules : IEntityBusinessRules
     public async Task EnsureEntityNameUniqueOnUpdateAsync(Guid projectId, Guid entityId, string name, CancellationToken cancellationToken)
     {
         var spec = new EntityByNameAndProjectSpec(projectId, name, excludeEntityId: entityId);
-        var exists = await _entityRepository.ExistsAsync(spec, cancellationToken);
+        var exists = await entityRepository.ExistsAsync(spec, cancellationToken);
 
         if (exists)
             throw new BusinessRuleValidationException(
@@ -91,7 +81,7 @@ public class EntityBusinessRules : IEntityBusinessRules
     public async Task EnsureEntityCanBeDeletedAsync(Guid entityId, CancellationToken cancellationToken)
     {
         var spec = new EntityByIdSpec(entityId, includeFieldsAndValidators: true);
-        var entity = await _entityRepository.FirstOrDefaultAsync(spec, cancellationToken: cancellationToken);
+        var entity = await entityRepository.FirstOrDefaultAsync(spec, cancellationToken: cancellationToken);
 
         if (entity is null)
             throw new BusinessRuleValidationException(
@@ -114,10 +104,7 @@ public class EntityBusinessRules : IEntityBusinessRules
     public async Task EnsureFieldNameUniqueAsync(Guid entityId, string fieldName, CancellationToken cancellationToken)
     {
         var spec = new EntityByIdSpec(entityId, includeFieldsAndValidators: true);
-        var entity = await _entityRepository.FirstOrDefaultAsync(
-            spec,
-            asNoTracking: false, // cần tracking để load fields & relations
-            cancellationToken: cancellationToken);
+        var entity = await entityRepository.FirstOrDefaultAsync(spec, cancellationToken: cancellationToken);
 
         if (entity is null)
             throw new BusinessRuleValidationException(
@@ -126,41 +113,86 @@ public class EntityBusinessRules : IEntityBusinessRules
 
         if (entity.Fields.Any(f => f.ColumnName.Equals(fieldName, StringComparison.OrdinalIgnoreCase)))
             throw new BusinessRuleValidationException(
-                $"Field with name '{fieldName}' already exists in entity {entityId}.",
+                $"Field with name '{fieldName}' already exists in entity '{entity.Name}'.",
                 "FIELD_NAME_DUPLICATED");
     }
 
     public async Task EnsureConstraintsValidAsync(Guid entityId, CancellationToken cancellationToken)
     {
-        var spec = new EntityByIdSpec(entityId, includeFieldsAndValidators: true);
-        var entity = await _entityRepository.FirstOrDefaultAsync(
-            spec,
-            asNoTracking: false, // cần tracking để load fields & relations
-            cancellationToken: cancellationToken);
+        var spec = new EntityByIdSpec(entityId, includeFieldsAndValidators: true, includeConstraints: true);
+        var entity = await entityRepository.FirstOrDefaultAsync(spec, cancellationToken: cancellationToken);
 
         if (entity is null)
             throw new BusinessRuleValidationException(
                 $"Entity with Id {entityId} does not exist.",
                 "ENTITY_NOT_FOUND");
 
-        // TODO: add specific constraint validation logic
-        // Ví dụ: check khóa chính phải tồn tại, không có 2 khóa chính, unique field hợp lệ, v.v.
+        // ⚙️ Validate Primary Key
+        var primaryKeys = entity.Constraints.Where(c => c.Type == ConstraintType.PrimaryKey).ToList();
+        if (primaryKeys.Count > 1)
+            throw new BusinessRuleValidationException(
+                "Entity cannot have more than one primary key.",
+                "PK_DUPLICATED");
+
+        if (primaryKeys.Count == 1 && !primaryKeys.First().Fields.Any())
+            throw new BusinessRuleValidationException(
+                "Primary key must have at least one field.",
+                "PK_NO_FIELDS");
+
+        // ⚙️ Validate Unique Constraints
+        var uniqueConstraints = entity.Constraints.Where(c => c.Type == ConstraintType.UniqueKey).ToList();
+        foreach (var constraint in uniqueConstraints)
+        {
+            if (!constraint.Fields.Any())
+                throw new BusinessRuleValidationException(
+                    $"Unique constraint '{constraint.ConstraintName}' must have at least one field.",
+                    "UNIQUE_NO_FIELDS");
+        }
+
+        // ⚙️ Validate Foreign Keys
+        var fkConstraints = entity.Constraints.Where(c => c.Type == ConstraintType.ForeignKey).ToList();
+        foreach (var fk in fkConstraints)
+        {
+            if (!fk.Fields.Any())
+                throw new BusinessRuleValidationException(
+                    $"Foreign key '{fk.ConstraintName}' must have at least one local field.",
+                    "FK_NO_FIELDS");
+
+            if (fk.ReferencedEntityId is null)
+                throw new BusinessRuleValidationException(
+                    $"Foreign key '{fk.ConstraintName}' must reference another entity.",
+                    "FK_NO_REFERENCE");
+        }
+
+        // ⚙️ Validate Check Constraints
+        var checkConstraints = entity.Constraints.Where(c => c.Type == ConstraintType.Check).ToList();
+        foreach (var check in checkConstraints)
+        {
+            if (string.IsNullOrWhiteSpace(check.Expression))
+                throw new BusinessRuleValidationException(
+                    $"Check constraint '{check.ConstraintName}' must have a valid expression.",
+                    "CHECK_NO_EXPRESSION");
+        }
     }
 
     // ================== Naming convention ==================
 
     public Task EnsureEntityNameFollowsConventionAsync(string name)
     {
-        // Example convention: PascalCase + chữ cái đầu viết hoa
+        // Example rule: PascalCase (no spaces, starts uppercase)
+        if (string.IsNullOrWhiteSpace(name))
+            throw new BusinessRuleValidationException("Entity name cannot be empty.", "ENTITY_NAME_EMPTY");
+
         if (!char.IsUpper(name[0]))
-        {
             throw new BusinessRuleValidationException(
-                $"Entity name '{name}' must start with uppercase.",
+                $"Entity name '{name}' must start with an uppercase letter.",
                 "ENTITY_NAME_INVALID");
-        }
+
+        if (name.Any(ch => ch == ' '))
+            throw new BusinessRuleValidationException(
+                $"Entity name '{name}' cannot contain spaces.",
+                "ENTITY_NAME_INVALID");
 
         return Task.CompletedTask;
     }
 }
-
-

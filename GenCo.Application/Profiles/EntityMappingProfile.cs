@@ -24,9 +24,8 @@ public class EntityMappingProfile : Profile
             .ForMember(dest => dest.Project, opt => opt.MapFrom(src => src.Project))
             .ForMember(dest => dest.Fields, opt => opt.MapFrom(src => src.Fields))
             .ForMember(dest => dest.FromRelations, opt => opt.MapFrom(src => src.FromRelations))
-            .ForMember(dest => dest.ToRelations, opt => opt.MapFrom(src => src.ToRelations));
-        // Nếu muốn load Constraints thì mở lại:
-        // .ForMember(dest => dest.Constraints, opt => opt.MapFrom(src => src.Constraints));
+            .ForMember(dest => dest.ToRelations, opt => opt.MapFrom(src => src.ToRelations))
+            .ForMember(dest => dest.Constraints, opt => opt.MapFrom(src => src.Constraints));
 
         // ===== DTO -> Entity =====
         CreateMap<CreateEntityRequestDto, Entity>()

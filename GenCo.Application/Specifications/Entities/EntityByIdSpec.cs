@@ -5,14 +5,32 @@ namespace GenCo.Application.Specifications.Entities;
 
 public class EntityByIdSpec : BaseSpecification<Entity>
 {
-    public EntityByIdSpec(Guid entityId, bool includeFieldsAndValidators = false)
+    public EntityByIdSpec(
+        Guid entityId,
+        bool includeFieldsAndValidators = false,
+        bool includeConstraints = false,
+        bool includeRelations = false)
         : base(e => e.Id == entityId)
     {
+        // Always include Project (liên kết quan trọng)
+        AddInclude(e => e.Project);
+
         if (includeFieldsAndValidators)
         {
-            AddInclude(e => e.Fields); // load Fields
-            AddInclude(e => e.Fields.Select(f => f.Validators)); // load Validators
+            AddInclude(e => e.Fields);
+            AddInclude(e => e.Fields.Select(f => f.Validators));
         }
-        AddInclude(e => e.Project);
+
+        if (includeConstraints)
+        {
+            AddInclude(e => e.Constraints);
+            AddInclude(e => e.Constraints.Select(c => c.Fields));
+        }
+
+        if (includeRelations)
+        {
+            AddInclude(e => e.FromRelations);
+            AddInclude(e => e.ToRelations);
+        }
     }
 }

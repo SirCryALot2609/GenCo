@@ -27,3 +27,4 @@ public class SoftDeleteEntityCommandHandler(
         return BaseResponseDto<bool>.Ok(true, "Entity soft deleted successfully");
     }
 }
+
