@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using GenCo.Application.BusinessRules.Relations;
 using GenCo.Application.DTOs.Common;
 using GenCo.Application.Persistence.Contracts.Common;
 using MediatR;
@@ -9,24 +10,39 @@ namespace GenCo.Application.Features.Relations.Commands.UpdateRelation;
 public class UpdateRelationCommandHandler(
     IGenericRepository<Relation> repository,
     IUnitOfWork unitOfWork,
-    IMapper mapper)
+    IMapper mapper,
+    IRelationBusinessRules businessRules)
     : IRequestHandler<UpdateRelationCommand, BaseResponseDto<RelationResponseDto>>
 {
     public async Task<BaseResponseDto<RelationResponseDto>> Handle(
         UpdateRelationCommand request,
         CancellationToken cancellationToken)
     {
-        var relation = await repository.GetByIdAsync(request.Request.Id, cancellationToken : cancellationToken);
+        var dto = request.Request;
+
+        var relation = await repository.GetByIdAsync(dto.Id, cancellationToken: cancellationToken);
         if (relation == null)
             return BaseResponseDto<RelationResponseDto>.Fail("Relation not found");
 
-        mapper.Map(request.Request, relation);
+        await businessRules.EnsureRelationTypeValidAsync(dto.RelationType);
+        await businessRules.EnsureDeleteBehaviorValidAsync(dto.OnDelete);
+        await businessRules.EnsureEntitiesExistAsync(dto.FromEntityId, dto.ToEntityId, cancellationToken);
+        await businessRules.EnsureNoCircularRelationAsync(dto.FromEntityId, dto.ToEntityId);
+        await businessRules.EnsureRelationUniqueOnUpdateAsync(
+            dto.ProjectId, dto.FromEntityId, dto.ToEntityId, dto.Id, dto.RelationType, cancellationToken);
+        await businessRules.EnsureRelationNameValidAsync(dto.RelationName);
+
+        mapper.Map(dto, relation);
         relation.UpdatedAt = DateTime.UtcNow;
+
+        await businessRules.EnsureFieldMappingConsistencyAsync(relation);
+        await businessRules.EnsureJoinTableConsistencyAsync(relation);
+        await businessRules.EnsureDeleteBehaviorCompatibilityAsync(relation);
 
         await repository.UpdateAsync(relation, cancellationToken);
         await unitOfWork.SaveChangesAsync(cancellationToken);
 
-        var dto = mapper.Map<RelationResponseDto>(relation);
-        return BaseResponseDto<RelationResponseDto>.Ok(dto, "Relation updated successfully");
+        var response = mapper.Map<RelationResponseDto>(relation);
+        return BaseResponseDto<RelationResponseDto>.Ok(response, "Relation updated successfully");
     }
 }

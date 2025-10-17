@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using GenCo.Application.BusinessRules.Relations;
 using GenCo.Application.DTOs.Common;
 using GenCo.Application.Persistence.Contracts.Common;
 using GenCo.Domain.Entities;
@@ -9,22 +10,36 @@ namespace GenCo.Application.Features.Relations.Commands.CreateRelation;
 public class CreateRelationCommandHandler(
     IGenericRepository<Relation> repository,
     IUnitOfWork unitOfWork,
-    IMapper mapper)
+    IMapper mapper,
+    IRelationBusinessRules businessRules)
     : IRequestHandler<CreateRelationCommand, BaseResponseDto<RelationResponseDto>>
 {
     public async Task<BaseResponseDto<RelationResponseDto>> Handle(
         CreateRelationCommand request,
         CancellationToken cancellationToken)
     {
-        var relation = mapper.Map<Relation>(request.Request);
+        var dto = request.Request;
+
+        await businessRules.EnsureRelationTypeValidAsync(dto.RelationType);
+        await businessRules.EnsureDeleteBehaviorValidAsync(dto.OnDelete);
+        await businessRules.EnsureEntitiesExistAsync(dto.FromEntityId, dto.ToEntityId, cancellationToken);
+        await businessRules.EnsureNoCircularRelationAsync(dto.FromEntityId, dto.ToEntityId);
+        await businessRules.EnsureRelationUniqueOnCreateAsync(
+            dto.ProjectId, dto.FromEntityId, dto.ToEntityId, dto.RelationType, cancellationToken);
+        await businessRules.EnsureRelationNameValidAsync(dto.RelationName);
+
+        var relation = mapper.Map<Relation>(dto);
         relation.Id = Guid.NewGuid();
         relation.CreatedAt = DateTime.UtcNow;
-        relation.UpdatedAt = null;
+
+        await businessRules.EnsureFieldMappingConsistencyAsync(relation);
+        await businessRules.EnsureJoinTableConsistencyAsync(relation);
+        await businessRules.EnsureDeleteBehaviorCompatibilityAsync(relation);
 
         await repository.AddAsync(relation, cancellationToken);
         await unitOfWork.SaveChangesAsync(cancellationToken);
 
-        var dto = mapper.Map<RelationResponseDto>(relation);
-        return BaseResponseDto<RelationResponseDto>.Ok(dto, "Relation created successfully");
+        var response = mapper.Map<RelationResponseDto>(relation);
+        return BaseResponseDto<RelationResponseDto>.Ok(response, "Relation created successfully");
     }
 }

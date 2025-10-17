@@ -3,17 +3,26 @@ using GenCo.Domain.Entities;
 
 namespace GenCo.Application.Specifications.Projects;
 
-public class ProjectByNameSpec : BaseSpecification<Project>
+public sealed class ProjectByNameSpec : BaseSpecification<Project>
 {
-    public ProjectByNameSpec(string name, bool includeEntities = false)
-        : base(p => p.Name == name)
+    public ProjectByNameSpec(
+        string name,
+        Guid? excludeProjectId = null,
+        bool includeRelations = false,
+        bool includeEntities = false,
+        bool includeWorkflows = false,
+        bool includeUiConfigs = false,
+        bool includeServiceConfigs = false,
+        bool includeConnections = false)
+        : base(p =>
+            p.Name.ToLower() == name.ToLower() &&
+            (excludeProjectId == null || p.Id != excludeProjectId))
     {
-        if (!includeEntities) return;
-        AddInclude(p => p.Entities);
-        AddInclude(p => p.Relations);
-        AddInclude(p => p.Workflows);
-        AddInclude(p => p.UiConfigs);
-        AddInclude(p => p.ServiceConfigs);
-        AddInclude(p => p.Connections);
+        if (includeEntities) AddInclude(p => p.Entities);
+        if (includeRelations) AddInclude(p => p.Relations);
+        if (includeWorkflows) AddInclude(p => p.Workflows);
+        if (includeUiConfigs) AddInclude(p => p.UiConfigs);
+        if (includeServiceConfigs) AddInclude(p => p.ServiceConfigs);
+        if (includeConnections) AddInclude(p => p.Connections);
     }
 }

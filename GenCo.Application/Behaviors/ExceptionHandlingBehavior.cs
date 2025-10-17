@@ -24,10 +24,10 @@ public class ExceptionHandlingBehavior<TRequest, TResponse>
                 throw; // fallback nếu không phải BaseResponseDto<>
             var failMethod = typeof(BaseResponseDto<>)
                 .MakeGenericType(typeof(TResponse).GetGenericArguments()[0])
-                .GetMethod(nameof(BaseResponseDto<object>.Fail), new[] { typeof(string), typeof(string) });
+                .GetMethod(nameof(BaseResponseDto<object>.Fail), [typeof(string), typeof(string)]);
 
             if (failMethod == null) throw; // fallback nếu không phải BaseResponseDto<>
-            var response = failMethod.Invoke(null, new object?[] { $"Unexpected error: {ex.Message}", null });
+            var response = failMethod.Invoke(null, [$"Unexpected error: {ex.Message}", null]);
             return (TResponse)response!;
 
         }

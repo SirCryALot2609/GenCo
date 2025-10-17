@@ -1,29 +1,47 @@
 ﻿using GenCo.Application.Specifications.Common;
 using GenCo.Domain.Entities;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace GenCo.Application.Specifications.Projects
+namespace GenCo.Application.Specifications.Projects;
+
+public sealed class ProjectByIdSpec : BaseSpecification<Project>
 {
-    public class ProjectByIdSpec : BaseSpecification<Project>
+    public ProjectByIdSpec(
+        Guid projectId,
+        bool includeEntities = false,
+        bool includeFields = false,
+        bool includeValidators = false,
+        bool includeRelations = false,
+        bool includeWorkflows = false,
+        bool includeUiConfigs = false,
+        bool includeServiceConfigs = false,
+        bool includeConnections = false)
+        : base(p => p.Id == projectId)
     {
-        public ProjectByIdSpec(Guid projectId, bool includeAllCollections = false)
-        : base(p => p.Id == projectId) 
+        if (includeEntities)
         {
-            if (includeAllCollections)
-            {
-                AddInclude(p => p.Entities);
-                AddInclude(p => p.Entities.Select(e => e.Fields));
-                AddInclude(p => p.Entities.SelectMany(e => e.Fields).Select(f => f.Validators));
-                AddInclude(p => p.Relations);
-                AddInclude(p => p.Workflows);
-                AddInclude(p => p.UiConfigs);
-                AddInclude(p => p.ServiceConfigs);
-            }
-        }
-    }
+            AddInclude(p => p.Entities);
 
+            if (includeFields)
+                AddInclude(p => p.Entities.Select(e => e.Fields));
+
+            if (includeValidators)
+                AddInclude(p => p.Entities.SelectMany(e => e.Fields)
+                    .SelectMany(f => f.Validators));
+        }
+
+        if (includeRelations)
+            AddInclude(p => p.Relations);
+
+        if (includeWorkflows)
+            AddInclude(p => p.Workflows);
+
+        if (includeUiConfigs)
+            AddInclude(p => p.UiConfigs);
+
+        if (includeServiceConfigs)
+            AddInclude(p => p.ServiceConfigs);
+
+        if (includeConnections)
+            AddInclude(p => p.Connections);
+    }
 }

@@ -12,7 +12,6 @@ public class EntityByIdSpec : BaseSpecification<Entity>
         bool includeRelations = false)
         : base(e => e.Id == entityId)
     {
-        // Always include Project (liên kết quan trọng)
         AddInclude(e => e.Project);
 
         if (includeFieldsAndValidators)
@@ -34,3 +33,4 @@ public class EntityByIdSpec : BaseSpecification<Entity>
         }
     }
 }
+

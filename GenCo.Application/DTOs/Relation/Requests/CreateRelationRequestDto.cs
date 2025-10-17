@@ -8,7 +8,7 @@ public class CreateRelationRequestDto : BaseRequestDto
     public Guid ProjectId { get; set; }
     public Guid FromEntityId { get; set; }
     public Guid ToEntityId { get; set; }
-    public RelationType RelationType { get; set; }
-    public DeleteBehavior OnDelete { get; set; }
+    public string RelationType { get; set; } = string.Empty;
+    public string OnDelete { get; set; } = string.Empty;
     public string? RelationName { get; set; }
 }
