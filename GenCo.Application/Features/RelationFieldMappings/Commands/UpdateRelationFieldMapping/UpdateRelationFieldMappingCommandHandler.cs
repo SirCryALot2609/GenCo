@@ -1,4 +1,5 @@
 using AutoMapper;
+using GenCo.Application.BusinessRules.RelationFieldMappings;
 using GenCo.Application.DTOs.Common;
 using GenCo.Application.DTOs.RelationFieldMapping.Responses;
 using GenCo.Application.Persistence.Contracts.Common;
@@ -10,24 +11,40 @@ namespace GenCo.Application.Features.RelationFieldMappings.Commands.UpdateRelati
 public class UpdateRelationFieldMappingCommandHandler(
     IGenericRepository<RelationFieldMapping> repository,
     IUnitOfWork unitOfWork,
-    IMapper mapper)
+    IMapper mapper,
+    IRelationFieldMappingBusinessRules businessRules)
     : IRequestHandler<UpdateRelationFieldMappingCommand, BaseResponseDto<RelationFieldMappingResponseDto>>
 {
     public async Task<BaseResponseDto<RelationFieldMappingResponseDto>> Handle(
         UpdateRelationFieldMappingCommand request,
         CancellationToken cancellationToken)
     {
-        var entity = await repository.GetByIdAsync(request.Request.Id, cancellationToken: cancellationToken);
+        var dto = request.Request;
+
+        var entity = await repository.GetByIdAsync(dto.Id, cancellationToken: cancellationToken);
         if (entity == null)
             return BaseResponseDto<RelationFieldMappingResponseDto>.Fail("RelationFieldMapping not found");
 
-        mapper.Map(request.Request, entity);
+        // ====== Business Rules ======
+        await businessRules.EnsureRelationExistsAsync(dto.RelationId, cancellationToken);
+        await businessRules.EnsureFieldsExistAsync(dto.FromFieldId, dto.ToFieldId, cancellationToken);
+        await businessRules.EnsureFieldsBelongToCorrectEntitiesAsync(dto.RelationId, dto.FromFieldId, dto.ToFieldId, cancellationToken);
+        await businessRules.EnsureFieldTypesCompatibleAsync(dto.FromFieldId, dto.ToFieldId, cancellationToken);
+
+        if (entity.RelationId != dto.RelationId ||
+            entity.FromFieldId != dto.FromFieldId ||
+            entity.ToFieldId != dto.ToFieldId)
+        {
+            await businessRules.EnsureNoDuplicateMappingAsync(dto.RelationId, dto.FromFieldId, dto.ToFieldId, cancellationToken);
+        }
+
+        mapper.Map(dto, entity);
         entity.UpdatedAt = DateTime.UtcNow;
 
         await repository.UpdateAsync(entity, cancellationToken);
         await unitOfWork.SaveChangesAsync(cancellationToken);
 
-        var dto = mapper.Map<RelationFieldMappingResponseDto>(entity);
-        return BaseResponseDto<RelationFieldMappingResponseDto>.Ok(dto, "RelationFieldMapping updated successfully");
+        var response = mapper.Map<RelationFieldMappingResponseDto>(entity);
+        return BaseResponseDto<RelationFieldMappingResponseDto>.Ok(response, "RelationFieldMapping updated successfully");
     }
 }

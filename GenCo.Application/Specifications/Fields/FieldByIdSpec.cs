@@ -1,22 +1,16 @@
 ﻿using GenCo.Application.Specifications.Common;
 using GenCo.Domain.Entities;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace GenCo.Application.Specifications.Fields
+namespace GenCo.Application.Specifications.Fields;
+
+public class FieldByIdSpec : BaseSpecification<Field>
 {
-    public class FieldByIdSpec : BaseSpecification<Field>
-    {
-        public FieldByIdSpec(Guid fieldId, bool includeValidators = false)
+    public FieldByIdSpec(Guid fieldId, bool includeValidators = false)
         : base(f => f.Id == fieldId)
+    {
+        if (includeValidators)
         {
-            if (includeValidators)
-            {
-                AddInclude(f => f.Validators);
-            }
+            AddInclude(f => f.Validators);
         }
     }
 }
